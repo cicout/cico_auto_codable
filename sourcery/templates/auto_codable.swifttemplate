@@ -1,0 +1,54 @@
+<%
+func codingKeysFor(_ type: Type) -> (generated: [String], all: [String]) {
+    var generatedKeys = [String]()
+    var allCodingKeys = [String]()
+    if (type is Struct || type is Class) {
+        if let codingKeysType = type.containedType["CodingKeys"] as? Enum {
+            allCodingKeys = codingKeysType.cases.map({ $0.name })
+            let definedKeys = Set(allCodingKeys)
+            let storedVariablesKeys = type.storedVariables.filter({ $0.defaultValue == nil }).map({ $0.name })
+
+            if storedVariablesKeys.count > definedKeys.count {
+                for key in storedVariablesKeys where !definedKeys.contains(key) {
+                    generatedKeys.append(key)
+                    allCodingKeys.append(key)
+                }
+            }
+        } else {
+            for variable in type.storedVariables {
+                generatedKeys.append(variable.name)
+                allCodingKeys.append(variable.name)
+            }
+        }
+    }
+    return (generated: generatedKeys, all: allCodingKeys)
+}
+-%>
+
+
+<%_ for type in types.all
+        where (type is Struct || type is Class)
+        && (type.implements["AutoCodable"] != nil) { -%>
+    <%_ let codingKeys = codingKeysFor(type) -%>
+    <%_ if let codingKeysType = type.containedType["CodingKeys"] as? Enum, codingKeys.generated.count > 0 { -%>
+// sourcery:inline:auto:<%= codingKeysType.name %>.AutoCodable
+        <%_ for key in codingKeys.generated { -%>
+        case <%= key %>
+        <%_ } -%>
+// sourcery:end
+    <%_ } -%>
+<%_ } -%>
+
+
+<%_ for type in types.all
+        where (type is Struct || type is Class)
+        && (type.implements["AutoCodableBase"] != nil) { -%>
+    <%_ let codingKeys = codingKeysFor(type) -%>
+    <%_ if let codingKeysType = type.containedType["CodingKeys"] as? Enum, codingKeys.generated.count > 0 { -%>
+// sourcery:inline:auto:<%= codingKeysType.name %>.AutoCodable
+        <%_ for key in codingKeys.generated { -%>
+        case <%= key %>
+        <%_ } -%>
+// sourcery:end
+    <%_ } -%>
+<%_ } -%>
