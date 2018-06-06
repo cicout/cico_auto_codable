@@ -1,0 +1,44 @@
+{
+    "first": {
+        "name": "name",
+        "string": "string",
+        "date": 1234567890123,
+        "int": 123,
+        "double": 2.5,
+        "bool": true,
+        "next": {
+            "name": "name",
+            "string": "string",
+            "int": 123,
+            "double": 2.5,
+            "bool": true
+        },
+        "array": [
+                  "string0",
+                  "string1",
+                  "string2"
+                  ],
+        "private": "private_string"
+    },
+    "second": {
+        "name": "name2",
+        "string": "string2",
+        "date": 1234567890123,
+        "int": 123,
+        "double": 2.5,
+        "bool": true,
+        "next": {
+            "name": "name2",
+            "string": "string2",
+            "int": 123,
+            "double": 2.5,
+            "bool": true
+        },
+        "array": [
+                  "string0",
+                  "string1",
+                  "string2"
+                  ],
+        "private": "private_string2"
+    }
+}

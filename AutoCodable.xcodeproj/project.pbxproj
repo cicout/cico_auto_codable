@@ -24,6 +24,8 @@
 		E41F762220C687CF00399E42 /* auto_codable.swifttemplate in Resources */ = {isa = PBXBuildFile; fileRef = E41F75FF20C687CF00399E42 /* auto_codable.swifttemplate */; };
 		E41F762520C68B8700399E42 /* show_all_type.stencil in Resources */ = {isa = PBXBuildFile; fileRef = E41F762420C68B8700399E42 /* show_all_type.stencil */; };
 		E41F762720C68B9500399E42 /* show_all_type.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F762620C68B9500399E42 /* show_all_type.generated.swift */; };
+		E41F762A20C7C37300399E42 /* default_array.json in Resources */ = {isa = PBXBuildFile; fileRef = E41F762920C7C35C00399E42 /* default_array.json */; };
+		E41F762C20C7C6ED00399E42 /* default_dictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = E41F762B20C7C6DB00399E42 /* default_dictionary.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		E41F75FF20C687CF00399E42 /* auto_codable.swifttemplate */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = auto_codable.swifttemplate; sourceTree = "<group>"; };
 		E41F762420C68B8700399E42 /* show_all_type.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = show_all_type.stencil; sourceTree = "<group>"; };
 		E41F762620C68B9500399E42 /* show_all_type.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = show_all_type.generated.swift; sourceTree = "<group>"; };
+		E41F762920C7C35C00399E42 /* default_array.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = default_array.json; sourceTree = "<group>"; };
+		E41F762B20C7C6DB00399E42 /* default_dictionary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = default_dictionary.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,8 @@
 				E41F759C20C67A2F00399E42 /* AppDelegate.swift */,
 				E41F75A320C67A2F00399E42 /* Assets.xcassets */,
 				E41F75AE20C680D500399E42 /* default.json */,
+				E41F762920C7C35C00399E42 /* default_array.json */,
+				E41F762B20C7C6DB00399E42 /* default_dictionary.json */,
 				E41F75A820C67A2F00399E42 /* Info.plist */,
 				E41F75A520C67A2F00399E42 /* LaunchScreen.storyboard */,
 				E41F75A020C67A2F00399E42 /* Main.storyboard */,
@@ -268,6 +274,8 @@
 			files = (
 				E41F75A720C67A2F00399E42 /* LaunchScreen.storyboard in Resources */,
 				E41F75B120C680D500399E42 /* default.json in Resources */,
+				E41F762A20C7C37300399E42 /* default_array.json in Resources */,
+				E41F762C20C7C6ED00399E42 /* default_dictionary.json in Resources */,
 				E41F762220C687CF00399E42 /* auto_codable.swifttemplate in Resources */,
 				E41F762520C68B8700399E42 /* show_all_type.stencil in Resources */,
 				E41F75A420C67A2F00399E42 /* Assets.xcassets in Resources */,
