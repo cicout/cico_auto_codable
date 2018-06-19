@@ -9,7 +9,7 @@
 import Foundation
 
 public extension JSONDecoder {
-    public func decodeData<T: Decodable>(_ type: T.Type, from jsonData: Data) -> T? {
+    public func decodeJSONData<T: Decodable>(_ type: T.Type, from jsonData: Data) -> T? {
         do {
             let object = try self.decode(type, from: jsonData)
             return object
@@ -19,12 +19,23 @@ public extension JSONDecoder {
         }
     }
     
-    public func decodeString<T: Decodable>(_ type: T.Type, from jsonString: String) -> T? {
+    public func decodeJSONString<T: Decodable>(_ type: T.Type, from jsonString: String) -> T? {
         guard let jsonData = jsonString.data(using: .utf8) else {
             return nil
         }
         
-        let object = self.decodeData(T.self, from: jsonData)
+        let object = self.decodeJSONData(T.self, from: jsonData)
         return object
+    }
+    
+    public func decodeJSONObject<T: Decodable>(_ type: T.Type, from jsonObject: Any) -> T? {
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: jsonObject, options: .prettyPrinted)
+            let object = self.decodeJSONData(T.self, from: jsonData)
+            return object
+        } catch let error {
+            print("[JSON_SERIALIZATION_ERROR]: \(error)")
+            return nil
+        }
     }
 }

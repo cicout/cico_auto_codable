@@ -22,7 +22,7 @@ public extension Decodable {
             decoder = kDefaultJSONDecoder
         }
         
-        if let object: Self = decoder.decodeData(Self.self, from: jsonData) {
+        if let object: Self = decoder.decodeJSONData(Self.self, from: jsonData) {
             self = object
         } else {
             return nil
@@ -37,7 +37,22 @@ public extension Decodable {
             decoder = kDefaultJSONDecoder
         }
         
-        if let object: Self = decoder.decodeString(Self.self, from: jsonString) {
+        if let object: Self = decoder.decodeJSONString(Self.self, from: jsonString) {
+            self = object
+        } else {
+            return nil
+        }
+    }
+    
+    public init?(jsonObject: Any, jsonDecoder: JSONDecoder? = nil) {
+        let decoder: JSONDecoder
+        if let jsonDecoder = jsonDecoder {
+            decoder = jsonDecoder
+        } else {
+            decoder = kDefaultJSONDecoder
+        }
+        
+        if let object: Self = decoder.decodeJSONObject(Self.self, from: jsonObject) {
             self = object
         } else {
             return nil
@@ -54,7 +69,7 @@ public extension Encodable {
             encoder = kDefaultJSONEncoder
         }
         
-        return encoder.encodeToData(object: self)
+        return encoder.encodeToJSONData(object: self)
     }
     
     public func toJSONString(jsonEncoder: JSONEncoder? = nil) -> String? {
@@ -65,7 +80,26 @@ public extension Encodable {
             encoder = kDefaultJSONEncoder
         }
         
-        return encoder.encodeToString(object: self)
+        return encoder.encodeToJSONString(object: self)
+    }
+    
+    public func toJSONObject<R>(returnType: R.Type, jsonEncoder: JSONEncoder? = nil) -> R? {
+        let encoder: JSONEncoder
+        if let jsonEncoder = jsonEncoder {
+            encoder = jsonEncoder
+        } else {
+            encoder = kDefaultJSONEncoder
+        }
+        
+        return encoder.encodeToJSONObject(object: self, returnType: returnType)
+    }
+    
+    public func toJSONDictionary(jsonEncoder: JSONEncoder? = nil) -> Dictionary<AnyHashable, Any>? {
+        return self.toJSONObject(returnType: Dictionary<AnyHashable, Any>.self)
+    }
+    
+    public func toJSONArray(jsonEncoder: JSONEncoder? = nil) -> Array<Any>? {
+        return self.toJSONObject(returnType: Array<Any>.self)
     }
 }
 
