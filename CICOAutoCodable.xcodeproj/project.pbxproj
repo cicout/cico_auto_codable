@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E41F758A20C6772700399E42 /* AutoCodable.h in Headers */ = {isa = PBXBuildFile; fileRef = E41F758820C6772700399E42 /* AutoCodable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E41F758A20C6772700399E42 /* CICOAutoCodable.h in Headers */ = {isa = PBXBuildFile; fileRef = E41F758820C6772700399E42 /* CICOAutoCodable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E41F759320C677A300399E42 /* JSONDecoder+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F759020C677A200399E42 /* JSONDecoder+String.swift */; };
-		E41F759420C677A300399E42 /* AutoCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F759120C677A200399E42 /* AutoCodable.swift */; };
+		E41F759420C677A300399E42 /* CICOAutoCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F759120C677A200399E42 /* CICOAutoCodable.swift */; };
 		E41F759520C677A300399E42 /* JSONEncoder+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F759220C677A300399E42 /* JSONEncoder+String.swift */; };
 		E41F759D20C67A2F00399E42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F759C20C67A2F00399E42 /* AppDelegate.swift */; };
 		E41F759F20C67A2F00399E42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F759E20C67A2F00399E42 /* ViewController.swift */; };
@@ -19,9 +19,9 @@
 		E41F75AF20C680D500399E42 /* TCodableClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F75AC20C680D500399E42 /* TCodableClass.swift */; };
 		E41F75B020C680D500399E42 /* TCodableStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F75AD20C680D500399E42 /* TCodableStruct.swift */; };
 		E41F75B120C680D500399E42 /* default.json in Resources */ = {isa = PBXBuildFile; fileRef = E41F75AE20C680D500399E42 /* default.json */; };
-		E41F75B220C681C600399E42 /* AutoCodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E41F758520C6772700399E42 /* AutoCodable.framework */; };
-		E41F75B320C681C600399E42 /* AutoCodable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E41F758520C6772700399E42 /* AutoCodable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E41F762220C687CF00399E42 /* auto_codable.swifttemplate in Resources */ = {isa = PBXBuildFile; fileRef = E41F75FF20C687CF00399E42 /* auto_codable.swifttemplate */; };
+		E41F75B220C681C600399E42 /* CICOAutoCodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E41F758520C6772700399E42 /* CICOAutoCodable.framework */; };
+		E41F75B320C681C600399E42 /* CICOAutoCodable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E41F758520C6772700399E42 /* CICOAutoCodable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E41F762220C687CF00399E42 /* cico_auto_codable.swifttemplate in Resources */ = {isa = PBXBuildFile; fileRef = E41F75FF20C687CF00399E42 /* cico_auto_codable.swifttemplate */; };
 		E41F762520C68B8700399E42 /* show_all_type.stencil in Resources */ = {isa = PBXBuildFile; fileRef = E41F762420C68B8700399E42 /* show_all_type.stencil */; };
 		E41F762720C68B9500399E42 /* show_all_type.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F762620C68B9500399E42 /* show_all_type.generated.swift */; };
 		E41F762A20C7C37300399E42 /* default_array.json in Resources */ = {isa = PBXBuildFile; fileRef = E41F762920C7C35C00399E42 /* default_array.json */; };
@@ -45,7 +45,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E41F75B320C681C600399E42 /* AutoCodable.framework in Embed Frameworks */,
+				E41F75B320C681C600399E42 /* CICOAutoCodable.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,13 +53,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E41F758520C6772700399E42 /* AutoCodable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AutoCodable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E41F758820C6772700399E42 /* AutoCodable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoCodable.h; sourceTree = "<group>"; };
+		E41F758520C6772700399E42 /* CICOAutoCodable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CICOAutoCodable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E41F758820C6772700399E42 /* CICOAutoCodable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CICOAutoCodable.h; sourceTree = "<group>"; };
 		E41F758920C6772700399E42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E41F759020C677A200399E42 /* JSONDecoder+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+String.swift"; sourceTree = "<group>"; };
-		E41F759120C677A200399E42 /* AutoCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCodable.swift; sourceTree = "<group>"; };
+		E41F759120C677A200399E42 /* CICOAutoCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CICOAutoCodable.swift; sourceTree = "<group>"; };
 		E41F759220C677A300399E42 /* JSONEncoder+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONEncoder+String.swift"; sourceTree = "<group>"; };
-		E41F759A20C67A2F00399E42 /* AutoCodableDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoCodableDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E41F759A20C67A2F00399E42 /* CICOAutoCodableDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CICOAutoCodableDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E41F759C20C67A2F00399E42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E41F759E20C67A2F00399E42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E41F75A120C67A2F00399E42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 		E41F75AC20C680D500399E42 /* TCodableClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCodableClass.swift; sourceTree = "<group>"; };
 		E41F75AD20C680D500399E42 /* TCodableStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCodableStruct.swift; sourceTree = "<group>"; };
 		E41F75AE20C680D500399E42 /* default.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = default.json; sourceTree = "<group>"; };
-		E41F75FF20C687CF00399E42 /* auto_codable.swifttemplate */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = auto_codable.swifttemplate; sourceTree = "<group>"; };
+		E41F75FF20C687CF00399E42 /* cico_auto_codable.swifttemplate */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cico_auto_codable.swifttemplate; sourceTree = "<group>"; };
 		E41F762420C68B8700399E42 /* show_all_type.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = show_all_type.stencil; sourceTree = "<group>"; };
 		E41F762620C68B9500399E42 /* show_all_type.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = show_all_type.generated.swift; sourceTree = "<group>"; };
 		E41F762920C7C35C00399E42 /* default_array.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = default_array.json; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E41F75B220C681C600399E42 /* AutoCodable.framework in Frameworks */,
+				E41F75B220C681C600399E42 /* CICOAutoCodable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,8 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				E41F75CC20C687CE00399E42 /* sourcery */,
-				E41F758720C6772700399E42 /* AutoCodable */,
-				E41F759B20C67A2F00399E42 /* AutoCodableDemo */,
+				E41F758720C6772700399E42 /* CICOAutoCodable */,
+				E41F759B20C67A2F00399E42 /* CICOAutoCodableDemo */,
 				E41F758620C6772700399E42 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,25 +108,25 @@
 		E41F758620C6772700399E42 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E41F758520C6772700399E42 /* AutoCodable.framework */,
-				E41F759A20C67A2F00399E42 /* AutoCodableDemo.app */,
+				E41F758520C6772700399E42 /* CICOAutoCodable.framework */,
+				E41F759A20C67A2F00399E42 /* CICOAutoCodableDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E41F758720C6772700399E42 /* AutoCodable */ = {
+		E41F758720C6772700399E42 /* CICOAutoCodable */ = {
 			isa = PBXGroup;
 			children = (
-				E41F758820C6772700399E42 /* AutoCodable.h */,
-				E41F759120C677A200399E42 /* AutoCodable.swift */,
+				E41F758820C6772700399E42 /* CICOAutoCodable.h */,
+				E41F759120C677A200399E42 /* CICOAutoCodable.swift */,
 				E41F758920C6772700399E42 /* Info.plist */,
 				E41F759020C677A200399E42 /* JSONDecoder+String.swift */,
 				E41F759220C677A300399E42 /* JSONEncoder+String.swift */,
 			);
-			path = AutoCodable;
+			path = CICOAutoCodable;
 			sourceTree = "<group>";
 		};
-		E41F759B20C67A2F00399E42 /* AutoCodableDemo */ = {
+		E41F759B20C67A2F00399E42 /* CICOAutoCodableDemo */ = {
 			isa = PBXGroup;
 			children = (
 				E41F759C20C67A2F00399E42 /* AppDelegate.swift */,
@@ -141,7 +141,7 @@
 				E41F75AD20C680D500399E42 /* TCodableStruct.swift */,
 				E41F759E20C67A2F00399E42 /* ViewController.swift */,
 			);
-			path = AutoCodableDemo;
+			path = CICOAutoCodableDemo;
 			sourceTree = "<group>";
 		};
 		E41F75CC20C687CE00399E42 /* sourcery */ = {
@@ -164,7 +164,7 @@
 		E41F75FE20C687CF00399E42 /* templates */ = {
 			isa = PBXGroup;
 			children = (
-				E41F75FF20C687CF00399E42 /* auto_codable.swifttemplate */,
+				E41F75FF20C687CF00399E42 /* cico_auto_codable.swifttemplate */,
 				E41F762420C68B8700399E42 /* show_all_type.stencil */,
 			);
 			path = templates;
@@ -177,16 +177,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E41F758A20C6772700399E42 /* AutoCodable.h in Headers */,
+				E41F758A20C6772700399E42 /* CICOAutoCodable.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		E41F758420C6772700399E42 /* AutoCodable */ = {
+		E41F758420C6772700399E42 /* CICOAutoCodable */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E41F758D20C6772700399E42 /* Build configuration list for PBXNativeTarget "AutoCodable" */;
+			buildConfigurationList = E41F758D20C6772700399E42 /* Build configuration list for PBXNativeTarget "CICOAutoCodable" */;
 			buildPhases = (
 				E41F758020C6772700399E42 /* Sources */,
 				E41F758120C6772700399E42 /* Frameworks */,
@@ -197,14 +197,14 @@
 			);
 			dependencies = (
 			);
-			name = AutoCodable;
+			name = CICOAutoCodable;
 			productName = AutoCodable;
-			productReference = E41F758520C6772700399E42 /* AutoCodable.framework */;
+			productReference = E41F758520C6772700399E42 /* CICOAutoCodable.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		E41F759920C67A2F00399E42 /* AutoCodableDemo */ = {
+		E41F759920C67A2F00399E42 /* CICOAutoCodableDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E41F75A920C67A2F00399E42 /* Build configuration list for PBXNativeTarget "AutoCodableDemo" */;
+			buildConfigurationList = E41F75A920C67A2F00399E42 /* Build configuration list for PBXNativeTarget "CICOAutoCodableDemo" */;
 			buildPhases = (
 				E41F759620C67A2F00399E42 /* Sources */,
 				E41F759720C67A2F00399E42 /* Frameworks */,
@@ -217,9 +217,9 @@
 			dependencies = (
 				E41F75B520C681C600399E42 /* PBXTargetDependency */,
 			);
-			name = AutoCodableDemo;
+			name = CICOAutoCodableDemo;
 			productName = AutoCodableDemo;
-			productReference = E41F759A20C67A2F00399E42 /* AutoCodableDemo.app */;
+			productReference = E41F759A20C67A2F00399E42 /* CICOAutoCodableDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -241,7 +241,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E41F757F20C6772700399E42 /* Build configuration list for PBXProject "AutoCodable" */;
+			buildConfigurationList = E41F757F20C6772700399E42 /* Build configuration list for PBXProject "CICOAutoCodable" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -254,8 +254,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E41F758420C6772700399E42 /* AutoCodable */,
-				E41F759920C67A2F00399E42 /* AutoCodableDemo */,
+				E41F758420C6772700399E42 /* CICOAutoCodable */,
+				E41F759920C67A2F00399E42 /* CICOAutoCodableDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -276,7 +276,7 @@
 				E41F75B120C680D500399E42 /* default.json in Resources */,
 				E41F762A20C7C37300399E42 /* default_array.json in Resources */,
 				E41F762C20C7C6ED00399E42 /* default_dictionary.json in Resources */,
-				E41F762220C687CF00399E42 /* auto_codable.swifttemplate in Resources */,
+				E41F762220C687CF00399E42 /* cico_auto_codable.swifttemplate in Resources */,
 				E41F762520C68B8700399E42 /* show_all_type.stencil in Resources */,
 				E41F75A420C67A2F00399E42 /* Assets.xcassets in Resources */,
 				E41F75A220C67A2F00399E42 /* Main.storyboard in Resources */,
@@ -297,7 +297,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./sourcery/source/Pods/Sourcery/bin/sourcery --sources ./AutoCodableDemo --sources ./AutoCodable --templates ./sourcery/templates/ --output ./sourcery/auto_generated";
+			shellScript = "./sourcery/source/Pods/Sourcery/bin/sourcery --sources ./CICOAutoCodableDemo --sources ./CICOAutoCodable --templates ./sourcery/templates/ --output ./sourcery/auto_generated";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -307,7 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E41F759320C677A300399E42 /* JSONDecoder+String.swift in Sources */,
-				E41F759420C677A300399E42 /* AutoCodable.swift in Sources */,
+				E41F759420C677A300399E42 /* CICOAutoCodable.swift in Sources */,
 				E41F759520C677A300399E42 /* JSONEncoder+String.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,7 +329,7 @@
 /* Begin PBXTargetDependency section */
 		E41F75B520C681C600399E42 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E41F758420C6772700399E42 /* AutoCodable */;
+			target = E41F758420C6772700399E42 /* CICOAutoCodable */;
 			targetProxy = E41F75B420C681C600399E42 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -406,7 +406,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -463,7 +463,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -484,7 +484,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AutoCodable/Info.plist;
+				INFOPLIST_FILE = CICOAutoCodable/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -511,7 +511,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AutoCodable/Info.plist;
+				INFOPLIST_FILE = CICOAutoCodable/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -533,7 +533,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = AutoCodableDemo/Info.plist;
+				INFOPLIST_FILE = CICOAutoCodableDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -552,7 +552,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = AutoCodableDemo/Info.plist;
+				INFOPLIST_FILE = CICOAutoCodableDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -568,7 +568,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E41F757F20C6772700399E42 /* Build configuration list for PBXProject "AutoCodable" */ = {
+		E41F757F20C6772700399E42 /* Build configuration list for PBXProject "CICOAutoCodable" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E41F758B20C6772700399E42 /* Debug */,
@@ -577,7 +577,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E41F758D20C6772700399E42 /* Build configuration list for PBXNativeTarget "AutoCodable" */ = {
+		E41F758D20C6772700399E42 /* Build configuration list for PBXNativeTarget "CICOAutoCodable" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E41F758E20C6772700399E42 /* Debug */,
@@ -586,7 +586,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E41F75A920C67A2F00399E42 /* Build configuration list for PBXNativeTarget "AutoCodableDemo" */ = {
+		E41F75A920C67A2F00399E42 /* Build configuration list for PBXNativeTarget "CICOAutoCodableDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E41F75AA20C67A2F00399E42 /* Debug */,

@@ -28,21 +28,7 @@ func codingKeysFor(_ type: Type) -> (generated: [String], all: [String]) {
 
 <%_ for type in types.all
         where (type is Struct || type is Class)
-        && (type.implements["AutoCodable"] != nil) { -%>
-    <%_ let codingKeys = codingKeysFor(type) -%>
-    <%_ if let codingKeysType = type.containedType["CodingKeys"] as? Enum, codingKeys.generated.count > 0 { -%>
-// sourcery:inline:auto:<%= codingKeysType.name %>.AutoCodable
-        <%_ for key in codingKeys.generated { -%>
-        case <%= key %>
-        <%_ } -%>
-// sourcery:end
-    <%_ } -%>
-<%_ } -%>
-
-
-<%_ for type in types.all
-        where (type is Struct || type is Class)
-        && (type.implements["AutoCodableBase"] != nil) { -%>
+        && (type.implements["CICOAutoCodable"] != nil) { -%>
     <%_ let codingKeys = codingKeysFor(type) -%>
     <%_ if let codingKeysType = type.containedType["CodingKeys"] as? Enum, codingKeys.generated.count > 0 { -%>
 // sourcery:inline:auto:<%= codingKeysType.name %>.AutoCodable

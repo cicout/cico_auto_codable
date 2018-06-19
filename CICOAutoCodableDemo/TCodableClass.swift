@@ -1,5 +1,5 @@
 //
-//  TCodableStruct.swift
+//  TCodableClass.swift
 //  AutoCodableDemo
 //
 //  Created by lucky.li on 2018/6/4.
@@ -7,15 +7,15 @@
 //
 
 import UIKit
-import AutoCodable
+import CICOAutoCodable
 
-struct TCodableStruct: AutoCodable {
+class TCodableClass: NSObject, CICOAutoCodable {
     private(set) var name: String?
     private(set) var stringValue: String?
-    //    private(set) var stringValue: Int?
+//    private(set) var stringValue: Int?
     private(set) var dateValue: Date?
     private(set) var intValue: Int?
-    //    private(set) var intValue: String?
+//    private(set) var intValue: String?
     private(set) var doubleValue: Double?
     private(set) var boolValue: Bool?
     private(set) var next: TCodableClass?
@@ -25,7 +25,7 @@ struct TCodableStruct: AutoCodable {
     private var privateStringValue: String?
 }
 
-extension TCodableStruct {
+extension TCodableClass {
     enum CodingKeys: String, CodingKey {
         case stringValue = "string"
         case dateValue = "date"
@@ -36,7 +36,7 @@ extension TCodableStruct {
         case arrayValue = "array"
         case privateStringValue = "private"
 
-// sourcery:inline:auto:TCodableStruct.CodingKeys.AutoCodable
+// sourcery:inline:auto:TCodableClass.CodingKeys.AutoCodable
         case name
         case dicValue
 // sourcery:end

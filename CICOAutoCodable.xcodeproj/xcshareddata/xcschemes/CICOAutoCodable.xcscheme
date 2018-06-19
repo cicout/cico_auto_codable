@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E41F758420C6772700399E42"
-               BuildableName = "AutoCodable.framework"
-               BlueprintName = "AutoCodable"
-               ReferencedContainer = "container:AutoCodable.xcodeproj">
+               BuildableName = "CICOAutoCodable.framework"
+               BlueprintName = "CICOAutoCodable"
+               ReferencedContainer = "container:CICOAutoCodable.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,9 +46,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E41F758420C6772700399E42"
-            BuildableName = "AutoCodable.framework"
-            BlueprintName = "AutoCodable"
-            ReferencedContainer = "container:AutoCodable.xcodeproj">
+            BuildableName = "CICOAutoCodable.framework"
+            BlueprintName = "CICOAutoCodable"
+            ReferencedContainer = "container:CICOAutoCodable.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -64,9 +64,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E41F758420C6772700399E42"
-            BuildableName = "AutoCodable.framework"
-            BlueprintName = "AutoCodable"
-            ReferencedContainer = "container:AutoCodable.xcodeproj">
+            BuildableName = "CICOAutoCodable.framework"
+            BlueprintName = "CICOAutoCodable"
+            ReferencedContainer = "container:CICOAutoCodable.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

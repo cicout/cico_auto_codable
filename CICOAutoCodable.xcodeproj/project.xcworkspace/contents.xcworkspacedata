@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:AutoCodable.xcodeproj">
+      location = "self:/Users/lucky_mac_pc/my_project/github/cico_auto_codable/CICOAutoCodable.xcodeproj">
    </FileRef>
 </Workspace>

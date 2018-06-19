@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import AutoCodable
+import CICOAutoCodable
 
 class ViewController: UIViewController {
 

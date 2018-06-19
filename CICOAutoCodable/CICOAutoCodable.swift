@@ -11,7 +11,7 @@ import Foundation
 private let kDefaultJSONDecoder = JSONDecoder()
 private let kDefaultJSONEncoder = JSONEncoder()
 
-public protocol AutoCodable: Codable {}
+public protocol CICOAutoCodable: Codable {}
 
 public extension Decodable {
     public init?(jsonData: Data, jsonDecoder: JSONDecoder? = nil) {
