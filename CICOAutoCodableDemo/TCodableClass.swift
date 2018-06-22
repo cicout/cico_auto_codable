@@ -14,7 +14,7 @@ class TCodableClass: NSObject, CICOAutoCodable {
     private(set) var stringValue: String?
 //    private(set) var stringValue: Int?
     private(set) var dateValue: Date?
-    private(set) var intValue: Int?
+    private(set) var intValue: Int = 1
 //    private(set) var intValue: String?
     private(set) var doubleValue: Double?
     private(set) var boolValue: Bool?
@@ -28,17 +28,20 @@ class TCodableClass: NSObject, CICOAutoCodable {
 extension TCodableClass {
     enum CodingKeys: String, CodingKey {
         case stringValue = "string"
-        case dateValue = "date"
-        case intValue = "int"
-        case doubleValue = "double"
-        case boolValue = "bool"
-        case next = "next"
-        case arrayValue = "array"
-        case privateStringValue = "private"
 
 // sourcery:inline:auto:TCodableClass.CodingKeys.AutoCodable
-        case name
+        case dateValue
+        case intValue
+        case doubleValue
+        case boolValue
+        case arrayValue
         case dicValue
+        case privateStringValue
 // sourcery:end
+    }
+    
+    enum CICOIgnoreCodingKeys: String, CodingKey {
+        case name
+        case next
     }
 }

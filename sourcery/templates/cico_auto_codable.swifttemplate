@@ -1,27 +1,35 @@
 <%
 func codingKeysFor(_ type: Type) -> (generated: [String], all: [String]) {
-    var generatedKeys = [String]()
+    var generatedCodingKeys = [String]()
     var allCodingKeys = [String]()
+
     if (type is Struct || type is Class) {
+        var ignoreCodingKeys = [String]()
+        if let ignoreCodingKeysType = type.containedType["CICOIgnoreCodingKeys"] as? Enum {
+            ignoreCodingKeys = ignoreCodingKeysType.cases.map({ $0.name })
+        }
+        let ignoreKeySet = Set(ignoreCodingKeys)
+
         if let codingKeysType = type.containedType["CodingKeys"] as? Enum {
             allCodingKeys = codingKeysType.cases.map({ $0.name })
-            let definedKeys = Set(allCodingKeys)
-            let storedVariablesKeys = type.storedVariables.filter({ $0.defaultValue == nil }).map({ $0.name })
 
-            if storedVariablesKeys.count > definedKeys.count {
-                for key in storedVariablesKeys where !definedKeys.contains(key) {
-                    generatedKeys.append(key)
+            let definedKeySet = Set(allCodingKeys)
+
+            let storedVariablesKeys = type.storedVariables.map({ $0.name })
+
+            if storedVariablesKeys.count > definedKeySet.count {
+                for key in storedVariablesKeys where !definedKeySet.contains(key) && !ignoreKeySet.contains(key) {
+                    generatedCodingKeys.append(key)
                     allCodingKeys.append(key)
                 }
             }
         } else {
-            for variable in type.storedVariables {
-                generatedKeys.append(variable.name)
+            for variable in type.storedVariables where !ignoreKeySet.contains(variable.name) {
                 allCodingKeys.append(variable.name)
             }
         }
     }
-    return (generated: generatedKeys, all: allCodingKeys)
+    return (generated: generatedCodingKeys, all: allCodingKeys)
 }
 -%>
 
@@ -30,8 +38,8 @@ func codingKeysFor(_ type: Type) -> (generated: [String], all: [String]) {
         where (type is Struct || type is Class)
         && (type.implements["CICOAutoCodable"] != nil) { -%>
     <%_ let codingKeys = codingKeysFor(type) -%>
-    <%_ if let codingKeysType = type.containedType["CodingKeys"] as? Enum, codingKeys.generated.count > 0 { -%>
-// sourcery:inline:auto:<%= codingKeysType.name %>.AutoCodable
+    <%_ if codingKeys.generated.count > 0 { -%>
+// sourcery:inline:auto:<%= type.name %>.CodingKeys.AutoCodable
         <%_ for key in codingKeys.generated { -%>
         case <%= key %>
         <%_ } -%>

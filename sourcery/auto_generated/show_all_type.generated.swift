@@ -2,4 +2,4 @@
 // DO NOT EDIT
 
 // Found 10 Types
-//  AppDelegate   Decodable   Encodable   JSONDecoder   JSONEncoder   TCodableClass   TCodableClass.CodingKeys   TCodableStruct   TCodableStruct.CodingKeys   ViewController  
+//  AppDelegate   Decodable   Encodable   JSONDecoder   JSONEncoder   TCodableClass   TCodableClass.CICOIgnoreCodingKeys   TCodableClass.CodingKeys   TCodableStruct   ViewController  
