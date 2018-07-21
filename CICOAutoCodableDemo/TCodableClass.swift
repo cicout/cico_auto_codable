@@ -28,20 +28,17 @@ class TCodableClass: NSObject, CICOAutoCodable {
 extension TCodableClass {
     enum CodingKeys: String, CodingKey {
         case stringValue = "string"
+        case dateValue = "date"
+        case intValue = "int"
+        case doubleValue = "double"
+        case boolValue = "bool"
+        case next = "next"
+        case arrayValue = "array"
+        case privateStringValue = "private"
 
-// sourcery:inline:auto:TCodableClass.CodingKeys.AutoCodable
-        case dateValue
-        case intValue
-        case doubleValue
-        case boolValue
-        case arrayValue
-        case dicValue
-        case privateStringValue
-// sourcery:end
-    }
-    
-    enum CICOIgnoreCodingKeys: String, CodingKey {
+// sourcery:inline:auto:TCodableClass.CodingKeys.CICOAutoCodable
         case name
-        case next
+        case dicValue
+// sourcery:end
     }
 }

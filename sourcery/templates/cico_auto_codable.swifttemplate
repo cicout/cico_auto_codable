@@ -39,7 +39,7 @@ func codingKeysFor(_ type: Type) -> (generated: [String], all: [String]) {
         && (type.implements["CICOAutoCodable"] != nil) { -%>
     <%_ let codingKeys = codingKeysFor(type) -%>
     <%_ if codingKeys.generated.count > 0 { -%>
-// sourcery:inline:auto:<%= type.name %>.CodingKeys.AutoCodable
+// sourcery:inline:auto:<%= type.name %>.CodingKeys.CICOAutoCodable
         <%_ for key in codingKeys.generated { -%>
         case <%= key %>
         <%_ } -%>

@@ -7,17 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73A280EE51E6CF81D64A46E1 /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 051FC8BF40362E3BC15C615E /* Pods_Demo.framework */; };
 		E41F75C620C686C500399E42 /* GetLatestSourceryByPodUpdateHere.h in Headers */ = {isa = PBXBuildFile; fileRef = E41F75C420C686C500399E42 /* GetLatestSourceryByPodUpdateHere.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F4DCC6335C71C1FC846CE34E /* Pods_GetLatestSourceryByPodUpdateHere.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6145AC8A861AEFB59021A834 /* Pods_GetLatestSourceryByPodUpdateHere.framework */; };
+		E492B4E920ECAB0500BC48A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E492B4E820ECAB0500BC48A4 /* AppDelegate.swift */; };
+		E492B4EB20ECAB0500BC48A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E492B4EA20ECAB0500BC48A4 /* ViewController.swift */; };
+		E492B4EE20ECAB0500BC48A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E492B4EC20ECAB0500BC48A4 /* Main.storyboard */; };
+		E492B4F020ECAB0600BC48A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E492B4EF20ECAB0600BC48A4 /* Assets.xcassets */; };
+		E492B4F320ECAB0600BC48A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E492B4F120ECAB0600BC48A4 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4BF30FFCD0D26F6797C6A66D /* Pods-GetLatestSourceryByPodUpdateHere.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetLatestSourceryByPodUpdateHere.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GetLatestSourceryByPodUpdateHere/Pods-GetLatestSourceryByPodUpdateHere.debug.xcconfig"; sourceTree = "<group>"; };
+		051FC8BF40362E3BC15C615E /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6145AC8A861AEFB59021A834 /* Pods_GetLatestSourceryByPodUpdateHere.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetLatestSourceryByPodUpdateHere.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AAF959C11930846DE8810763 /* Pods-GetLatestSourceryByPodUpdateHere.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetLatestSourceryByPodUpdateHere.release.xcconfig"; path = "Pods/Target Support Files/Pods-GetLatestSourceryByPodUpdateHere/Pods-GetLatestSourceryByPodUpdateHere.release.xcconfig"; sourceTree = "<group>"; };
+		B046796C6FB60175262AAFFD /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		E41F75C120C686C500399E42 /* GetLatestSourceryByPodUpdateHere.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GetLatestSourceryByPodUpdateHere.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E41F75C420C686C500399E42 /* GetLatestSourceryByPodUpdateHere.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetLatestSourceryByPodUpdateHere.h; sourceTree = "<group>"; };
 		E41F75C520C686C500399E42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E492B4E620ECAB0500BC48A4 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E492B4E820ECAB0500BC48A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E492B4EA20ECAB0500BC48A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E492B4ED20ECAB0500BC48A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E492B4EF20ECAB0600BC48A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E492B4F220ECAB0600BC48A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E492B4F420ECAB0600BC48A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFA379B99DA4C307C0BD2A44 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -25,7 +38,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4DCC6335C71C1FC846CE34E /* Pods_GetLatestSourceryByPodUpdateHere.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E492B4E320ECAB0500BC48A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73A280EE51E6CF81D64A46E1 /* Pods_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,8 +55,8 @@
 		97AD84DD6DA6D532D03F38BF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4BF30FFCD0D26F6797C6A66D /* Pods-GetLatestSourceryByPodUpdateHere.debug.xcconfig */,
-				AAF959C11930846DE8810763 /* Pods-GetLatestSourceryByPodUpdateHere.release.xcconfig */,
+				B046796C6FB60175262AAFFD /* Pods-Demo.debug.xcconfig */,
+				FFA379B99DA4C307C0BD2A44 /* Pods-Demo.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -45,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				6145AC8A861AEFB59021A834 /* Pods_GetLatestSourceryByPodUpdateHere.framework */,
+				051FC8BF40362E3BC15C615E /* Pods_Demo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -53,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				E41F75C320C686C500399E42 /* GetLatestSourceryByPodUpdateHere */,
+				E492B4E720ECAB0500BC48A4 /* Demo */,
 				E41F75C220C686C500399E42 /* Products */,
 				97AD84DD6DA6D532D03F38BF /* Pods */,
 				A8365DF28C9C836AB5747500 /* Frameworks */,
@@ -63,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				E41F75C120C686C500399E42 /* GetLatestSourceryByPodUpdateHere.framework */,
+				E492B4E620ECAB0500BC48A4 /* Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,6 +97,19 @@
 				E41F75C520C686C500399E42 /* Info.plist */,
 			);
 			path = GetLatestSourceryByPodUpdateHere;
+			sourceTree = "<group>";
+		};
+		E492B4E720ECAB0500BC48A4 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				E492B4E820ECAB0500BC48A4 /* AppDelegate.swift */,
+				E492B4EA20ECAB0500BC48A4 /* ViewController.swift */,
+				E492B4EC20ECAB0500BC48A4 /* Main.storyboard */,
+				E492B4EF20ECAB0600BC48A4 /* Assets.xcassets */,
+				E492B4F120ECAB0600BC48A4 /* LaunchScreen.storyboard */,
+				E492B4F420ECAB0600BC48A4 /* Info.plist */,
+			);
+			path = Demo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -94,7 +130,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E41F75C920C686C500399E42 /* Build configuration list for PBXNativeTarget "GetLatestSourceryByPodUpdateHere" */;
 			buildPhases = (
-				C4577E1814DB54BF127E4261 /* [CP] Check Pods Manifest.lock */,
 				E41F75BC20C686C500399E42 /* Sources */,
 				E41F75BD20C686C500399E42 /* Frameworks */,
 				E41F75BE20C686C500399E42 /* Headers */,
@@ -109,17 +144,39 @@
 			productReference = E41F75C120C686C500399E42 /* GetLatestSourceryByPodUpdateHere.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		E492B4E520ECAB0500BC48A4 /* Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E492B4F720ECAB0600BC48A4 /* Build configuration list for PBXNativeTarget "Demo" */;
+			buildPhases = (
+				32487FAA1C738B9BE4F152CF /* [CP] Check Pods Manifest.lock */,
+				E492B4E220ECAB0500BC48A4 /* Sources */,
+				E492B4E320ECAB0500BC48A4 /* Frameworks */,
+				E492B4E420ECAB0500BC48A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Demo;
+			productName = Demo;
+			productReference = E492B4E620ECAB0500BC48A4 /* Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		E41F75B820C686C500399E42 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = cico;
 				TargetAttributes = {
 					E41F75C020C686C500399E42 = {
 						CreatedOnToolsVersion = 9.3;
+					};
+					E492B4E520ECAB0500BC48A4 = {
+						CreatedOnToolsVersion = 9.4;
 					};
 				};
 			};
@@ -129,6 +186,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = E41F75B720C686C500399E42;
 			productRefGroup = E41F75C220C686C500399E42 /* Products */;
@@ -136,6 +194,7 @@
 			projectRoot = "";
 			targets = (
 				E41F75C020C686C500399E42 /* GetLatestSourceryByPodUpdateHere */,
+				E492B4E520ECAB0500BC48A4 /* Demo */,
 			);
 		};
 /* End PBXProject section */
@@ -148,10 +207,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E492B4E420ECAB0500BC48A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E492B4F320ECAB0600BC48A4 /* LaunchScreen.storyboard in Resources */,
+				E492B4F020ECAB0600BC48A4 /* Assets.xcassets in Resources */,
+				E492B4EE20ECAB0500BC48A4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		C4577E1814DB54BF127E4261 /* [CP] Check Pods Manifest.lock */ = {
+		32487FAA1C738B9BE4F152CF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -162,7 +231,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GetLatestSourceryByPodUpdateHere-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Demo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -179,7 +248,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E492B4E220ECAB0500BC48A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E492B4EB20ECAB0500BC48A4 /* ViewController.swift in Sources */,
+				E492B4E920ECAB0500BC48A4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E492B4EC20ECAB0500BC48A4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E492B4ED20ECAB0500BC48A4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E492B4F120ECAB0600BC48A4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E492B4F220ECAB0600BC48A4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E41F75C720C686C500399E42 /* Debug */ = {
@@ -304,7 +401,6 @@
 		};
 		E41F75CA20C686C500399E42 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4BF30FFCD0D26F6797C6A66D /* Pods-GetLatestSourceryByPodUpdateHere.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -326,7 +422,6 @@
 		};
 		E41F75CB20C686C500399E42 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AAF959C11930846DE8810763 /* Pods-GetLatestSourceryByPodUpdateHere.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -341,6 +436,38 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cico.GetLatestSourceryByPodUpdateHere;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E492B4F520ECAB0600BC48A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B046796C6FB60175262AAFFD /* Pods-Demo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cico.Demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E492B4F620ECAB0600BC48A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFA379B99DA4C307C0BD2A44 /* Pods-Demo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cico.Demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -363,6 +490,15 @@
 			buildConfigurations = (
 				E41F75CA20C686C500399E42 /* Debug */,
 				E41F75CB20C686C500399E42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E492B4F720ECAB0600BC48A4 /* Build configuration list for PBXNativeTarget "Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E492B4F520ECAB0600BC48A4 /* Debug */,
+				E492B4F620ECAB0600BC48A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

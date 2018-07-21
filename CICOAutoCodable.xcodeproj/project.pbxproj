@@ -297,7 +297,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./sourcery/source/Pods/Sourcery/bin/sourcery --sources ./CICOAutoCodableDemo --sources ./CICOAutoCodable --templates ./sourcery/templates/ --output ./sourcery/auto_generated";
+			shellScript = "if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\necho \"[***** Start Running CICOAutoCodable Script *****]\"\n./sourcery/source/Pods/Sourcery/bin/sourcery --sources ./CICOAutoCodableDemo --sources ./CICOAutoCodable --templates ./sourcery/templates/ --output ./sourcery/auto_generated\necho \"[***** End Running CICOAutoCodable Script *****]\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
