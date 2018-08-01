@@ -23,6 +23,7 @@ class TCodableClass: NSObject, CICOAutoCodable {
     private(set) var dicValue: [String: String]?
     
     private var privateStringValue: String?
+    private var url: URL?
 }
 
 extension TCodableClass {
@@ -39,6 +40,9 @@ extension TCodableClass {
 // sourcery:inline:auto:TCodableClass.CodingKeys.CICOAutoCodable
         case name
         case dicValue
+        case url
 // sourcery:end
     }
 }
+
+extension TCodableClass: AutoEquatable {}

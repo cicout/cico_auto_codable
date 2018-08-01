@@ -42,3 +42,5 @@ struct TCodableStruct: CICOAutoCodable {
 //// sourcery:end
 //    }
 //}
+
+extension TCodableStruct: AutoEquatable {}

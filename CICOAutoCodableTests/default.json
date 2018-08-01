@@ -17,5 +17,6 @@
               "string1",
               "string2"
               ],
-    "private": "private_string"
+    "private": "private_string",
+    "url": "https://www.google.com"
 }
