@@ -9,9 +9,9 @@
 import XCTest
 
 class CICOAutoCodableTests: XCTestCase {
-    private var defaultJSONString: String?
-    private var defaultJSONArrayString: String?
-    private var defaultJSONDicString: String?
+    private var defaultJSONString: String!
+    private var defaultJSONArrayString: String!
+    private var defaultJSONDicString: String!
     
     override func setUp() {
         super.setUp()

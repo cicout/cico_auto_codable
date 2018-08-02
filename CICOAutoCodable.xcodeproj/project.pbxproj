@@ -205,16 +205,24 @@
 		E4FD6C46210FFD0000ECAF4E /* CICOAutoCodableTests */ = {
 			isa = PBXGroup;
 			children = (
+				E4FD6D262112B56A00ECAF4E /* internal */,
 				E4FD6C47210FFD0000ECAF4E /* CICOAutoCodableTests.swift */,
-				E41F762920C7C35C00399E42 /* default_array.json */,
-				E41F762B20C7C6DB00399E42 /* default_dictionary.json */,
-				E41F75AE20C680D500399E42 /* default.json */,
+			);
+			path = CICOAutoCodableTests;
+			sourceTree = "<group>";
+		};
+		E4FD6D262112B56A00ECAF4E /* internal */ = {
+			isa = PBXGroup;
+			children = (
 				E4FD6C49210FFD0000ECAF4E /* Info.plist */,
 				E41F75AC20C680D500399E42 /* TCodableClass.swift */,
 				E41F75AD20C680D500399E42 /* TCodableStruct.swift */,
 				E4FD6C58211003FE00ECAF4E /* AutoEquatable.swift */,
+				E41F762920C7C35C00399E42 /* default_array.json */,
+				E41F762B20C7C6DB00399E42 /* default_dictionary.json */,
+				E41F75AE20C680D500399E42 /* default.json */,
 			);
-			path = CICOAutoCodableTests;
+			path = internal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,7 +284,6 @@
 				E4FD6C41210FFD0000ECAF4E /* Sources */,
 				E4FD6C42210FFD0000ECAF4E /* Frameworks */,
 				E4FD6C43210FFD0000ECAF4E /* Resources */,
-				E4FD6C57211003B400ECAF4E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -368,19 +375,6 @@
 
 /* Begin PBXShellScriptBuildPhase section */
 		E41F762320C6882300399E42 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\necho \"[***** Start Running CICOAutoCodable Script *****]\"\n./sourcery/source/Pods/Sourcery/bin/sourcery --sources ./CICOAutoCodableDemo --sources ./CICOAutoCodable --sources ./CICOAutoCodableTests --templates ./sourcery/templates/ --output ./sourcery/auto_generated\necho \"[***** End Running CICOAutoCodable Script *****]\"\nfi";
-		};
-		E4FD6C57211003B400ECAF4E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -688,7 +682,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CICOAutoCodableTests/Info.plist;
+				INFOPLIST_FILE = CICOAutoCodableTests/internal/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -707,7 +701,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CICOAutoCodableTests/Info.plist;
+				INFOPLIST_FILE = CICOAutoCodableTests/internal/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
