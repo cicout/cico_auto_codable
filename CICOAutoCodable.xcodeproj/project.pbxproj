@@ -131,11 +131,11 @@
 		E41F757B20C6772700399E42 = {
 			isa = PBXGroup;
 			children = (
-				E41F75CC20C687CE00399E42 /* sourcery */,
 				E41F758720C6772700399E42 /* CICOAutoCodable */,
 				E41F759B20C67A2F00399E42 /* CICOAutoCodableDemo */,
 				E4FD6C46210FFD0000ECAF4E /* CICOAutoCodableTests */,
 				E41F758620C6772700399E42 /* Products */,
+				E41F75CC20C687CE00399E42 /* sourcery */,
 			);
 			sourceTree = "<group>";
 		};

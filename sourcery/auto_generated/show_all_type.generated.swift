@@ -1,5 +1,10 @@
 // Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
-// Found 10 Types
-//  AppDelegate   CICOAutoCodableTests   Decodable   Encodable   JSONDecoder   JSONEncoder   TCodableClass   TCodableClass.CodingKeys   TCodableStruct   ViewController  
+// Found 11 Types
+//  AppDelegate   CICOAutoCodableTests   Decodable   Encodable   JSONDecoder   JSONEncoder   TCodableClass   TCodableClass.CodingKeys   TCodableStruct   TCodableStruct.CodingKeys   ViewController  
+
+/**
+ * Found 2 CICOAutoCodable Types
+ * TCodableClass   TCodableStruct  
+ */

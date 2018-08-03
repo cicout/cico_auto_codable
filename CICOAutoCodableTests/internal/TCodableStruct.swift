@@ -25,22 +25,22 @@ struct TCodableStruct: CICOAutoCodable {
     private var privateStringValue: String?
 }
 
-//extension TCodableStruct {
-//    enum CodingKeys: String, CodingKey {
-//        case stringValue = "string"
-//        case dateValue = "date"
-//        case intValue = "int"
-//        case doubleValue = "double"
-//        case boolValue = "bool"
-//        case next = "next"
-//        case arrayValue = "array"
-//        case privateStringValue = "private"
-//
-//// sourcery:inline:auto:TCodableStruct.CodingKeys.AutoCodable
-//        case name
-//        case dicValue
-//// sourcery:end
-//    }
-//}
+extension TCodableStruct {
+    enum CodingKeys: String, CodingKey {
+        case stringValue = "string"
+        case dateValue = "date"
+        case intValue = "int"
+        case doubleValue = "double"
+        case boolValue = "bool"
+        case next = "next"
+        case arrayValue = "array"
+        case privateStringValue = "private"
+
+// sourcery:inline:auto:TCodableStruct.CodingKeys.CICOAutoCodable_Auto_Generated_CodingKeys
+        case name
+        case dicValue
+// sourcery:end
+    }
+}
 
 extension TCodableStruct: AutoEquatable {}

@@ -9,7 +9,7 @@
 import UIKit
 import CICOAutoCodable
 
-class TCodableClass: NSObject, CICOAutoCodable {
+class TCodableClass: CICOAutoCodable {
     private(set) var name: String?
     private(set) var stringValue: String?
 //    private(set) var stringValue: Int?
@@ -37,7 +37,7 @@ extension TCodableClass {
         case arrayValue = "array"
         case privateStringValue = "private"
 
-// sourcery:inline:auto:TCodableClass.CodingKeys.CICOAutoCodable
+// sourcery:inline:auto:TCodableClass.CodingKeys.CICOAutoCodable_Auto_Generated_CodingKeys
         case name
         case dicValue
         case url

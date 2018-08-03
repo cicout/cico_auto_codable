@@ -1,35 +1,42 @@
 <%
-func codingKeysFor(_ type: Type) -> (generated: [String], all: [String]) {
-    var generatedCodingKeys = [String]()
-    var allCodingKeys = [String]()
+func codingKeysFor(_ type: Type) -> (existedKey: Bool, generated: [String], all: [String]) {
+    var generatedKeyArray = [String]()
+    var allKeyArray = [String]()
 
-    if (type is Struct || type is Class) {
-        var ignoreCodingKeys = [String]()
-        if let ignoreCodingKeysType = type.containedType["CICOIgnoreCodingKeys"] as? Enum {
-            ignoreCodingKeys = ignoreCodingKeysType.cases.map({ $0.name })
+    guard (type is Struct || type is Class) else {
+        return (existedKey: false, generated: generatedKeyArray, all: allKeyArray)
+    }
+
+    var ignoredKeyArray = [String]()
+    var existedIgnoredKey = false
+    if let IgnoredCodingKeysType = type.containedType["CICOIgnoredCodingKeys"] as? Enum {
+        existedIgnoredKey = true
+        ignoredKeyArray = IgnoredCodingKeysType.cases.map({ $0.name })
+    }
+    let ignoredKeySet = Set(ignoredKeyArray)
+
+    var existingKeyArray = [String]()
+    var existedKey = false
+    if let codingKeysType = type.containedType["CodingKeys"] as? Enum {
+        existedKey = true
+        existingKeyArray = codingKeysType.cases.map({ $0.name })
+        allKeyArray = codingKeysType.cases.map({ $0.name })
+    }
+    let existingKeySet = Set(existingKeyArray)
+
+    if existedIgnoredKey || existedKey {
+        let storedVariablesKeys = type.storedVariables.map({ $0.name })
+        for key in storedVariablesKeys where !existingKeySet.contains(key) && !ignoredKeySet.contains(key) {
+            generatedKeyArray.append(key)
+            allKeyArray.append(key)
         }
-        let ignoreKeySet = Set(ignoreCodingKeys)
-
-        if let codingKeysType = type.containedType["CodingKeys"] as? Enum {
-            allCodingKeys = codingKeysType.cases.map({ $0.name })
-
-            let definedKeySet = Set(allCodingKeys)
-
-            let storedVariablesKeys = type.storedVariables.map({ $0.name })
-
-            if storedVariablesKeys.count > definedKeySet.count {
-                for key in storedVariablesKeys where !definedKeySet.contains(key) && !ignoreKeySet.contains(key) {
-                    generatedCodingKeys.append(key)
-                    allCodingKeys.append(key)
-                }
-            }
-        } else {
-            for variable in type.storedVariables where !ignoreKeySet.contains(variable.name) {
-                allCodingKeys.append(variable.name)
-            }
+    } else {
+        for variable in type.storedVariables {
+            allKeyArray.append(variable.name)
         }
     }
-    return (generated: generatedCodingKeys, all: allCodingKeys)
+
+    return (existedKey: existedKey, generated: generatedKeyArray, all: allKeyArray)
 }
 -%>
 
@@ -39,9 +46,17 @@ func codingKeysFor(_ type: Type) -> (generated: [String], all: [String]) {
         && (type.implements["CICOAutoCodable"] != nil) { -%>
     <%_ let codingKeys = codingKeysFor(type) -%>
     <%_ if codingKeys.generated.count > 0 { -%>
-// sourcery:inline:auto:<%= type.name %>.CodingKeys.CICOAutoCodable
+        <%_ if !codingKeys.existedKey { -%>
+// sourcery:inline:auto:<%= type.name %>.CICOAutoCodable_Auto_Generated_CodingKeys_Head
+    enum CodingKeys: String, CodingKey {
+        <%_ } -%>
+// sourcery:inline:auto:<%= type.name %>.CodingKeys.CICOAutoCodable_Auto_Generated_CodingKeys
         <%_ for key in codingKeys.generated { -%>
         case <%= key %>
+        <%_ } -%>
+        <%_ if !codingKeys.existedKey { -%>
+// sourcery:inline:auto:<%= type.name %>..CICOAutoCodable_Auto_Generated_CodingKeys_Tail
+    }
         <%_ } -%>
 // sourcery:end
     <%_ } -%>

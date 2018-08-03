@@ -25,6 +25,7 @@ fileprivate func compareArrays<T>(lhs: [T], rhs: [T], compare: (_ lhs: T, _ rhs:
 
 // MARK: - AutoEquatable for classes, protocols, structs
 // MARK: - TCodableClass AutoEquatable
+extension TCodableClass: Equatable {}
 internal func == (lhs: TCodableClass, rhs: TCodableClass) -> Bool {
     guard compareOptionals(lhs: lhs.name, rhs: rhs.name, compare: ==) else { return false }
     guard compareOptionals(lhs: lhs.stringValue, rhs: rhs.stringValue, compare: ==) else { return false }
