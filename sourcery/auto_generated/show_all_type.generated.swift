@@ -2,7 +2,7 @@
 // DO NOT EDIT
 
 // Found 11 Types
-//  AppDelegate   CICOAutoCodableTests   Decodable   Encodable   JSONDecoder   JSONEncoder   TCodableClass   TCodableClass.CodingKeys   TCodableStruct   TCodableStruct.CodingKeys   ViewController  
+//  AppDelegate   CICOAutoCodableTests   Decodable   Encodable   JSONDecoder   JSONEncoder   TCodableClass   TCodableClass.CICOCustomCodingKeys   TCodableStruct   TCodableStruct.CodingKeys   ViewController  
 
 /**
  * Found 2 CICOAutoCodable Types

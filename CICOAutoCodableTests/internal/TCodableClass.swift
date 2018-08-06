@@ -27,7 +27,7 @@ class TCodableClass: CICOAutoCodable {
 }
 
 extension TCodableClass {
-    enum CodingKeys: String, CodingKey {
+    enum CICOCustomCodingKeys: String {
         case stringValue = "string"
         case dateValue = "date"
         case intValue = "int"
@@ -36,13 +36,26 @@ extension TCodableClass {
         case next = "next"
         case arrayValue = "array"
         case privateStringValue = "private"
-
+    }
+    
+// sourcery:inline:auto:TCodableClass.CICOAutoCodable_Auto_Generated_CodingKeys_Head
+    enum CodingKeys: String, CodingKey {
+// sourcery:inline:auto:TCodableClass.CodingKeys.CICOAutoCodable_Auto_Generated_Custom_CodingKeys
+        case stringValue = "string"
+        case dateValue = "date"
+        case intValue = "int"
+        case doubleValue = "double"
+        case boolValue = "bool"
+        case next = "next"
+        case arrayValue = "array"
+        case privateStringValue = "private"
 // sourcery:inline:auto:TCodableClass.CodingKeys.CICOAutoCodable_Auto_Generated_CodingKeys
         case name
         case dicValue
         case url
-// sourcery:end
+// sourcery:inline:auto:TCodableClass..CICOAutoCodable_Auto_Generated_CodingKeys_Tail
     }
+// sourcery:end
 }
 
 extension TCodableClass: AutoEquatable {}

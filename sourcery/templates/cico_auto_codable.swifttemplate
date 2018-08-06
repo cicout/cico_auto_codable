@@ -1,10 +1,33 @@
 <%
-func codingKeysFor(_ type: Type) -> (existedKey: Bool, generated: [String], all: [String]) {
+func codingKeysFor(_ type: Type) -> (existedKey: Bool, generatedCustomKeyArray: [(String, String)], generatedKeyArray: [String], allKeyArray: [String]) {
+    var existedKey = false
+    var generatedCustomKeyArray = [(String, String)]()
     var generatedKeyArray = [String]()
     var allKeyArray = [String]()
 
     guard (type is Struct || type is Class) else {
-        return (existedKey: false, generated: generatedKeyArray, all: allKeyArray)
+        return (existedKey: existedKey, generatedCustomKeyArray: generatedCustomKeyArray, generatedKeyArray: generatedKeyArray, allKeyArray: allKeyArray)
+    }
+
+    var existingKeyArray = [String]()
+    if let codingKeysType = type.containedType["CodingKeys"] as? Enum {
+        existedKey = true
+        existingKeyArray = codingKeysType.cases.map({ $0.name })
+        allKeyArray = codingKeysType.cases.map({ $0.name })
+    }
+    let existingKeySet = Set(existingKeyArray)
+
+    var customKeyDic = [String: String]()
+    var existedCustomKey = false
+    if let customCodingKeysType = type.containedType["CICOCustomCodingKeys"] as? Enum {
+        existedCustomKey = true
+        for enumCase in customCodingKeysType.cases {
+            if let customKey = enumCase.rawValue {
+                customKeyDic[enumCase.name] = customKey
+            } else {
+                customKeyDic[enumCase.name] = enumCase.name
+            }
+        }
     }
 
     var ignoredKeyArray = [String]()
@@ -15,19 +38,14 @@ func codingKeysFor(_ type: Type) -> (existedKey: Bool, generated: [String], all:
     }
     let ignoredKeySet = Set(ignoredKeyArray)
 
-    var existingKeyArray = [String]()
-    var existedKey = false
-    if let codingKeysType = type.containedType["CodingKeys"] as? Enum {
-        existedKey = true
-        existingKeyArray = codingKeysType.cases.map({ $0.name })
-        allKeyArray = codingKeysType.cases.map({ $0.name })
-    }
-    let existingKeySet = Set(existingKeyArray)
-
-    if existedIgnoredKey || existedKey {
+    if existedKey || existedCustomKey || existedIgnoredKey  {
         let storedVariablesKeys = type.storedVariables.map({ $0.name })
         for key in storedVariablesKeys where !existingKeySet.contains(key) && !ignoredKeySet.contains(key) {
-            generatedKeyArray.append(key)
+            if let customKey = customKeyDic[key] {
+                generatedCustomKeyArray.append((key, customKey))
+            } else {
+                generatedKeyArray.append(key)
+            }
             allKeyArray.append(key)
         }
     } else {
@@ -36,7 +54,7 @@ func codingKeysFor(_ type: Type) -> (existedKey: Bool, generated: [String], all:
         }
     }
 
-    return (existedKey: existedKey, generated: generatedKeyArray, all: allKeyArray)
+    return (existedKey: existedKey, generatedCustomKeyArray: generatedCustomKeyArray, generatedKeyArray: generatedKeyArray, allKeyArray: allKeyArray)
 }
 -%>
 
@@ -45,14 +63,22 @@ func codingKeysFor(_ type: Type) -> (existedKey: Bool, generated: [String], all:
         where (type is Struct || type is Class)
         && (type.implements["CICOAutoCodable"] != nil) { -%>
     <%_ let codingKeys = codingKeysFor(type) -%>
-    <%_ if codingKeys.generated.count > 0 { -%>
+    <%_ if codingKeys.generatedCustomKeyArray.count + codingKeys.generatedKeyArray.count > 0 { -%>
         <%_ if !codingKeys.existedKey { -%>
 // sourcery:inline:auto:<%= type.name %>.CICOAutoCodable_Auto_Generated_CodingKeys_Head
     enum CodingKeys: String, CodingKey {
         <%_ } -%>
+        <%_ if codingKeys.generatedCustomKeyArray.count > 0 { -%>
+// sourcery:inline:auto:<%= type.name %>.CodingKeys.CICOAutoCodable_Auto_Generated_Custom_CodingKeys
+            <%_ for (key, customKey) in codingKeys.generatedCustomKeyArray { -%>
+        case <%= key %> = "<%= customKey %>"
+            <%_ } -%>
+        <%_ } -%>
+        <%_ if codingKeys.generatedKeyArray.count > 0 { -%>
 // sourcery:inline:auto:<%= type.name %>.CodingKeys.CICOAutoCodable_Auto_Generated_CodingKeys
-        <%_ for key in codingKeys.generated { -%>
+            <%_ for key in codingKeys.generatedKeyArray { -%>
         case <%= key %>
+            <%_ } -%>
         <%_ } -%>
         <%_ if !codingKeys.existedKey { -%>
 // sourcery:inline:auto:<%= type.name %>..CICOAutoCodable_Auto_Generated_CodingKeys_Tail
