@@ -93,16 +93,16 @@ You don't need to write any mapping code when there is no custom mapping relatio
 
 ### Install Sourcery
 1. Copy "sourcery" directory in this framework source into your project;
-2. Get the latest sourcery by CocoaPod;  
+2. Get the latest sourcery by CocoaPod; (replace "**yourProjectName**" with your real project name)  
 ```
-cd <yourProjectDir>/sourcery/source
+cd "yourProjectDir"/sourcery/source
 pod update
 ```
-3. Open "yourProjectTarget" -> "Build Phases" -> "+" -> "New Run Script Phase", and add new run script below: (replace "yourProjectName" with your real project name)   
+3. Open "yourProjectTarget" -> "Build Phases" -> "+" -> "New Run Script Phase", and add new run script below: (replace "**yourProjectName**" with your real project name)   
 ```
 if [ "${CONFIGURATION}" = "Debug" ]; then
 echo "[***** Start Running CICOAutoCodable Script *****]"
-./sourcery/source/Pods/Sourcery/bin/sourcery --sources ./Carthage/Checkouts/cico_auto_codable/CICOAutoCodable --sources ./yourProjectName --templates ./Carthage/Checkouts/cico_auto_codable/sourcery/templates/ --output ./sourcery/auto_generated
+./sourcery/source/Pods/Sourcery/bin/sourcery --sources ./Carthage/Checkouts/cico_auto_codable/CICOAutoCodable --sources ./"yourProjectName" --templates ./Carthage/Checkouts/cico_auto_codable/sourcery/templates/ --output ./sourcery/auto_generated
 echo "[***** End Running CICOAutoCodable Script *****]"
 fi
 ```
