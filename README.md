@@ -93,7 +93,7 @@ You don't need to write any mapping code when there is no custom mapping relatio
 
 ### Install Sourcery
 1. Copy "sourcery" directory in this framework source into your project;
-2. Get the latest sourcery by CocoaPod; (replace "**yourProjectName**" with your real project name)  
+2. Get the latest sourcery by CocoaPod; (replace "**yourProjectDir**" with your real project directory)  
 ```
 cd "yourProjectDir"/sourcery/source
 pod update
