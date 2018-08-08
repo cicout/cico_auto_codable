@@ -131,9 +131,9 @@ class MyClass: CICOAutoCodable {
 }
 ```
 
-#### CodingKeys Definition
-* Using Custom And Ignored CodingKeys  
-```
+#### Using Custom And Ignored CodingKeys  
+* CodingKeys Definition  
+```swift
 extension MyClass {
     enum CICOCustomCodingKeys: String {
         case next = "nextValue"
@@ -144,22 +144,8 @@ extension MyClass {
     }
 }
 ```
-* Using CodingKeys Directly  
-```
-extension MyClass {
-    enum CICOIgnoredCodingKeys: String {
-        case ignoredValue
-    }
-    
-    enum CodingKeys: String, CodingKey {
-        case next = "nextValue"
-    }
-}
-```
-
-#### Auto Generated Code
-* Using Custom And Ignored CodingKeys  
-```
+* Auto Generated Code  
+```swift
 // sourcery:inline:auto:MyClass.CICOAutoCodable_Auto_Generated_CodingKeys_Head
     enum CodingKeys: String, CodingKey {
 // sourcery:inline:auto:MyClass.CodingKeys.CICOAutoCodable_Auto_Generated_Custom_CodingKeys
@@ -178,8 +164,22 @@ extension MyClass {
     }
 // sourcery:end
 ```
-* Using CodingKeys Directly  
+
+#### Using CodingKeys Directly  
+* CodingKeys Definition  
+```swift
+extension MyClass {
+    enum CICOIgnoredCodingKeys: String {
+        case ignoredValue
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case next = "nextValue"
+    }
+}
 ```
+* Auto Generated Code  
+```swift
 extension MyClass {
     enum CICOIgnoredCodingKeys: String {
         case ignoredValue
