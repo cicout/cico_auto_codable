@@ -1,0 +1,24 @@
+{
+    "stringValue": "string",
+    "dateValue": 1234567890123,
+    "intValue": 123,
+    "doubleValue": 2.5,
+    "boolValue": true,
+    "enumValue": "two",
+    "urlValue": "https://www.google.com",
+    "nextValue": {
+        "stringValue": "string",
+        "intValue": 123,
+        "doubleValue": 2.5,
+        "boolValue": true,
+        "enumValue": "two"
+    },
+    "arrayValue": [
+              "string0",
+              "string1",
+              ],
+    "dicValue": {
+        "key0": "value0",
+        "key1": "value1"
+    }
+}

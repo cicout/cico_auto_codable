@@ -37,6 +37,10 @@
 		E4FD6C5A211003FE00ECAF4E /* AutoEquatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FD6C58211003FE00ECAF4E /* AutoEquatable.swift */; };
 		E4FD6C5C2110045D00ECAF4E /* AutoEquatable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FD6C5B2110045D00ECAF4E /* AutoEquatable.generated.swift */; };
 		E4FD6C5D2110045D00ECAF4E /* AutoEquatable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FD6C5B2110045D00ECAF4E /* AutoEquatable.generated.swift */; };
+		E4FD6DEB21193FD300ECAF4E /* MyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FD6DEA21193FD300ECAF4E /* MyClass.swift */; };
+		E4FD6DEC21193FD300ECAF4E /* MyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FD6DEA21193FD300ECAF4E /* MyClass.swift */; };
+		E4FD6DEE2119403D00ECAF4E /* my.json in Resources */ = {isa = PBXBuildFile; fileRef = E4FD6DED2119403D00ECAF4E /* my.json */; };
+		E4FD6DEF2119403D00ECAF4E /* my.json in Resources */ = {isa = PBXBuildFile; fileRef = E4FD6DED2119403D00ECAF4E /* my.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +101,8 @@
 		E4FD6C49210FFD0000ECAF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4FD6C58211003FE00ECAF4E /* AutoEquatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoEquatable.swift; sourceTree = "<group>"; };
 		E4FD6C5B2110045D00ECAF4E /* AutoEquatable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoEquatable.generated.swift; sourceTree = "<group>"; };
+		E4FD6DEA21193FD300ECAF4E /* MyClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClass.swift; sourceTree = "<group>"; };
+		E4FD6DED2119403D00ECAF4E /* my.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = my.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,13 +217,15 @@
 		E4FD6D262112B56A00ECAF4E /* internal */ = {
 			isa = PBXGroup;
 			children = (
-				E4FD6C49210FFD0000ECAF4E /* Info.plist */,
-				E41F75AC20C680D500399E42 /* TCodableClass.swift */,
-				E41F75AD20C680D500399E42 /* TCodableStruct.swift */,
 				E4FD6C58211003FE00ECAF4E /* AutoEquatable.swift */,
 				E41F762920C7C35C00399E42 /* default_array.json */,
 				E41F762B20C7C6DB00399E42 /* default_dictionary.json */,
 				E41F75AE20C680D500399E42 /* default.json */,
+				E4FD6C49210FFD0000ECAF4E /* Info.plist */,
+				E4FD6DED2119403D00ECAF4E /* my.json */,
+				E4FD6DEA21193FD300ECAF4E /* MyClass.swift */,
+				E41F75AC20C680D500399E42 /* TCodableClass.swift */,
+				E41F75AD20C680D500399E42 /* TCodableStruct.swift */,
 			);
 			path = internal;
 			sourceTree = "<group>";
@@ -346,6 +354,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4FD6DEE2119403D00ECAF4E /* my.json in Resources */,
 				E41F75A720C67A2F00399E42 /* LaunchScreen.storyboard in Resources */,
 				E41F75B120C680D500399E42 /* default.json in Resources */,
 				E41F762A20C7C37300399E42 /* default_array.json in Resources */,
@@ -362,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4FD6C52210FFD5100ECAF4E /* default_dictionary.json in Resources */,
+				E4FD6DEF2119403D00ECAF4E /* my.json in Resources */,
 				E4FD6C50210FFD4C00ECAF4E /* default.json in Resources */,
 				E4FD6C51210FFD4F00ECAF4E /* default_array.json in Resources */,
 			);
@@ -404,6 +414,7 @@
 				E41F75AF20C680D500399E42 /* TCodableClass.swift in Sources */,
 				E41F75B020C680D500399E42 /* TCodableStruct.swift in Sources */,
 				E4FD6C59211003FE00ECAF4E /* AutoEquatable.swift in Sources */,
+				E4FD6DEB21193FD300ECAF4E /* MyClass.swift in Sources */,
 				E41F762720C68B9500399E42 /* show_all_type.generated.swift in Sources */,
 				E4FD6C5C2110045D00ECAF4E /* AutoEquatable.generated.swift in Sources */,
 				E41F759D20C67A2F00399E42 /* AppDelegate.swift in Sources */,
@@ -416,6 +427,7 @@
 			files = (
 				E4FD6C5D2110045D00ECAF4E /* AutoEquatable.generated.swift in Sources */,
 				E4FD6C54210FFDB000ECAF4E /* TCodableStruct.swift in Sources */,
+				E4FD6DEC21193FD300ECAF4E /* MyClass.swift in Sources */,
 				E4FD6C53210FFDAE00ECAF4E /* TCodableClass.swift in Sources */,
 				E4FD6C48210FFD0000ECAF4E /* CICOAutoCodableTests.swift in Sources */,
 				E4FD6C5A211003FE00ECAF4E /* AutoEquatable.swift in Sources */,

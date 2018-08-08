@@ -6,16 +6,13 @@
 //  Copyright © 2018 cico. All rights reserved.
 //
 
-import UIKit
 import CICOAutoCodable
 
 class TCodableClass: CICOAutoCodable {
     private(set) var name: String?
     private(set) var stringValue: String?
-//    private(set) var stringValue: Int?
     private(set) var dateValue: Date?
     private(set) var intValue: Int = 1
-//    private(set) var intValue: String?
     private(set) var doubleValue: Double?
     private(set) var boolValue: Bool?
     private(set) var next: TCodableClass?
@@ -33,7 +30,6 @@ extension TCodableClass {
         case intValue = "int"
         case doubleValue = "double"
         case boolValue = "bool"
-        case next = "next"
         case arrayValue = "array"
         case privateStringValue = "private"
     }
@@ -46,11 +42,11 @@ extension TCodableClass {
         case intValue = "int"
         case doubleValue = "double"
         case boolValue = "bool"
-        case next = "next"
         case arrayValue = "array"
         case privateStringValue = "private"
 // sourcery:inline:auto:TCodableClass.CodingKeys.CICOAutoCodable_Auto_Generated_CodingKeys
         case name
+        case next
         case dicValue
         case url
 // sourcery:inline:auto:TCodableClass..CICOAutoCodable_Auto_Generated_CodingKeys_Tail

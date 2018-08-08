@@ -6,7 +6,6 @@
 //  Copyright © 2018 cico. All rights reserved.
 //
 
-import UIKit
 import CICOAutoCodable
 
 struct TCodableStruct: CICOAutoCodable {

@@ -22,9 +22,10 @@ class ViewController: UIViewController {
     }
 
     @IBAction func testBtnAction(_ sender: Any) {
-        self.testCodableObject()
+//        self.testCodableObject()
 //        self.testCodableArray()
 //        self.testCodableDictionary()
+        self.testMyClass()
     }
     
     private func testCodableObject() {
@@ -96,6 +97,20 @@ class ViewController: UIViewController {
         let json2 = object2?.toJSONString(jsonEncoder: self.defaultJSONEncoder())
         if let json2 = json2 {
             print("\(json2)")
+        }
+    }
+    
+    private func testMyClass() {
+        let myJSONString = self.jsonString(name: "my")
+ 
+        let object = MyClass.init(jsonString: myJSONString, jsonDecoder: self.defaultJSONDecoder())
+        if let object = object {
+            print("\(object)")
+        }
+        
+        let jsonString = object?.toJSONString(jsonEncoder: self.defaultJSONEncoder())
+        if let json = jsonString {
+            print("\(json)")
         }
     }
     
