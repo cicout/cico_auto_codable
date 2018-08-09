@@ -88,8 +88,8 @@ let jsonString = object?.toJSONString(jsonEncoder: encoder)
 You don't need to write any mapping code when there is no custom mapping relationship using codable. However, you need to manually define the CodingKeys enumeration and list all the mappings, including the part that does not require a custom mapping, when there is any custom mapping relationship. CICOAutoCodable can complete the code for you automaticaly using sourcery.
 
 ### About Sourcery
-[Sourcery](https://github.com/krzysztofzablocki/Sourcery)  
-[Sourcery Reference](https://cdn.rawgit.com/krzysztofzablocki/Sourcery/master/docs/index.html)
+* [Sourcery](https://github.com/krzysztofzablocki/Sourcery)  
+* [Sourcery Reference](https://cdn.rawgit.com/krzysztofzablocki/Sourcery/master/docs/index.html)
 
 ### Install Sourcery
 1. Copy "sourcery" directory in this framework source into your project;
