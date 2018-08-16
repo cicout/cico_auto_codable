@@ -21,6 +21,12 @@ class TCodableClass: CICOAutoCodable {
     
     private var privateStringValue: String?
     private var url: URL?
+    
+    var testInt: Int! = 0
+    
+    required init(from decoder: Decoder) throws {
+        
+    }
 }
 
 extension TCodableClass {
@@ -49,6 +55,7 @@ extension TCodableClass {
         case next
         case dicValue
         case url
+        case testInt
 // sourcery:inline:auto:TCodableClass..CICOAutoCodable_Auto_Generated_CodingKeys_Tail
     }
 // sourcery:end

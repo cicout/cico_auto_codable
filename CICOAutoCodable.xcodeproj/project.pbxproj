@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E418ABF921252D57002BD333 /* OCCodingObjectWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E418ABF721252D57002BD333 /* OCCodingObjectWrapper.swift */; };
+		E418ABFA21252D57002BD333 /* OCEnumWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E418ABF821252D57002BD333 /* OCEnumWrapper.swift */; };
 		E41F758A20C6772700399E42 /* CICOAutoCodable.h in Headers */ = {isa = PBXBuildFile; fileRef = E41F758820C6772700399E42 /* CICOAutoCodable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E41F759320C677A300399E42 /* JSONDecoder+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F759020C677A200399E42 /* JSONDecoder+String.swift */; };
 		E41F759420C677A300399E42 /* CICOAutoCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F759120C677A200399E42 /* CICOAutoCodable.swift */; };
@@ -75,6 +77,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E418ABF721252D57002BD333 /* OCCodingObjectWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCCodingObjectWrapper.swift; sourceTree = "<group>"; };
+		E418ABF821252D57002BD333 /* OCEnumWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCEnumWrapper.swift; sourceTree = "<group>"; };
 		E41F758520C6772700399E42 /* CICOAutoCodable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CICOAutoCodable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E41F758820C6772700399E42 /* CICOAutoCodable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CICOAutoCodable.h; sourceTree = "<group>"; };
 		E41F758920C6772700399E42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -161,6 +165,8 @@
 				E41F758920C6772700399E42 /* Info.plist */,
 				E41F759020C677A200399E42 /* JSONDecoder+String.swift */,
 				E41F759220C677A300399E42 /* JSONEncoder+String.swift */,
+				E418ABF721252D57002BD333 /* OCCodingObjectWrapper.swift */,
+				E418ABF821252D57002BD333 /* OCEnumWrapper.swift */,
 			);
 			path = CICOAutoCodable;
 			sourceTree = "<group>";
@@ -400,8 +406,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E418ABF921252D57002BD333 /* OCCodingObjectWrapper.swift in Sources */,
 				E41F759320C677A300399E42 /* JSONDecoder+String.swift in Sources */,
 				E41F759420C677A300399E42 /* CICOAutoCodable.swift in Sources */,
+				E418ABFA21252D57002BD333 /* OCEnumWrapper.swift in Sources */,
 				E41F759520C677A300399E42 /* JSONEncoder+String.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
