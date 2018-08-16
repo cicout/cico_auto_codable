@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		E418ABF921252D57002BD333 /* OCCodingObjectWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E418ABF721252D57002BD333 /* OCCodingObjectWrapper.swift */; };
 		E418ABFA21252D57002BD333 /* OCEnumWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E418ABF821252D57002BD333 /* OCEnumWrapper.swift */; };
+		E41947232125964000A43398 /* OCTestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E41947222125964000A43398 /* OCTestClass.m */; };
+		E41947252125990F00A43398 /* SwiftTestClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41947242125990F00A43398 /* SwiftTestClass.swift */; };
+		E4194727212599F100A43398 /* WrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4194726212599F100A43398 /* WrapperTests.swift */; };
 		E41F758A20C6772700399E42 /* CICOAutoCodable.h in Headers */ = {isa = PBXBuildFile; fileRef = E41F758820C6772700399E42 /* CICOAutoCodable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E41F759320C677A300399E42 /* JSONDecoder+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F759020C677A200399E42 /* JSONDecoder+String.swift */; };
 		E41F759420C677A300399E42 /* CICOAutoCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F759120C677A200399E42 /* CICOAutoCodable.swift */; };
@@ -79,6 +82,11 @@
 /* Begin PBXFileReference section */
 		E418ABF721252D57002BD333 /* OCCodingObjectWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCCodingObjectWrapper.swift; sourceTree = "<group>"; };
 		E418ABF821252D57002BD333 /* OCEnumWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCEnumWrapper.swift; sourceTree = "<group>"; };
+		E41947202125964000A43398 /* CICOAutoCodableTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CICOAutoCodableTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		E41947212125964000A43398 /* OCTestClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCTestClass.h; sourceTree = "<group>"; };
+		E41947222125964000A43398 /* OCTestClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCTestClass.m; sourceTree = "<group>"; };
+		E41947242125990F00A43398 /* SwiftTestClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTestClass.swift; sourceTree = "<group>"; };
+		E4194726212599F100A43398 /* WrapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapperTests.swift; sourceTree = "<group>"; };
 		E41F758520C6772700399E42 /* CICOAutoCodable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CICOAutoCodable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E41F758820C6772700399E42 /* CICOAutoCodable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CICOAutoCodable.h; sourceTree = "<group>"; };
 		E41F758920C6772700399E42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -216,6 +224,7 @@
 			children = (
 				E4FD6D262112B56A00ECAF4E /* internal */,
 				E4FD6C47210FFD0000ECAF4E /* CICOAutoCodableTests.swift */,
+				E4194726212599F100A43398 /* WrapperTests.swift */,
 			);
 			path = CICOAutoCodableTests;
 			sourceTree = "<group>";
@@ -224,14 +233,18 @@
 			isa = PBXGroup;
 			children = (
 				E4FD6C58211003FE00ECAF4E /* AutoEquatable.swift */,
+				E41947202125964000A43398 /* CICOAutoCodableTests-Bridging-Header.h */,
 				E41F762920C7C35C00399E42 /* default_array.json */,
 				E41F762B20C7C6DB00399E42 /* default_dictionary.json */,
 				E41F75AE20C680D500399E42 /* default.json */,
 				E4FD6C49210FFD0000ECAF4E /* Info.plist */,
 				E4FD6DED2119403D00ECAF4E /* my.json */,
 				E4FD6DEA21193FD300ECAF4E /* MyClass.swift */,
+				E41947212125964000A43398 /* OCTestClass.h */,
+				E41947222125964000A43398 /* OCTestClass.m */,
 				E41F75AC20C680D500399E42 /* TCodableClass.swift */,
 				E41F75AD20C680D500399E42 /* TCodableStruct.swift */,
+				E41947242125990F00A43398 /* SwiftTestClass.swift */,
 			);
 			path = internal;
 			sourceTree = "<group>";
@@ -325,6 +338,7 @@
 					};
 					E4FD6C44210FFD0000ECAF4E = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -434,9 +448,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4FD6C5D2110045D00ECAF4E /* AutoEquatable.generated.swift in Sources */,
+				E41947232125964000A43398 /* OCTestClass.m in Sources */,
 				E4FD6C54210FFDB000ECAF4E /* TCodableStruct.swift in Sources */,
 				E4FD6DEC21193FD300ECAF4E /* MyClass.swift in Sources */,
 				E4FD6C53210FFDAE00ECAF4E /* TCodableClass.swift in Sources */,
+				E4194727212599F100A43398 /* WrapperTests.swift in Sources */,
+				E41947252125990F00A43398 /* SwiftTestClass.swift in Sources */,
 				E4FD6C48210FFD0000ECAF4E /* CICOAutoCodableTests.swift in Sources */,
 				E4FD6C5A211003FE00ECAF4E /* AutoEquatable.swift in Sources */,
 			);
@@ -697,6 +714,7 @@
 		E4FD6C4D210FFD0000ECAF4E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CICOAutoCodableTests/internal/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
@@ -707,6 +725,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cico.CICOAutoCodableTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CICOAutoCodableTests/internal/CICOAutoCodableTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = arm64;
@@ -716,6 +736,7 @@
 		E4FD6C4E210FFD0000ECAF4E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CICOAutoCodableTests/internal/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
@@ -726,6 +747,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cico.CICOAutoCodableTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CICOAutoCodableTests/internal/CICOAutoCodableTests-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = arm64;

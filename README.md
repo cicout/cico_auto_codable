@@ -83,7 +83,57 @@ let encoder = JSONEncoder()
 encoder.dateEncodingStrategy = .millisecondsSince1970
 let jsonString = object?.toJSONString(jsonEncoder: encoder)
 ```
+  
+  
+## OBJ-C Wrapper
+* **OCCodingObjectWrapper**  
+OCCodingObjectWrapper can make NSCoding Class in OBJ-C conform to Codable protocol in Swift.
+```objc
+@interface OCTestClass : NSObject <NSCoding>
 
+@property (nonatomic, strong) NSString *text;
+
+@end
+
+@implementation OCTestClass
+
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super init];
+    if (self) {
+        self.text = [coder decodeObjectForKey:@"text"];
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)coder
+{
+    [coder encodeObject:self.text forKey:@"text"];
+}
+
+@end
+``` 
+```swift
+class SwiftTestClass: CICOAutoCodable {
+    var objectValue: OCCodingObjectWrapper<OCTestClass>?
+}
+``` 
+
+* **OCEnumWrapper**  
+OCEnumWrapper can make integer enum in OBJ-C conform to Codable protocol in Swift.
+```objc
+NS_ENUM(NSInteger, OCTestIntEnum) {
+    one = 1,
+    two
+};
+``` 
+```swift
+class SwiftTestClass: CICOAutoCodable {
+    var enumValue: OCEnumWrapper<OCTestIntEnum>?
+}
+```
+  
+  
 ## Auto Code Completion
 You don't need to write any mapping code when there is no custom mapping relationship using codable. However, you need to manually define the CodingKeys enumeration and list all the mappings, including the part that does not require a custom mapping, when there is any custom mapping relationship. CICOAutoCodable can complete the code for you automaticaly using sourcery.
 
@@ -93,16 +143,16 @@ You don't need to write any mapping code when there is no custom mapping relatio
 
 ### Install Sourcery
 1. Copy "sourcery" directory in this framework source into your project;
-2. Get the latest sourcery by CocoaPod; (replace "**yourProjectDir**" with your real project directory)  
+2. Get the latest sourcery by CocoaPod; (replace `{YourProjectDir}` with your real project directory)  
 ```
-cd "yourProjectDir"/sourcery/source
+cd "{YourProjectDir}"/sourcery/source
 pod update
 ```
-3. Open "yourProjectTarget" -> "Build Phases" -> "+" -> "New Run Script Phase", and add new run script below: (replace "**yourProjectName**" with your real project name)   
+3. Open "yourProjectTarget" -> "Build Phases" -> "+" -> "New Run Script Phase", and add new run script below: (replace `{YourProjectName}` with your real project name)   
 ```
 if [ "${CONFIGURATION}" = "Debug" ]; then
 echo "[***** Start Running CICOAutoCodable Script *****]"
-./sourcery/source/Pods/Sourcery/bin/sourcery --sources ./Carthage/Checkouts/cico_auto_codable/CICOAutoCodable --sources ./"yourProjectName" --templates ./Carthage/Checkouts/cico_auto_codable/sourcery/templates/ --output ./sourcery/auto_generated
+./sourcery/source/Pods/Sourcery/bin/sourcery --sources ./Carthage/Checkouts/cico_auto_codable/CICOAutoCodable --sources ./"{YourProjectName}" --templates ./Carthage/Checkouts/cico_auto_codable/sourcery/templates/ --output ./sourcery/auto_generated
 echo "[***** End Running CICOAutoCodable Script *****]"
 fi
 ```
