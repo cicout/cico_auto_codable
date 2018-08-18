@@ -43,4 +43,34 @@ class WrapperTests: XCTestCase {
         XCTAssert(valuex!.enumValue!.value == value.enumValue!.value, "enum value unequal")
     }
     
+    func test_Empty_Array_Wrapper() {
+        var emptyArray = [OCTestClass].init()
+        
+        let wrapper = OCCodingObjectArrayWrapper<OCTestClass>.init(value: emptyArray)
+        let jsonString = wrapper.toJSONString()
+        XCTAssertNotNil(jsonString, "model to json failed")
+        
+        let wrapperx = OCCodingObjectArrayWrapper<OCTestClass>.init(jsonString: jsonString!)
+        XCTAssertNotNil(wrapperx, "json to model failed")
+    }
+    
+    func test_Array_Wrapper() {
+        var array = [OCTestClass].init()
+        
+        let objectValue = OCTestClass.init()
+        objectValue.text = "test_text"
+        array.append(objectValue)
+        
+        let wrapper = OCCodingObjectArrayWrapper<OCTestClass>.init(value: array)
+        let jsonString = wrapper.toJSONString()
+        XCTAssertNotNil(jsonString, "model to json failed")
+        
+        let wrapperx = OCCodingObjectArrayWrapper<OCTestClass>.init(jsonString: jsonString!)
+        XCTAssertNotNil(wrapperx, "json to model failed")
+        
+        let objectValueX = wrapperx!.value.first
+        XCTAssertNotNil(objectValueX, "invalid array value")
+        
+        XCTAssert(objectValueX!.text == objectValue.text, "invalid object value")
+    }
 }

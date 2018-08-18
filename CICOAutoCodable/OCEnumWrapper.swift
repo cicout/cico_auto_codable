@@ -14,12 +14,13 @@ public struct OCEnumWrapper<T: RawRepresentable>: Codable where T.RawValue: Coda
             self.rawValue = newValue.rawValue
         }
         get {
-            return T.init(rawValue: rawValue)!
+            return T.init(rawValue: self.rawValue)!
         }
     }
-    private var rawValue: T.RawValue!
+    private var rawValue: T.RawValue
 
     public init(value: T) {
+        self.rawValue = value.rawValue
         self.value = value
     }
 }
