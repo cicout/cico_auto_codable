@@ -10,7 +10,6 @@ import Foundation
 
 public struct OCCodingObjectArrayWrapper<T: NSCoding>: Codable {
     public var value: [T]
-    private var data: Data = Data.init()
     
     public init(value: [T]) {
         self.value = value
@@ -26,9 +25,9 @@ public extension OCCodingObjectArrayWrapper {
 public extension OCCodingObjectArrayWrapper {
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.data = try container.decode(Data.self, forKey: .data)
+        let data = try container.decode(Data.self, forKey: .data)
         
-        self.value = NSKeyedUnarchiver.unarchiveObject(with: self.data) as! [T]
+        self.value = NSKeyedUnarchiver.unarchiveObject(with: data) as! [T]
     }
     
     public func encode(to encoder: Encoder) throws {
