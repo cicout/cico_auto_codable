@@ -1,5 +1,5 @@
 PODS:
-  - Sourcery (0.13.1)
+  - Sourcery (0.15.0)
 
 DEPENDENCIES:
   - Sourcery
@@ -9,7 +9,7 @@ SPEC REPOS:
     - Sourcery
 
 SPEC CHECKSUMS:
-  Sourcery: 9ef51b8777516f204d82996441f293813158d0d7
+  Sourcery: 5895672cae353cdbfa95f3f4aaeb75a664d76f6a
 
 PODFILE CHECKSUM: ab965d8e51a4a29b2659e4ade431f0d578cba24c
 
