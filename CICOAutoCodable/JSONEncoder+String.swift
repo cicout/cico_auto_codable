@@ -9,6 +9,11 @@
 import Foundation
 
 public extension JSONEncoder {
+    /// Encode object to JSON data;
+    ///
+    /// - parameter object: encodable object;
+    ///
+    /// - returns: JSON data, nil when invalid;
     public func encodeToJSONData<T: Encodable>(object: T) -> Data? {
         do {
             let data = try self.encode(object)
@@ -19,6 +24,11 @@ public extension JSONEncoder {
         }
     }
     
+    /// Encode object to JSON string;
+    ///
+    /// - parameter object: encodable object;
+    ///
+    /// - returns: JSON string, nil when invalid;
     public func encodeToJSONString<T: Encodable>(object: T) -> String? {
         guard let jsonData = self.encodeToJSONData(object: object) else {
             return nil
@@ -28,25 +38,24 @@ public extension JSONEncoder {
         return jsonString
     }
     
-    public func encodeToJSONObject<T: Encodable, R>(object: T, returnType: R.Type) -> R? {
+    /// Encode object to JSON object;
+    ///
+    /// - parameter object: encodable object;
+    ///
+    /// - returns: JSON object, nil when invalid;
+    ///
+    /// - see: JSONSerialization.jsonObject(with:options:)
+    public func encodeToJSONObject<T: Encodable>(object: T) -> Any? {
         guard let jsonData = self.encodeToJSONData(object: object) else {
             return nil
         }
         
         do {
-            let object = try JSONSerialization.jsonObject(with: jsonData, options: .allowFragments) as? R
+            let object = try JSONSerialization.jsonObject(with: jsonData, options: .allowFragments)
             return object
         } catch let error {
             print("[JSON_SERIALIZATION_ERROR]: \(error)")
             return nil
         }
-    }
-    
-    public func encodeToJSONDictionary<T: Encodable>(object: T) -> Dictionary<AnyHashable, Any>? {
-        return self.encodeToJSONObject(object: object, returnType: Dictionary<AnyHashable, Any>.self)
-    }
-    
-    public func encodeToJSONArray<T: Encodable>(object: [T]) -> Array<Any>? {
-        return self.encodeToJSONObject(object: object, returnType: Array<Any>.self)
     }
 }

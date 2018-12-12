@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Transfer OBJ-C NSCoding object array to SWIFT codable object array;
 public struct OCCodingObjectArrayWrapper<T: NSCoding>: Codable {
     public var value: [T]
     

@@ -14,6 +14,12 @@ private let kDefaultJSONEncoder = JSONEncoder()
 public protocol CICOAutoCodable: Codable {}
 
 public extension Decodable {
+    /// Init with JSON data;
+    ///
+    /// - parameter jsonData: JSON encoded data;
+    /// - parameter jsonDecoder: JSON decoder, it will use default JSONDecoder when nil;
+    ///
+    /// - returns: Init object, nil when invalid JSON data;
     public init?(jsonData: Data, jsonDecoder: JSONDecoder? = nil) {
         let decoder: JSONDecoder
         if let jsonDecoder = jsonDecoder {
@@ -29,6 +35,12 @@ public extension Decodable {
         }
     }
     
+    /// Init with JSON string;
+    ///
+    /// - parameter jsonString: JSON encoded string;
+    /// - parameter jsonDecoder: JSON decoder, it will use default JSONDecoder when nil;
+    ///
+    /// - returns: Init object, nil when invalid JSON string;
     public init?(jsonString: String, jsonDecoder: JSONDecoder? = nil) {
         let decoder: JSONDecoder
         if let jsonDecoder = jsonDecoder {
@@ -44,6 +56,15 @@ public extension Decodable {
         }
     }
     
+    /// Init with JSON object(Array/Dictionary);
+    ///
+    /// - parameter jsonObject: JSON encoded object, it must be json array or json dictionary;
+    ///                         It will be transfered to JSON data using JSONSerialization;
+    /// - parameter jsonDecoder: JSON decoder, it will use default JSONDecoder when nil;
+    ///
+    /// - returns: Init object, nil when invalid JSON object;
+    ///
+    /// - see: JSONSerialization.isValidJSONObject(_)
     public init?(jsonObject: Any, jsonDecoder: JSONDecoder? = nil) {
         let decoder: JSONDecoder
         if let jsonDecoder = jsonDecoder {
@@ -61,6 +82,11 @@ public extension Decodable {
 }
 
 public extension Encodable {
+    /// Transfer self to JSON data;
+    ///
+    /// - parameter jsonEncoder: JSON encoder, it will use default JSONEncoder when nil;
+    ///
+    /// - returns: JSON data, nil when invalid;
     public func toJSONData(jsonEncoder: JSONEncoder? = nil) -> Data? {
         let encoder: JSONEncoder
         if let jsonEncoder = jsonEncoder {
@@ -72,6 +98,11 @@ public extension Encodable {
         return encoder.encodeToJSONData(object: self)
     }
     
+    /// Transfer self to JSON string;
+    ///
+    /// - parameter jsonEncoder: JSON encoder, it will use default JSONEncoder when nil;
+    ///
+    /// - returns: JSON string, nil when invalid;
     public func toJSONString(jsonEncoder: JSONEncoder? = nil) -> String? {
         let encoder: JSONEncoder
         if let jsonEncoder = jsonEncoder {
@@ -83,7 +114,14 @@ public extension Encodable {
         return encoder.encodeToJSONString(object: self)
     }
     
-    public func toJSONObject<R>(returnType: R.Type, jsonEncoder: JSONEncoder? = nil) -> R? {
+    /// Transfer self to JSON object;
+    ///
+    /// - parameter jsonEncoder: JSON encoder, it will use default JSONEncoder when nil;
+    ///
+    /// - returns: JSON object, nil when invalid;
+    ///
+    /// - see: JSONSerialization.jsonObject(with:options:)
+    public func toJSONObject(jsonEncoder: JSONEncoder? = nil) -> Any? {
         let encoder: JSONEncoder
         if let jsonEncoder = jsonEncoder {
             encoder = jsonEncoder
@@ -91,15 +129,7 @@ public extension Encodable {
             encoder = kDefaultJSONEncoder
         }
         
-        return encoder.encodeToJSONObject(object: self, returnType: returnType)
-    }
-    
-    public func toJSONDictionary(jsonEncoder: JSONEncoder? = nil) -> Dictionary<AnyHashable, Any>? {
-        return self.toJSONObject(returnType: Dictionary<AnyHashable, Any>.self)
-    }
-    
-    public func toJSONArray(jsonEncoder: JSONEncoder? = nil) -> Array<Any>? {
-        return self.toJSONObject(returnType: Array<Any>.self)
+        return encoder.encodeToJSONObject(object: self)
     }
 }
 

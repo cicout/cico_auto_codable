@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Transfer OBJ-C enum object to SWIFT codable object;
 public struct OCEnumWrapper<T: RawRepresentable>: Codable where T.RawValue: Codable {
     public var value: T {
         set {
