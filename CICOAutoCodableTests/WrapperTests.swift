@@ -44,7 +44,7 @@ class WrapperTests: XCTestCase {
     }
     
     func test_Empty_Array_Wrapper() {
-        var emptyArray = [OCTestClass].init()
+        let emptyArray = [OCTestClass].init()
         
         let wrapper = OCCodingObjectArrayWrapper<OCTestClass>.init(value: emptyArray)
         let jsonString = wrapper.toJSONString()
@@ -72,5 +72,27 @@ class WrapperTests: XCTestCase {
         XCTAssertNotNil(objectValueX, "invalid array value")
         
         XCTAssert(objectValueX!.text == objectValue.text, "invalid object value")
+    }
+    
+    func test_C_Struct_Wrapper() {
+        let point = CGPoint.init(x: 1, y: 2)
+        let pointWrapper = CStructWrapper<CGPoint>.init(value: point)
+        
+        let pointJSONString = pointWrapper.toJSONString()
+        XCTAssertNotNil(pointJSONString, "model to json failed")
+        
+        let pointWrapperX = CStructWrapper<CGPoint>.init(jsonString: pointJSONString!)
+        XCTAssertNotNil(pointWrapperX, "json to model failed")
+        XCTAssert(pointWrapperX!.value == point, "invalid point")
+        
+        let rect = CGRect.init(x: 1, y: 2, width: 3, height: 4)
+        let rectWrapper = CStructWrapper<CGRect>.init(value: rect)
+        
+        let rectJSONString = rectWrapper.toJSONString()
+        XCTAssertNotNil(rectJSONString, "model to json failed")
+        
+        let rectWrapperX = CStructWrapper<CGRect>.init(jsonString: rectJSONString!)
+        XCTAssertNotNil(rectWrapperX, "json to model failed")
+        XCTAssert(rectWrapperX!.value == rect, "invalid rect")
     }
 }

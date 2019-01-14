@@ -32,6 +32,7 @@
 		E41F762A20C7C37300399E42 /* default_array.json in Resources */ = {isa = PBXBuildFile; fileRef = E41F762920C7C35C00399E42 /* default_array.json */; };
 		E41F762C20C7C6ED00399E42 /* default_dictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = E41F762B20C7C6DB00399E42 /* default_dictionary.json */; };
 		E47B3B4C2127BA210037626F /* OCCodingObjectArrayWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47B3B4B2127BA210037626F /* OCCodingObjectArrayWrapper.swift */; };
+		E4CA2E8521EC7FF10056714D /* CStructWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA2E8421EC7FF10056714D /* CStructWrapper.swift */; };
 		E4FD6C48210FFD0000ECAF4E /* CICOAutoCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FD6C47210FFD0000ECAF4E /* CICOAutoCodableTests.swift */; };
 		E4FD6C4A210FFD0000ECAF4E /* CICOAutoCodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E41F758520C6772700399E42 /* CICOAutoCodable.framework */; };
 		E4FD6C50210FFD4C00ECAF4E /* default.json in Resources */ = {isa = PBXBuildFile; fileRef = E41F75AE20C680D500399E42 /* default.json */; };
@@ -110,6 +111,7 @@
 		E41F762920C7C35C00399E42 /* default_array.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = default_array.json; sourceTree = "<group>"; };
 		E41F762B20C7C6DB00399E42 /* default_dictionary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = default_dictionary.json; sourceTree = "<group>"; };
 		E47B3B4B2127BA210037626F /* OCCodingObjectArrayWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCCodingObjectArrayWrapper.swift; sourceTree = "<group>"; };
+		E4CA2E8421EC7FF10056714D /* CStructWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CStructWrapper.swift; sourceTree = "<group>"; };
 		E4FD6C45210FFD0000ECAF4E /* CICOAutoCodableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CICOAutoCodableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4FD6C47210FFD0000ECAF4E /* CICOAutoCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CICOAutoCodableTests.swift; sourceTree = "<group>"; };
 		E4FD6C49210FFD0000ECAF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			children = (
 				E41F758820C6772700399E42 /* CICOAutoCodable.h */,
 				E41F759120C677A200399E42 /* CICOAutoCodable.swift */,
+				E4CA2E8421EC7FF10056714D /* CStructWrapper.swift */,
 				E41F758920C6772700399E42 /* Info.plist */,
 				E41F759020C677A200399E42 /* JSONDecoder+String.swift */,
 				E41F759220C677A300399E42 /* JSONEncoder+String.swift */,
@@ -428,6 +431,7 @@
 				E418ABF921252D57002BD333 /* OCCodingObjectWrapper.swift in Sources */,
 				E41F759320C677A300399E42 /* JSONDecoder+String.swift in Sources */,
 				E41F759420C677A300399E42 /* CICOAutoCodable.swift in Sources */,
+				E4CA2E8521EC7FF10056714D /* CStructWrapper.swift in Sources */,
 				E418ABFA21252D57002BD333 /* OCEnumWrapper.swift in Sources */,
 				E41F759520C677A300399E42 /* JSONEncoder+String.swift in Sources */,
 			);
