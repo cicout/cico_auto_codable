@@ -28,7 +28,12 @@ public extension OCCodingObjectWrapper {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let data = try container.decode(Data.self, forKey: .data)
         
-        self.value = NSKeyedUnarchiver.unarchiveObject(with: data) as! T
+        guard let value = NSKeyedUnarchiver.unarchiveObject(with: data) as? T else {
+            let error = NSError.init(domain: "Invalid data of \(T.self).", code: -999, userInfo: nil) as Error
+            throw error
+        }
+        
+        self.value = value
     }
     
     public func encode(to encoder: Encoder) throws {

@@ -15,7 +15,10 @@ public struct OCEnumWrapper<T: RawRepresentable>: Codable where T.RawValue: Coda
             self.rawValue = newValue.rawValue
         }
         get {
-            return T.init(rawValue: self.rawValue)!
+            guard let value = T.init(rawValue: self.rawValue) else {
+                fatalError("Invalid raw value of \(T.self).")
+            }
+            return value
         }
     }
     private var rawValue: T.RawValue
@@ -29,5 +32,19 @@ public struct OCEnumWrapper<T: RawRepresentable>: Codable where T.RawValue: Coda
 public extension OCEnumWrapper {
     public enum CodingKeys: String, CodingKey {
         case rawValue
+    }
+}
+
+public extension OCEnumWrapper {
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let rawValue = try container.decode(T.RawValue.self, forKey: .rawValue)
+        
+        guard let _ = T.init(rawValue: rawValue) else {
+            let error = NSError.init(domain: "Invalid data of \(T.self).", code: -999, userInfo: nil) as Error
+            throw error
+        }
+        
+        self.rawValue = rawValue
     }
 }

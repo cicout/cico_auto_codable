@@ -19,7 +19,7 @@ public struct CStructWrapper<T: Any>: Codable {
 
 public extension CStructWrapper {
     public enum CodingKeys: String, CodingKey {
-        case data
+        case data = "c_struct_data"
     }
 }
 
@@ -28,17 +28,19 @@ public extension CStructWrapper {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let data = try container.decode(Data.self, forKey: .data)
         
-        self.value = data.withUnsafeBytes { (ptr: UnsafePointer<CChar>) -> T in
-            let size = MemoryLayout<T>.size
-            return ptr.withMemoryRebound(to: T.self, capacity: size, { (valuePtr) -> T in
-                return valuePtr.pointee
-            })
+        let size = MemoryLayout<T>.size
+        guard data.count == size else {
+            let error = NSError.init(domain: "Invalid data of \(T.self).", code: -999, userInfo: nil) as Error
+            throw error
+        }
+        
+        self.value = data.withUnsafeBytes { (ptr: UnsafePointer<T>) -> T in
+            return ptr.pointee
         }
     }
     
     public func encode(to encoder: Encoder) throws {
-        var currentValue = self.value
-        let data = withUnsafeBytes(of: &currentValue) { (ptr) -> Data in
+        let data = withUnsafeBytes(of: self.value) { (ptr) -> Data in
             return Data.init(bytes: ptr)
         }
         

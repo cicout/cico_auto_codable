@@ -25,3 +25,21 @@
 }
 
 @end
+
+@implementation OCTestClassX
+
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super init];
+    if (self) {
+        self.textx = [coder decodeObjectForKey:@"textx"];
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)coder
+{
+    [coder encodeObject:self.textx forKey:@"textx"];
+}
+
+@end
