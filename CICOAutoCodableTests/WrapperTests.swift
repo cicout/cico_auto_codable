@@ -106,23 +106,40 @@ class WrapperTests: XCTestCase {
     func test_C_Struct_Wrapper() {
         let point = CGPoint.init(x: 1, y: 2)
         let pointWrapper = CStructWrapper<CGPoint>.init(value: point)
-        
+
         let pointJSONString = pointWrapper.toJSONString()
         XCTAssertNotNil(pointJSONString, "model to json failed")
-        
+
         let pointWrapperX = CStructWrapper<CGPoint>.init(jsonString: pointJSONString!)
         XCTAssertNotNil(pointWrapperX, "json to model failed")
         XCTAssert(pointWrapperX!.value == point, "invalid point")
-        
+
         let rect = CGRect.init(x: 1, y: 2, width: 3, height: 4)
         let rectWrapper = CStructWrapper<CGRect>.init(value: rect)
-        
+
         let rectJSONString = rectWrapper.toJSONString()
         XCTAssertNotNil(rectJSONString, "model to json failed")
-        
+
         let rectWrapperX = CStructWrapper<CGRect>.init(jsonString: rectJSONString!)
         XCTAssertNotNil(rectWrapperX, "json to model failed")
         XCTAssert(rectWrapperX!.value == rect, "invalid rect")
+        
+        print("TCStruct:\nsize: \(MemoryLayout<TCStruct>.size)\nstride: \(MemoryLayout<TCStruct>.stride)\nalignment: \(MemoryLayout<TCStruct>.alignment)\n")
+        
+        let cs = TCStruct.init()
+        let csWrapper = CStructWrapper<TCStruct>.init(value: cs)
+        
+        let csJSONString = csWrapper.toJSONString()
+        XCTAssertNotNil(csJSONString, "model to json failed")
+        
+        let csWrapperX = CStructWrapper<TCStruct>.init(jsonString: csJSONString!)
+        XCTAssertNotNil(csWrapperX, "json to model failed")
+        XCTAssert(csWrapperX!.value.int1 == cs.int1 &&
+            csWrapperX!.value.int2 == cs.int2 &&
+            csWrapperX!.value.int3 == cs.int3 &&
+            csWrapperX!.value.int4 == cs.int4 &&
+            csWrapperX!.value.int5 == cs.int5 &&
+            csWrapperX!.value.int6 == cs.int6, "invalid cs")
         
         let orientation = GLKQuaternionMake(1, 2, 3, 4)
         let orientationWrapper = CStructWrapper<GLKQuaternion>.init(value: orientation)

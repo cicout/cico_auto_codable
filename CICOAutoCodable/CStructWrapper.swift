@@ -9,6 +9,9 @@
 import Foundation
 
 /// Transfer C Struct object to SWIFT codable object;
+///
+/// - WARNING: Don't use it for class, it is struct only!!!
+///
 public struct CStructWrapper<T: Any>: Codable {
     public var value: T
     
