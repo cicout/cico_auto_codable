@@ -18,13 +18,13 @@ public struct OCCodingObjectArrayWrapper<T: NSCoding>: Codable {
 }
 
 public extension OCCodingObjectArrayWrapper {
-    public enum CodingKeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case data
     }
 }
 
 public extension OCCodingObjectArrayWrapper {
-    public init(from decoder: Decoder) throws {
+    init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let data = try container.decode(Data.self, forKey: .data)
         
@@ -36,7 +36,7 @@ public extension OCCodingObjectArrayWrapper {
         self.value = value
     }
     
-    public func encode(to encoder: Encoder) throws {
+    func encode(to encoder: Encoder) throws {
         let data = NSKeyedArchiver.archivedData(withRootObject: value)
         
         var container = encoder.container(keyedBy: CodingKeys.self)

@@ -14,7 +14,7 @@ public extension JSONEncoder {
     /// - parameter object: encodable object;
     ///
     /// - returns: JSON data, nil when invalid;
-    public func encodeToJSONData<T: Encodable>(object: T) -> Data? {
+    func encodeToJSONData<T: Encodable>(object: T) -> Data? {
         do {
             let data = try self.encode(object)
             return data
@@ -29,7 +29,7 @@ public extension JSONEncoder {
     /// - parameter object: encodable object;
     ///
     /// - returns: JSON string, nil when invalid;
-    public func encodeToJSONString<T: Encodable>(object: T) -> String? {
+    func encodeToJSONString<T: Encodable>(object: T) -> String? {
         guard let jsonData = self.encodeToJSONData(object: object) else {
             return nil
         }
@@ -45,7 +45,7 @@ public extension JSONEncoder {
     /// - returns: JSON object, nil when invalid;
     ///
     /// - see: JSONSerialization.jsonObject(with:options:)
-    public func encodeToJSONObject<T: Encodable>(object: T) -> Any? {
+    func encodeToJSONObject<T: Encodable>(object: T) -> Any? {
         guard let jsonData = self.encodeToJSONData(object: object) else {
             return nil
         }

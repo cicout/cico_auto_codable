@@ -30,13 +30,13 @@ public struct OCEnumWrapper<T: RawRepresentable>: Codable where T.RawValue: Coda
 }
 
 public extension OCEnumWrapper {
-    public enum CodingKeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case rawValue
     }
 }
 
 public extension OCEnumWrapper {
-    public init(from decoder: Decoder) throws {
+    init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let rawValue = try container.decode(T.RawValue.self, forKey: .rawValue)
         

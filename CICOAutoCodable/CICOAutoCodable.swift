@@ -20,7 +20,7 @@ public extension Decodable {
     /// - parameter jsonDecoder: JSON decoder, it will use default JSONDecoder when nil;
     ///
     /// - returns: Init object, nil when invalid JSON data;
-    public init?(jsonData: Data, jsonDecoder: JSONDecoder? = nil) {
+    init?(jsonData: Data, jsonDecoder: JSONDecoder? = nil) {
         let decoder: JSONDecoder
         if let jsonDecoder = jsonDecoder {
             decoder = jsonDecoder
@@ -41,7 +41,7 @@ public extension Decodable {
     /// - parameter jsonDecoder: JSON decoder, it will use default JSONDecoder when nil;
     ///
     /// - returns: Init object, nil when invalid JSON string;
-    public init?(jsonString: String, jsonDecoder: JSONDecoder? = nil) {
+    init?(jsonString: String, jsonDecoder: JSONDecoder? = nil) {
         let decoder: JSONDecoder
         if let jsonDecoder = jsonDecoder {
             decoder = jsonDecoder
@@ -65,7 +65,7 @@ public extension Decodable {
     /// - returns: Init object, nil when invalid JSON object;
     ///
     /// - see: JSONSerialization.isValidJSONObject(_)
-    public init?(jsonObject: Any, jsonDecoder: JSONDecoder? = nil) {
+    init?(jsonObject: Any, jsonDecoder: JSONDecoder? = nil) {
         let decoder: JSONDecoder
         if let jsonDecoder = jsonDecoder {
             decoder = jsonDecoder
@@ -87,7 +87,7 @@ public extension Encodable {
     /// - parameter jsonEncoder: JSON encoder, it will use default JSONEncoder when nil;
     ///
     /// - returns: JSON data, nil when invalid;
-    public func toJSONData(jsonEncoder: JSONEncoder? = nil) -> Data? {
+    func toJSONData(jsonEncoder: JSONEncoder? = nil) -> Data? {
         let encoder: JSONEncoder
         if let jsonEncoder = jsonEncoder {
             encoder = jsonEncoder
@@ -103,7 +103,7 @@ public extension Encodable {
     /// - parameter jsonEncoder: JSON encoder, it will use default JSONEncoder when nil;
     ///
     /// - returns: JSON string, nil when invalid;
-    public func toJSONString(jsonEncoder: JSONEncoder? = nil) -> String? {
+    func toJSONString(jsonEncoder: JSONEncoder? = nil) -> String? {
         let encoder: JSONEncoder
         if let jsonEncoder = jsonEncoder {
             encoder = jsonEncoder
@@ -121,7 +121,7 @@ public extension Encodable {
     /// - returns: JSON object, nil when invalid;
     ///
     /// - see: JSONSerialization.jsonObject(with:options:)
-    public func toJSONObject(jsonEncoder: JSONEncoder? = nil) -> Any? {
+    func toJSONObject(jsonEncoder: JSONEncoder? = nil) -> Any? {
         let encoder: JSONEncoder
         if let jsonEncoder = jsonEncoder {
             encoder = jsonEncoder

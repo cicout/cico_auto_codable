@@ -15,7 +15,7 @@ public extension JSONDecoder {
     /// - parameter jsonData: JSON encoded data;
     ///
     /// - returns: Decodable object, nil when invalid JSON data;
-    public func decodeJSONData<T: Decodable>(_ type: T.Type, from jsonData: Data) -> T? {
+    func decodeJSONData<T: Decodable>(_ type: T.Type, from jsonData: Data) -> T? {
         do {
             let object = try self.decode(type, from: jsonData)
             return object
@@ -31,7 +31,7 @@ public extension JSONDecoder {
     /// - parameter jsonString: JSON encoded string;
     ///
     /// - returns: Decodable object, nil when invalid JSON string;
-    public func decodeJSONString<T: Decodable>(_ type: T.Type, from jsonString: String) -> T? {
+    func decodeJSONString<T: Decodable>(_ type: T.Type, from jsonString: String) -> T? {
         guard let jsonData = jsonString.data(using: .utf8) else {
             return nil
         }
@@ -49,7 +49,7 @@ public extension JSONDecoder {
     /// - returns: Decodable object, nil when invalid JSON object;
     ///
     /// - see: JSONSerialization.isValidJSONObject(_)
-    public func decodeJSONObject<T: Decodable>(_ type: T.Type, from jsonObject: Any) -> T? {
+    func decodeJSONObject<T: Decodable>(_ type: T.Type, from jsonObject: Any) -> T? {
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: jsonObject, options: .prettyPrinted)
             let object = self.decodeJSONData(T.self, from: jsonData)
