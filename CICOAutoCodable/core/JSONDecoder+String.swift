@@ -24,7 +24,7 @@ public extension JSONDecoder {
             return nil
         }
     }
-    
+
     /// Decode JSON string to decodable object;
     ///
     /// - parameter type: Decodable object type;
@@ -35,11 +35,11 @@ public extension JSONDecoder {
         guard let jsonData = jsonString.data(using: .utf8) else {
             return nil
         }
-        
+
         let object = self.decodeJSONData(T.self, from: jsonData)
         return object
     }
-    
+
     /// Decode JSON object to decodable object;
     ///
     /// - parameter type: Decodable object type;

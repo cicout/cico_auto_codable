@@ -60,7 +60,7 @@ extension MyClass {
     enum CICOIgnoredCodingKeys: String {
         case ignoredValue
     }
-    
+
     enum CodingKeys: String, CodingKey {
         case next = "nextValue"
 

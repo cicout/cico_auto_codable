@@ -27,14 +27,14 @@ public extension Decodable {
         } else {
             decoder = kDefaultJSONDecoder
         }
-        
+
         if let object: Self = decoder.decodeJSONData(Self.self, from: jsonData) {
             self = object
         } else {
             return nil
         }
     }
-    
+
     /// Init with JSON string;
     ///
     /// - parameter jsonString: JSON encoded string;
@@ -48,14 +48,14 @@ public extension Decodable {
         } else {
             decoder = kDefaultJSONDecoder
         }
-        
+
         if let object: Self = decoder.decodeJSONString(Self.self, from: jsonString) {
             self = object
         } else {
             return nil
         }
     }
-    
+
     /// Init with JSON object(Array/Dictionary);
     ///
     /// - parameter jsonObject: JSON encoded object, it must be json array or json dictionary;
@@ -72,7 +72,7 @@ public extension Decodable {
         } else {
             decoder = kDefaultJSONDecoder
         }
-        
+
         if let object: Self = decoder.decodeJSONObject(Self.self, from: jsonObject) {
             self = object
         } else {
@@ -94,10 +94,10 @@ public extension Encodable {
         } else {
             encoder = kDefaultJSONEncoder
         }
-        
+
         return encoder.encodeToJSONData(object: self)
     }
-    
+
     /// Transfer self to JSON string;
     ///
     /// - parameter jsonEncoder: JSON encoder, it will use default JSONEncoder when nil;
@@ -110,10 +110,10 @@ public extension Encodable {
         } else {
             encoder = kDefaultJSONEncoder
         }
-        
+
         return encoder.encodeToJSONString(object: self)
     }
-    
+
     /// Transfer self to JSON object;
     ///
     /// - parameter jsonEncoder: JSON encoder, it will use default JSONEncoder when nil;
@@ -128,9 +128,7 @@ public extension Encodable {
         } else {
             encoder = kDefaultJSONEncoder
         }
-        
+
         return encoder.encodeToJSONObject(object: self)
     }
 }
-
-

@@ -20,7 +20,7 @@ struct TCodableStruct: CICOAutoCodable {
     private(set) var next: TCodableClass?
     private(set) var arrayValue: [String]?
     private(set) var dicValue: [String: String]?
-    
+
     private var privateStringValue: String?
 }
 

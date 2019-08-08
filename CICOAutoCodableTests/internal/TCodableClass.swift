@@ -18,14 +18,14 @@ class TCodableClass: CICOAutoCodable {
     private(set) var next: TCodableClass?
     private(set) var arrayValue: [String]?
     private(set) var dicValue: [String: String]?
-    
+
     private var privateStringValue: String?
     private var url: URL?
-    
+
     var testInt: Int! = 0
-    
+
     required init(from decoder: Decoder) throws {
-        
+
     }
 }
 
@@ -39,7 +39,7 @@ extension TCodableClass {
         case arrayValue = "array"
         case privateStringValue = "private"
     }
-    
+
 // sourcery:inline:auto:TCodableClass.CICOAutoCodable_Auto_Generated_CodingKeys_Head
     enum CodingKeys: String, CodingKey {
 // sourcery:inline:auto:TCodableClass.CodingKeys.CICOAutoCodable_Auto_Generated_Custom_CodingKeys

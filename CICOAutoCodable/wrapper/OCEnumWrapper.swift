@@ -39,12 +39,12 @@ public extension OCEnumWrapper {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let rawValue = try container.decode(T.RawValue.self, forKey: .rawValue)
-        
+
         guard let _ = T.init(rawValue: rawValue) else {
             let error = NSError.init(domain: "Invalid data of \(T.self).", code: -999, userInfo: nil) as Error
             throw error
         }
-        
+
         self.rawValue = rawValue
     }
 }

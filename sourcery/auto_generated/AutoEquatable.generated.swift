@@ -2,7 +2,7 @@
 // DO NOT EDIT
 
 // swiftlint:disable file_length
-fileprivate func compareOptionals<T>(lhs: T?, rhs: T?, compare: (_ lhs: T, _ rhs: T) -> Bool) -> Bool {
+private func compareOptionals<T>(lhs: T?, rhs: T?, compare: (_ lhs: T, _ rhs: T) -> Bool) -> Bool {
     switch (lhs, rhs) {
     case let (lValue?, rValue?):
         return compare(lValue, rValue)
@@ -13,7 +13,7 @@ fileprivate func compareOptionals<T>(lhs: T?, rhs: T?, compare: (_ lhs: T, _ rhs
     }
 }
 
-fileprivate func compareArrays<T>(lhs: [T], rhs: [T], compare: (_ lhs: T, _ rhs: T) -> Bool) -> Bool {
+private func compareArrays<T>(lhs: [T], rhs: [T], compare: (_ lhs: T, _ rhs: T) -> Bool) -> Bool {
     guard lhs.count == rhs.count else { return false }
     for (idx, lhsItem) in lhs.enumerated() {
         guard compare(lhsItem, rhs[idx]) else { return false }
@@ -21,7 +21,6 @@ fileprivate func compareArrays<T>(lhs: [T], rhs: [T], compare: (_ lhs: T, _ rhs:
 
     return true
 }
-
 
 // MARK: - AutoEquatable for classes, protocols, structs
 // MARK: - TCodableClass AutoEquatable

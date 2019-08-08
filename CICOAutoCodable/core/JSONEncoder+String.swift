@@ -23,7 +23,7 @@ public extension JSONEncoder {
             return nil
         }
     }
-    
+
     /// Encode object to JSON string;
     ///
     /// - parameter object: encodable object;
@@ -33,11 +33,11 @@ public extension JSONEncoder {
         guard let jsonData = self.encodeToJSONData(object: object) else {
             return nil
         }
-        
+
         let jsonString = String.init(data: jsonData, encoding: .utf8)
         return jsonString
     }
-    
+
     /// Encode object to JSON object;
     ///
     /// - parameter object: encodable object;
@@ -49,7 +49,7 @@ public extension JSONEncoder {
         guard let jsonData = self.encodeToJSONData(object: object) else {
             return nil
         }
-        
+
         do {
             let object = try JSONSerialization.jsonObject(with: jsonData, options: .allowFragments)
             return object
