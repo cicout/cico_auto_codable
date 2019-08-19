@@ -1,5 +1,5 @@
 PODS:
-  - Sourcery (0.16.0)
+  - Sourcery (0.16.2)
 
 DEPENDENCIES:
   - Sourcery
@@ -9,8 +9,8 @@ SPEC REPOS:
     - Sourcery
 
 SPEC CHECKSUMS:
-  Sourcery: 3e55aad9719ee5782ab81eb16addd44d272e4d13
+  Sourcery: 3f406d227efd179773b3c3599ebd1700d1a6013c
 
 PODFILE CHECKSUM: ab965d8e51a4a29b2659e4ade431f0d578cba24c
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.7.5

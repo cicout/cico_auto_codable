@@ -5,6 +5,7 @@
 //  Created by lucky.li on 2018/6/5.
 //  Copyright © 2018 cico. All rights reserved.
 //
+// swiftlint:disable line_length
 
 import UIKit
 

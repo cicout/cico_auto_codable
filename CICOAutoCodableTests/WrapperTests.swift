@@ -124,22 +124,20 @@ class WrapperTests: XCTestCase {
         XCTAssertNotNil(rectWrapperX, "json to model failed")
         XCTAssert(rectWrapperX!.value == rect, "invalid rect")
 
-        print("TCStruct:\nsize: \(MemoryLayout<TCStruct>.size)\nstride: \(MemoryLayout<TCStruct>.stride)\nalignment: \(MemoryLayout<TCStruct>.alignment)\n")
-
-        let cs = TCStruct.init()
-        let csWrapper = CStructWrapper<TCStruct>.init(value: cs)
+        let csValue = TCStruct.init()
+        let csWrapper = CStructWrapper<TCStruct>.init(value: csValue)
 
         let csJSONString = csWrapper.toJSONString()
         XCTAssertNotNil(csJSONString, "model to json failed")
 
         let csWrapperX = CStructWrapper<TCStruct>.init(jsonString: csJSONString!)
         XCTAssertNotNil(csWrapperX, "json to model failed")
-        XCTAssert(csWrapperX!.value.int1 == cs.int1 &&
-            csWrapperX!.value.int2 == cs.int2 &&
-            csWrapperX!.value.int3 == cs.int3 &&
-            csWrapperX!.value.int4 == cs.int4 &&
-            csWrapperX!.value.int5 == cs.int5 &&
-            csWrapperX!.value.int6 == cs.int6, "invalid cs")
+        XCTAssert(csWrapperX!.value.int1 == csValue.int1 &&
+            csWrapperX!.value.int2 == csValue.int2 &&
+            csWrapperX!.value.int3 == csValue.int3 &&
+            csWrapperX!.value.int4 == csValue.int4 &&
+            csWrapperX!.value.int5 == csValue.int5 &&
+            csWrapperX!.value.int6 == csValue.int6, "invalid cs")
 
         let orientation = GLKQuaternionMake(1, 2, 3, 4)
         let orientationWrapper = CStructWrapper<GLKQuaternion>.init(value: orientation)

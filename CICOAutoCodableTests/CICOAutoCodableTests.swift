@@ -83,8 +83,8 @@ class CICOAutoCodableTests: XCTestCase {
         let objectArrayX = [TCodableClass].init(jsonString: jsonStringArray!)
         XCTAssertNotNil(objectArrayX, "json back to object array failed")
 
-        for i in 0..<objectArray!.count {
-            XCTAssert(objectArrayX![i] == objectArray![i], "objectArrayX[\(i)] != objectArray[\(i)]")
+        for index in 0..<objectArray!.count {
+            XCTAssert(objectArrayX![index] == objectArray![index], "objectArrayX[\(index)] != objectArray[\(index)]")
         }
     }
 
@@ -106,12 +106,12 @@ class CICOAutoCodableTests: XCTestCase {
     }
 
     func test_Int() {
-        let i = 5
-        let jsonString = i.toJSONString()
+        let iValue = 5
+        let jsonString = iValue.toJSONString()
         XCTAssertNil(jsonString, "int to json string should be nil")
 
-        let t = "5"
-        let object = Int.init(jsonString: t)
+        let tValue = "5"
+        let object = Int.init(jsonString: tValue)
         XCTAssertNil(object, "string to int should be nil")
     }
 
