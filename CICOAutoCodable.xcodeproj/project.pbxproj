@@ -304,7 +304,7 @@
 				E41F758120C6772700399E42 /* Frameworks */,
 				E41F758220C6772700399E42 /* Headers */,
 				E41F758320C6772700399E42 /* Resources */,
-				E4081E7B22FBD1DF0087C3D3 /* ShellScript */,
+				E4081E7B22FBD1DF0087C3D3 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -323,7 +323,7 @@
 				E41F759720C67A2F00399E42 /* Frameworks */,
 				E41F759820C67A2F00399E42 /* Resources */,
 				E41F75B620C681C600399E42 /* Embed Frameworks */,
-				E41F762320C6882300399E42 /* ShellScript */,
+				E41F762320C6882300399E42 /* AutoCodable */,
 			);
 			buildRules = (
 			);
@@ -435,7 +435,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		E4081E7B22FBD1DF0087C3D3 /* ShellScript */ = {
+		E4081E7B22FBD1DF0087C3D3 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -444,6 +444,7 @@
 			);
 			inputPaths = (
 			);
+			name = SwiftLint;
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -452,13 +453,14 @@
 			shellPath = /bin/sh;
 			shellScript = "if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\n    if which swiftlint >/dev/null; then\n        swiftlint\n    else\n        echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n    fi\nfi\n";
 		};
-		E41F762320C6882300399E42 /* ShellScript */ = {
+		E41F762320C6882300399E42 /* AutoCodable */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = AutoCodable;
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
