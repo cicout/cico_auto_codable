@@ -56,7 +56,7 @@ extension TCodableClass {
         case dicValue
         case url
         case testInt
-// sourcery:inline:auto:TCodableClass..CICOAutoCodable_Auto_Generated_CodingKeys_Tail
+// sourcery:inline:auto:TCodableClass.CICOAutoCodable_Auto_Generated_CodingKeys_Tail
     }
 // sourcery:end
 }

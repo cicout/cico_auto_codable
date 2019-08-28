@@ -27,12 +27,12 @@
 		E41F75B220C681C600399E42 /* CICOAutoCodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E41F758520C6772700399E42 /* CICOAutoCodable.framework */; };
 		E41F75B320C681C600399E42 /* CICOAutoCodable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E41F758520C6772700399E42 /* CICOAutoCodable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E41F762220C687CF00399E42 /* cico_auto_codable.swifttemplate in Resources */ = {isa = PBXBuildFile; fileRef = E41F75FF20C687CF00399E42 /* cico_auto_codable.swifttemplate */; };
-		E41F762520C68B8700399E42 /* show_all_type.stencil in Resources */ = {isa = PBXBuildFile; fileRef = E41F762420C68B8700399E42 /* show_all_type.stencil */; };
 		E41F762720C68B9500399E42 /* show_all_type.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F762620C68B9500399E42 /* show_all_type.generated.swift */; };
 		E41F762A20C7C37300399E42 /* default_array.json in Resources */ = {isa = PBXBuildFile; fileRef = E41F762920C7C35C00399E42 /* default_array.json */; };
 		E41F762C20C7C6ED00399E42 /* default_dictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = E41F762B20C7C6DB00399E42 /* default_dictionary.json */; };
 		E42EA2CE21F2CD6D00C61F52 /* TCStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42EA2CD21F2CD6D00C61F52 /* TCStruct.swift */; };
 		E47B3B4C2127BA210037626F /* OCCodingObjectArrayWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47B3B4B2127BA210037626F /* OCCodingObjectArrayWrapper.swift */; };
+		E481123523161CEE001DA5B9 /* show_all_type.stencil in Resources */ = {isa = PBXBuildFile; fileRef = E481123423161CED001DA5B9 /* show_all_type.stencil */; };
 		E4CA2E8521EC7FF10056714D /* CStructWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA2E8421EC7FF10056714D /* CStructWrapper.swift */; };
 		E4FD6C48210FFD0000ECAF4E /* CICOAutoCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FD6C47210FFD0000ECAF4E /* CICOAutoCodableTests.swift */; };
 		E4FD6C4A210FFD0000ECAF4E /* CICOAutoCodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E41F758520C6772700399E42 /* CICOAutoCodable.framework */; };
@@ -107,12 +107,12 @@
 		E41F75AD20C680D500399E42 /* TCodableStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCodableStruct.swift; sourceTree = "<group>"; };
 		E41F75AE20C680D500399E42 /* default.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = default.json; sourceTree = "<group>"; };
 		E41F75FF20C687CF00399E42 /* cico_auto_codable.swifttemplate */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cico_auto_codable.swifttemplate; sourceTree = "<group>"; };
-		E41F762420C68B8700399E42 /* show_all_type.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = show_all_type.stencil; sourceTree = "<group>"; };
 		E41F762620C68B9500399E42 /* show_all_type.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = show_all_type.generated.swift; sourceTree = "<group>"; };
 		E41F762920C7C35C00399E42 /* default_array.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = default_array.json; sourceTree = "<group>"; };
 		E41F762B20C7C6DB00399E42 /* default_dictionary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = default_dictionary.json; sourceTree = "<group>"; };
 		E42EA2CD21F2CD6D00C61F52 /* TCStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCStruct.swift; sourceTree = "<group>"; };
 		E47B3B4B2127BA210037626F /* OCCodingObjectArrayWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCCodingObjectArrayWrapper.swift; sourceTree = "<group>"; };
+		E481123423161CED001DA5B9 /* show_all_type.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = show_all_type.stencil; sourceTree = "<group>"; };
 		E4CA2E8421EC7FF10056714D /* CStructWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CStructWrapper.swift; sourceTree = "<group>"; };
 		E4FD6C45210FFD0000ECAF4E /* CICOAutoCodableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CICOAutoCodableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4FD6C47210FFD0000ECAF4E /* CICOAutoCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CICOAutoCodableTests.swift; sourceTree = "<group>"; };
@@ -215,8 +215,8 @@
 		E41F75FE20C687CF00399E42 /* templates */ = {
 			isa = PBXGroup;
 			children = (
+				E481123423161CED001DA5B9 /* show_all_type.stencil */,
 				E41F75FF20C687CF00399E42 /* cico_auto_codable.swifttemplate */,
-				E41F762420C68B8700399E42 /* show_all_type.stencil */,
 			);
 			path = templates;
 			sourceTree = "<group>";
@@ -323,7 +323,7 @@
 				E41F759720C67A2F00399E42 /* Frameworks */,
 				E41F759820C67A2F00399E42 /* Resources */,
 				E41F75B620C681C600399E42 /* Embed Frameworks */,
-				E41F762320C6882300399E42 /* AutoCodable */,
+				E41F762320C6882300399E42 /* CICOAutoCodable */,
 			);
 			buildRules = (
 			);
@@ -402,6 +402,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E481123523161CEE001DA5B9 /* show_all_type.stencil in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,7 +416,6 @@
 				E41F762A20C7C37300399E42 /* default_array.json in Resources */,
 				E41F762C20C7C6ED00399E42 /* default_dictionary.json in Resources */,
 				E41F762220C687CF00399E42 /* cico_auto_codable.swifttemplate in Resources */,
-				E41F762520C68B8700399E42 /* show_all_type.stencil in Resources */,
 				E41F75A420C67A2F00399E42 /* Assets.xcassets in Resources */,
 				E41F75A220C67A2F00399E42 /* Main.storyboard in Resources */,
 			);
@@ -453,19 +453,19 @@
 			shellPath = /bin/sh;
 			shellScript = "if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\n    if which swiftlint >/dev/null; then\n        swiftlint\n    else\n        echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n    fi\nfi\n";
 		};
-		E41F762320C6882300399E42 /* AutoCodable */ = {
+		E41F762320C6882300399E42 /* CICOAutoCodable */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = AutoCodable;
+			name = CICOAutoCodable;
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\necho \"[***** Start Running CICOAutoCodable Script *****]\"\n./sourcery/source/Pods/Sourcery/bin/sourcery --sources ./CICOAutoCodableDemo --sources ./CICOAutoCodable --sources ./CICOAutoCodableTests --templates ./sourcery/templates/ --output ./sourcery/auto_generated\necho \"[***** Finish Running CICOAutoCodable Script *****]\"\nfi\n";
+			shellScript = "if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\n    if which sourcery >/dev/null; then\n        sourcery\n    else\n        echo \"[WARNING]: Sourcery is not installed, install using \\\"brew install sourcery\\\".\"\n    fi\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

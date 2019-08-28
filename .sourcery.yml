@@ -1,0 +1,9 @@
+sources:
+    - CICOAutoCodable
+    - CICOAutoCodableDemo
+    - CICOAutoCodableTests
+templates:
+    - sourcery/templates
+output:
+    sourcery/auto_generated
+

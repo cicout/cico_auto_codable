@@ -81,7 +81,7 @@ func codingKeysFor(_ type: Type) -> (existedKey: Bool, generatedCustomKeyArray: 
             <%_ } -%>
         <%_ } -%>
         <%_ if !codingKeys.existedKey { -%>
-// sourcery:inline:auto:<%= type.name %>..CICOAutoCodable_Auto_Generated_CodingKeys_Tail
+// sourcery:inline:auto:<%= type.name %>.CICOAutoCodable_Auto_Generated_CodingKeys_Tail
     }
         <%_ } -%>
 // sourcery:end
