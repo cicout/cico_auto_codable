@@ -108,11 +108,11 @@ class CICOAutoCodableTests: XCTestCase {
     func test_Int() {
         let iValue = 5
         let jsonString = iValue.toJSONString()
-        XCTAssertNil(jsonString, "int to json string should be nil")
+        XCTAssertNotNil(jsonString, "Int to json string failed.")
 
         let tValue = "5"
         let object = Int.init(jsonString: tValue)
-        XCTAssertNil(object, "string to int should be nil")
+        XCTAssertNotNil(object, "JSON string to int failed.")
     }
 
     private func jsonString(name: String) -> String? {
