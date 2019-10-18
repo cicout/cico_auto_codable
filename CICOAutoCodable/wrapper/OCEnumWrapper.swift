@@ -41,8 +41,7 @@ public extension OCEnumWrapper {
         let rawValue = try container.decode(T.RawValue.self, forKey: .rawValue)
 
         guard T.init(rawValue: rawValue) != nil else {
-            let error = NSError.init(domain: "Invalid data of \(T.self).", code: -999, userInfo: nil) as Error
-            throw error
+            throw CodableError.invalidData
         }
 
         self.rawValue = rawValue

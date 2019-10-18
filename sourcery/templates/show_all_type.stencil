@@ -1,9 +1,11 @@
-// swiftlint:disable line_length
+// swiftlint:disable file_length
 
 /** Found {{ types.all.count }} Types
- * {% for type in types.all %}{{ type.name }}    {% endfor %}
+{% for type in types.all %} * {{ type.name }}
+{% endfor %}
  */
 
 /** Found {{ types.implementing.CICOAutoCodable.count }} CICOAutoCodable Types
- * {% for type in types.implementing.CICOAutoCodable %}{{ type.name }}    {% endfor %}
+{% for type in types.implementing.CICOAutoCodable %} * {{ type.name }}
+{% endfor %}
  */

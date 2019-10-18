@@ -8,7 +8,7 @@
 
 import CICOAutoCodable
 
-struct TCodableStruct: CICOAutoCodable {
+public struct TCodableStruct: CICOAutoCodable {
     private(set) var name: String?
     private(set) var stringValue: String?
     //    private(set) var stringValue: Int?

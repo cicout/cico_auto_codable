@@ -8,7 +8,7 @@
 
 import CICOAutoCodable
 
-class TCodableClass: CICOAutoCodable {
+public class TCodableClass: CICOAutoCodable {
     private(set) var name: String?
     private(set) var stringValue: String?
     private(set) var dateValue: Date?
@@ -24,7 +24,7 @@ class TCodableClass: CICOAutoCodable {
 
     var testInt: Int! = 0
 
-    required init(from decoder: Decoder) throws {
+    public required init(from decoder: Decoder) throws {
 
     }
 }

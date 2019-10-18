@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E41830872359B08100C17AC5 /* MemoryBytesWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41830862359B08100C17AC5 /* MemoryBytesWrapper.swift */; };
+		E41830892359C42900C17AC5 /* CodableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41830882359C42900C17AC5 /* CodableError.swift */; };
 		E418ABF921252D57002BD333 /* OCCodingObjectWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E418ABF721252D57002BD333 /* OCCodingObjectWrapper.swift */; };
 		E418ABFA21252D57002BD333 /* OCEnumWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E418ABF821252D57002BD333 /* OCEnumWrapper.swift */; };
 		E41947232125964000A43398 /* OCTestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E41947222125964000A43398 /* OCTestClass.m */; };
@@ -33,7 +35,6 @@
 		E42EA2CE21F2CD6D00C61F52 /* TCStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42EA2CD21F2CD6D00C61F52 /* TCStruct.swift */; };
 		E47B3B4C2127BA210037626F /* OCCodingObjectArrayWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47B3B4B2127BA210037626F /* OCCodingObjectArrayWrapper.swift */; };
 		E481123523161CEE001DA5B9 /* show_all_type.stencil in Resources */ = {isa = PBXBuildFile; fileRef = E481123423161CED001DA5B9 /* show_all_type.stencil */; };
-		E4CA2E8521EC7FF10056714D /* CStructWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA2E8421EC7FF10056714D /* CStructWrapper.swift */; };
 		E4FD6C48210FFD0000ECAF4E /* CICOAutoCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FD6C47210FFD0000ECAF4E /* CICOAutoCodableTests.swift */; };
 		E4FD6C4A210FFD0000ECAF4E /* CICOAutoCodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E41F758520C6772700399E42 /* CICOAutoCodable.framework */; };
 		E4FD6C50210FFD4C00ECAF4E /* default.json in Resources */ = {isa = PBXBuildFile; fileRef = E41F75AE20C680D500399E42 /* default.json */; };
@@ -49,6 +50,10 @@
 		E4FD6DEC21193FD300ECAF4E /* MyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FD6DEA21193FD300ECAF4E /* MyClass.swift */; };
 		E4FD6DEE2119403D00ECAF4E /* my.json in Resources */ = {isa = PBXBuildFile; fileRef = E4FD6DED2119403D00ECAF4E /* my.json */; };
 		E4FD6DEF2119403D00ECAF4E /* my.json in Resources */ = {isa = PBXBuildFile; fileRef = E4FD6DED2119403D00ECAF4E /* my.json */; };
+		E4FFB7392355AA970036844B /* MemoryBytesAide.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FFB7382355AA970036844B /* MemoryBytesAide.swift */; };
+		E4FFB7482355C5A00036844B /* MemoryBytesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FFB7472355C5A00036844B /* MemoryBytesTests.swift */; };
+		E4FFB74A2355C6250036844B /* TMemoryBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FFB7492355C6250036844B /* TMemoryBytes.swift */; };
+		E4FFB74D2356BE1F0036844B /* TMemoryBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FFB7492355C6250036844B /* TMemoryBytes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +88,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E41830862359B08100C17AC5 /* MemoryBytesWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryBytesWrapper.swift; sourceTree = "<group>"; };
+		E41830882359C42900C17AC5 /* CodableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableError.swift; sourceTree = "<group>"; };
 		E418ABF721252D57002BD333 /* OCCodingObjectWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCCodingObjectWrapper.swift; sourceTree = "<group>"; };
 		E418ABF821252D57002BD333 /* OCEnumWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCEnumWrapper.swift; sourceTree = "<group>"; };
 		E41947202125964000A43398 /* CICOAutoCodableTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CICOAutoCodableTests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -113,7 +120,6 @@
 		E42EA2CD21F2CD6D00C61F52 /* TCStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCStruct.swift; sourceTree = "<group>"; };
 		E47B3B4B2127BA210037626F /* OCCodingObjectArrayWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCCodingObjectArrayWrapper.swift; sourceTree = "<group>"; };
 		E481123423161CED001DA5B9 /* show_all_type.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = show_all_type.stencil; sourceTree = "<group>"; };
-		E4CA2E8421EC7FF10056714D /* CStructWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CStructWrapper.swift; sourceTree = "<group>"; };
 		E4FD6C45210FFD0000ECAF4E /* CICOAutoCodableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CICOAutoCodableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4FD6C47210FFD0000ECAF4E /* CICOAutoCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CICOAutoCodableTests.swift; sourceTree = "<group>"; };
 		E4FD6C49210FFD0000ECAF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -121,6 +127,9 @@
 		E4FD6C5B2110045D00ECAF4E /* AutoEquatable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoEquatable.generated.swift; sourceTree = "<group>"; };
 		E4FD6DEA21193FD300ECAF4E /* MyClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClass.swift; sourceTree = "<group>"; };
 		E4FD6DED2119403D00ECAF4E /* my.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = my.json; sourceTree = "<group>"; };
+		E4FFB7382355AA970036844B /* MemoryBytesAide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryBytesAide.swift; sourceTree = "<group>"; };
+		E4FFB7472355C5A00036844B /* MemoryBytesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryBytesTests.swift; sourceTree = "<group>"; };
+		E4FFB7492355C6250036844B /* TMemoryBytes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMemoryBytes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,7 +252,9 @@
 		E434DE792273F9DC00D5677B /* wrapper */ = {
 			isa = PBXGroup;
 			children = (
-				E4CA2E8421EC7FF10056714D /* CStructWrapper.swift */,
+				E41830882359C42900C17AC5 /* CodableError.swift */,
+				E4FFB7382355AA970036844B /* MemoryBytesAide.swift */,
+				E41830862359B08100C17AC5 /* MemoryBytesWrapper.swift */,
 				E47B3B4B2127BA210037626F /* OCCodingObjectArrayWrapper.swift */,
 				E418ABF721252D57002BD333 /* OCCodingObjectWrapper.swift */,
 				E418ABF821252D57002BD333 /* OCEnumWrapper.swift */,
@@ -254,9 +265,10 @@
 		E4FD6C46210FFD0000ECAF4E /* CICOAutoCodableTests */ = {
 			isa = PBXGroup;
 			children = (
-				E4FD6D262112B56A00ECAF4E /* internal */,
 				E4FD6C47210FFD0000ECAF4E /* CICOAutoCodableTests.swift */,
+				E4FFB7472355C5A00036844B /* MemoryBytesTests.swift */,
 				E4194726212599F100A43398 /* WrapperTests.swift */,
+				E4FD6D262112B56A00ECAF4E /* internal */,
 			);
 			path = CICOAutoCodableTests;
 			sourceTree = "<group>";
@@ -264,20 +276,21 @@
 		E4FD6D262112B56A00ECAF4E /* internal */ = {
 			isa = PBXGroup;
 			children = (
-				E4FD6C58211003FE00ECAF4E /* AutoEquatable.swift */,
 				E41947202125964000A43398 /* CICOAutoCodableTests-Bridging-Header.h */,
+				E41947212125964000A43398 /* OCTestClass.h */,
 				E41F762920C7C35C00399E42 /* default_array.json */,
 				E41F762B20C7C6DB00399E42 /* default_dictionary.json */,
 				E41F75AE20C680D500399E42 /* default.json */,
-				E4FD6C49210FFD0000ECAF4E /* Info.plist */,
 				E4FD6DED2119403D00ECAF4E /* my.json */,
-				E4FD6DEA21193FD300ECAF4E /* MyClass.swift */,
-				E41947212125964000A43398 /* OCTestClass.h */,
 				E41947222125964000A43398 /* OCTestClass.m */,
+				E4FD6C49210FFD0000ECAF4E /* Info.plist */,
+				E4FD6C58211003FE00ECAF4E /* AutoEquatable.swift */,
+				E4FD6DEA21193FD300ECAF4E /* MyClass.swift */,
+				E41947242125990F00A43398 /* SwiftTestClass.swift */,
 				E41F75AC20C680D500399E42 /* TCodableClass.swift */,
 				E41F75AD20C680D500399E42 /* TCodableStruct.swift */,
-				E41947242125990F00A43398 /* SwiftTestClass.swift */,
 				E42EA2CD21F2CD6D00C61F52 /* TCStruct.swift */,
+				E4FFB7492355C6250036844B /* TMemoryBytes.swift */,
 			);
 			path = internal;
 			sourceTree = "<group>";
@@ -478,9 +491,11 @@
 				E418ABF921252D57002BD333 /* OCCodingObjectWrapper.swift in Sources */,
 				E41F759320C677A300399E42 /* JSONDecoder+String.swift in Sources */,
 				E41F759420C677A300399E42 /* CICOAutoCodable.swift in Sources */,
-				E4CA2E8521EC7FF10056714D /* CStructWrapper.swift in Sources */,
+				E4FFB7392355AA970036844B /* MemoryBytesAide.swift in Sources */,
+				E41830892359C42900C17AC5 /* CodableError.swift in Sources */,
 				E418ABFA21252D57002BD333 /* OCEnumWrapper.swift in Sources */,
 				E41F759520C677A300399E42 /* JSONEncoder+String.swift in Sources */,
+				E41830872359B08100C17AC5 /* MemoryBytesWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +507,7 @@
 				E41F75AF20C680D500399E42 /* TCodableClass.swift in Sources */,
 				E41F75B020C680D500399E42 /* TCodableStruct.swift in Sources */,
 				E4FD6C59211003FE00ECAF4E /* AutoEquatable.swift in Sources */,
+				E4FFB74D2356BE1F0036844B /* TMemoryBytes.swift in Sources */,
 				E4FD6DEB21193FD300ECAF4E /* MyClass.swift in Sources */,
 				E41F762720C68B9500399E42 /* show_all_type.generated.swift in Sources */,
 				E4FD6C5C2110045D00ECAF4E /* AutoEquatable.generated.swift in Sources */,
@@ -504,9 +520,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4FD6C5D2110045D00ECAF4E /* AutoEquatable.generated.swift in Sources */,
+				E4FFB74A2355C6250036844B /* TMemoryBytes.swift in Sources */,
 				E41947232125964000A43398 /* OCTestClass.m in Sources */,
 				E4FD6C54210FFDB000ECAF4E /* TCodableStruct.swift in Sources */,
 				E4FD6DEC21193FD300ECAF4E /* MyClass.swift in Sources */,
+				E4FFB7482355C5A00036844B /* MemoryBytesTests.swift in Sources */,
 				E4FD6C53210FFDAE00ECAF4E /* TCodableClass.swift in Sources */,
 				E42EA2CE21F2CD6D00C61F52 /* TCStruct.swift in Sources */,
 				E4194727212599F100A43398 /* WrapperTests.swift in Sources */,

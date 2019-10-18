@@ -1,12 +1,50 @@
 // Generated using Sourcery 0.16.2 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
-// swiftlint:disable line_length
+// swiftlint:disable file_length
 
-/** Found 26 Types
- * AppDelegate    CICOAutoCodableTests    CStructWrapper    CStructWrapper.CodingKeys    Decodable    Encodable    JSONDecoder    JSONEncoder    MyClass    MyClass.CICOIgnoredCodingKeys    MyClass.CodingKeys    MyEnum    OCCodingObjectArrayWrapper    OCCodingObjectArrayWrapper.CodingKeys    OCCodingObjectWrapper    OCCodingObjectWrapper.CodingKeys    OCEnumWrapper    OCEnumWrapper.CodingKeys    SwiftTestClass    TCStruct    TCodableClass    TCodableClass.CICOCustomCodingKeys    TCodableStruct    TCodableStruct.CodingKeys    ViewController    WrapperTests    
+/** Found 35 Types
+ * AppDelegate
+ * CICOAutoCodableTests
+ * ClassMemoryBytesWrapper
+ * ClassMemoryBytesWrapper.CodingKeys
+ * CodableError
+ * Decodable
+ * Encodable
+ * JSONDecoder
+ * JSONEncoder
+ * MemoryBytesAide
+ * MemoryBytesTests
+ * MyClass
+ * MyClass.CICOIgnoredCodingKeys
+ * MyClass.CodingKeys
+ * MyEnum
+ * OCCodingObjectArrayWrapper
+ * OCCodingObjectArrayWrapper.CodingKeys
+ * OCCodingObjectWrapper
+ * OCCodingObjectWrapper.CodingKeys
+ * OCEnumWrapper
+ * OCEnumWrapper.CodingKeys
+ * StructMemoryBytesWrapper
+ * StructMemoryBytesWrapper.CodingKeys
+ * SwiftTestClass
+ * TCStruct
+ * TClassBase
+ * TClassChild
+ * TCodableClass
+ * TCodableClass.CICOCustomCodingKeys
+ * TCodableStruct
+ * TCodableStruct.CodingKeys
+ * TStructOne
+ * TStructTwo
+ * ViewController
+ * WrapperTests
  */
 
 /** Found 5 CICOAutoCodable Types
- * MyClass    MyEnum    SwiftTestClass    TCodableClass    TCodableStruct    
+ * MyClass
+ * MyEnum
+ * SwiftTestClass
+ * TCodableClass
+ * TCodableStruct
  */
