@@ -33,8 +33,7 @@ public class MemoryBytesAide {
     }
 
     private static func readStructMemoryBytes<T>(_ instance: T) -> Data {
-        var tmpInstance = instance
-        return withUnsafeBytes(of: &tmpInstance) { (rawBufferPointer) -> Data in
+        return withUnsafeBytes(of: instance) { (rawBufferPointer) -> Data in
             return Data.init(rawBufferPointer)
         }
     }
@@ -49,14 +48,15 @@ extension MemoryBytesAide {
         }
 
         return bytes.withUnsafeBytes({ (rawBufferPointer) -> T? in
-            // TODO: Reset retain count to 1.
             let newPtr = UnsafeMutableRawBufferPointer.allocate(byteCount: rawBufferPointer.count, alignment: 1)
             newPtr.copyMemory(from: rawBufferPointer)
+
             let int32Ptr = newPtr.bindMemory(to: Int32.self)
             int32Ptr[3] = 0
+
             let unmanagedInstance = Unmanaged<T>.fromOpaque(newPtr.baseAddress!)
             let instance = unmanagedInstance.takeRetainedValue()
-//            unmanagedInstance.release()
+
             return instance
         })
     }

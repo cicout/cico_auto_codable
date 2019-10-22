@@ -41,6 +41,10 @@ public class TClassBase: Codable, Equatable, CustomStringConvertible {
     public var description: String {
         return "<\(type(of: self))>: \(self.intValue), \(self.doubleValue), \(self.boolValue)"
     }
+
+    deinit {
+        print("TClassBase: \(self) deinit")
+    }
 }
 
 public class TClassChild: TClassBase {
@@ -62,5 +66,9 @@ public class TClassChild: TClassBase {
 
     public override var description: String {
         return "\(super.description)###<\(type(of: self))>: \(self.enumValue), \(self.dateValue)"
+    }
+
+    deinit {
+        print("TClassChild: \(self) deinit")
     }
 }

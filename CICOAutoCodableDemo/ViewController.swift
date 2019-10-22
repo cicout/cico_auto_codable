@@ -10,6 +10,7 @@ import UIKit
 import CICOAutoCodable
 
 class ViewController: UIViewController {
+    var count: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,82 +22,15 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func testBtnAction(_ sender: Any) {
-//        self.testCodableObject()
-//        self.testCodableArray()
-//        self.testCodableDictionary()
-        self.testMyClass()
-    }
+    @IBAction func testBtnAction(_ sender: UIButton) {
+//        self.testMyClass()
+        self.testRetainCount()
 
-    private func testCodableObject() {
-        let jsonString = self.jsonString(name: "default")
-
-        let object = TCodableClass.init(jsonString: jsonString, jsonDecoder: self.defaultJSONDecoder())
-        if let object = object {
-            print("\(object)")
-        }
-
-        let json = object?.toJSONString(jsonEncoder: self.defaultJSONEncoder())
-        if let json = json {
-            print("\(json)")
-        }
-
-        let object2 = TCodableStruct.init(jsonString: jsonString, jsonDecoder: self.defaultJSONDecoder())
-        if let object2 = object2 {
-            print("\(object2)")
-        }
-
-        let json2 = object2?.toJSONString(jsonEncoder: self.defaultJSONEncoder())
-        if let json2 = json2 {
-            print("\(json2)")
-        }
-    }
-
-    private func testCodableArray() {
-        let jsonString = self.jsonString(name: "default_array")
-
-        let object = [TCodableClass].init(jsonString: jsonString, jsonDecoder: self.defaultJSONDecoder())
-        if let object = object {
-            print("\(object)")
-        }
-
-        let json = object?.toJSONString(jsonEncoder: self.defaultJSONEncoder())
-        if let json = json {
-            print("\(json)")
-        }
-
-        let object2 = [TCodableStruct].init(jsonString: jsonString, jsonDecoder: self.defaultJSONDecoder())
-        if let object2 = object2 {
-            print("\(object2)")
-        }
-
-        let json2 = object2?.toJSONString(jsonEncoder: self.defaultJSONEncoder())
-        if let json2 = json2 {
-            print("\(json2)")
-        }
-    }
-
-    private func testCodableDictionary() {
-        let jsonString = self.jsonString(name: "default_dictionary")
-
-        let object = [String: TCodableClass].init(jsonString: jsonString, jsonDecoder: self.defaultJSONDecoder())
-        if let object = object {
-            print("\(object)")
-        }
-
-        let json = object?.toJSONString(jsonEncoder: self.defaultJSONEncoder())
-        if let json = json {
-            print("\(json)")
-        }
-
-        let object2 = [String: TCodableStruct].init(jsonString: jsonString, jsonDecoder: self.defaultJSONDecoder())
-        if let object2 = object2 {
-            print("\(object2)")
-        }
-
-        let json2 = object2?.toJSONString(jsonEncoder: self.defaultJSONEncoder())
-        if let json2 = json2 {
-            print("\(json2)")
+        self.count += 1
+        if self.count % 2 == 0 {
+            sender.backgroundColor = UIColor.orange.withAlphaComponent(0.5)
+        } else {
+            sender.backgroundColor = UIColor.green.withAlphaComponent(0.5)
         }
     }
 
@@ -112,6 +46,27 @@ class ViewController: UIViewController {
         if let json = jsonString {
             print("\(json)")
         }
+    }
+
+    private func testRetainCount() {
+        let instance = TClassChild.init()
+
+        print("[#]: Retain count of instance: \(CFGetRetainCount(instance))")
+
+        var array = [TClassChild].init()
+        array.append(instance)
+
+        print("[#]: Retain count of instance: \(CFGetRetainCount(instance))")
+
+        let data = MemoryBytesAide.readMemoryBytes(instance)
+        print("[#]: MemoryBytes of \(instance):\n\(data as NSData)")
+
+        let instancex = MemoryBytesAide.createInstanceFromMemoryBytes(data, type: TClassChild.self)
+        print("[#]: New instance: \(instancex!)")
+        print("[#]: Retain count of instancex: \(CFGetRetainCount(instancex!))")
+
+        let datax = MemoryBytesAide.readMemoryBytes(instancex!)
+        print("[#]: MemoryBytes of \(instancex!):\n\(datax as NSData)")
     }
 
     private func jsonString(name: String) -> String {
