@@ -10,6 +10,8 @@ import Foundation
 
 /// Transfer struct memory bytes to Swift codable object;
 ///
+/// Use for Swift Struct or C Struct only.
+///
 /// - WARNING: Don't use for any type contains pointer properties!!!
 /// - Don't use for Swift Class or OBJ-C Class;
 /// - Don't use for Collection types (Array/Dictionary/Set);
