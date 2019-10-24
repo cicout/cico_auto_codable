@@ -164,11 +164,11 @@ class WrapperTests: XCTestCase {
         let two = TStructTwo.init()
         self.commonTest(two)
 
-        let base = TClassBase.init()
-        self.commonTest(base)
-
-        let child = TClassChild.init()
-        self.commonTest(child)
+//        let base = TClassBase.init()
+//        self.commonTest(base)
+//
+//        let child = TClassChild.init()
+//        self.commonTest(child)
     }
 
     private func commonStructTest<T: Equatable>(_ instance: T) {
@@ -193,32 +193,32 @@ class WrapperTests: XCTestCase {
         self.commonStructTest(tmpInstance)
     }
 
-    private func commonClassTest<T: Equatable & AnyObject>(_ instance: T) {
-        print("[#]: instance: \(instance)")
+//    private func commonClassTest<T: Equatable & AnyObject>(_ instance: T) {
+//        print("[#]: instance: \(instance)")
+//
+//        let instanceWrapper = ClassMemoryBytesWrapper.init(value: instance)
+//
+//        let instanceJSONString = instanceWrapper.toJSONString()
+//        XCTAssertNotNil(instanceJSONString, "model to json failed")
+//
+//        print("[#]: instanceJSONString: \(instanceJSONString!)")
+//
+//        let instanceWrapperX = ClassMemoryBytesWrapper<T>.init(jsonString: instanceJSONString!)
+//        XCTAssertNotNil(instanceWrapperX, "json to model failed")
+//
+//        print("[#]: New instance: \(instanceWrapperX!.value)")
+//
+//        XCTAssert(instanceWrapperX!.value == instance, "invalid point")
+//    }
 
-        let instanceWrapper = ClassMemoryBytesWrapper.init(value: instance)
-
-        let instanceJSONString = instanceWrapper.toJSONString()
-        XCTAssertNotNil(instanceJSONString, "model to json failed")
-
-        print("[#]: instanceJSONString: \(instanceJSONString!)")
-
-        let instanceWrapperX = ClassMemoryBytesWrapper<T>.init(jsonString: instanceJSONString!)
-        XCTAssertNotNil(instanceWrapperX, "json to model failed")
-
-        print("[#]: New instance: \(instanceWrapperX!.value)")
-
-        XCTAssert(instanceWrapperX!.value == instance, "invalid point")
-    }
-
-    private func commonTest<T: Equatable & AnyObject>(_ instance: T) {
-        self.commonClassTest(instance)
-    }
-
-    private func commonTest<T: Equatable & AnyObject>(_ instance: T?) {
-        guard let tmpInstance = instance else {
-            return
-        }
-        self.commonClassTest(tmpInstance)
-    }
+//    private func commonTest<T: Equatable & AnyObject>(_ instance: T) {
+//        self.commonClassTest(instance)
+//    }
+//
+//    private func commonTest<T: Equatable & AnyObject>(_ instance: T?) {
+//        guard let tmpInstance = instance else {
+//            return
+//        }
+//        self.commonClassTest(tmpInstance)
+//    }
 }

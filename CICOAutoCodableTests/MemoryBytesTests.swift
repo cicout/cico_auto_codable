@@ -26,11 +26,11 @@ class MemoryBytesTests: XCTestCase {
         let two = TStructTwo.init()
         self.commonTest(two)
 
-        let base = TClassBase.init()
-        self.commonTest(base)
-
-        let child = TClassChild.init()
-        self.commonTest(child)
+//        let base = TClassBase.init()
+//        self.commonTest(base)
+//
+//        let child = TClassChild.init()
+//        self.commonTest(child)
     }
 
     func testCreateInstance() {
@@ -44,32 +44,32 @@ class MemoryBytesTests: XCTestCase {
     }
 
     func testRetainCount() {
-        let instance = TClassChild.init()
-        print("[#]: Retain count of TClassChild: \(CFGetRetainCount(instance))")
-
-        self.retainCountCommonTest(instance)
-
-        var array1 = [TClassChild].init()
-        array1.append(instance)
-
-        print("[#]: Retain count of TClassChild: \(CFGetRetainCount(instance))")
-
-        self.retainCountCommonTest(instance)
-
-        var array2 = [TClassChild].init()
-        array2.append(instance)
-
-        print("[#]: Retain count of TClassChild: \(CFGetRetainCount(instance))")
-
-        self.retainCountCommonTest(instance)
+//        let instance = TClassChild.init()
+//        print("[#]: Retain count of TClassChild: \(CFGetRetainCount(instance))")
+//
+//        self.retainCountCommonTest(instance)
+//
+//        var array1 = [TClassChild].init()
+//        array1.append(instance)
+//
+//        print("[#]: Retain count of TClassChild: \(CFGetRetainCount(instance))")
+//
+//        self.retainCountCommonTest(instance)
+//
+//        var array2 = [TClassChild].init()
+//        array2.append(instance)
+//
+//        print("[#]: Retain count of TClassChild: \(CFGetRetainCount(instance))")
+//
+//        self.retainCountCommonTest(instance)
     }
 
     func testOptional() {
         let two: TStructTwo? = TStructTwo.init()
         self.commonTest(two)
 
-        let child: TClassChild? = TClassChild.init()
-        self.commonTest(child)
+//        let child: TClassChild? = TClassChild.init()
+//        self.commonTest(child)
     }
 
     func testBaseType() {

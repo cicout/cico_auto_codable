@@ -9,13 +9,13 @@
 import Foundation
 import CICOAutoCodable
 
-public struct TStructOne: Codable, AutoEquatable {
+public struct TStructOne: AutoEquatable {
     var intValue: Int = 3
     var doubleValue: Double = 2.5
     var boolValue: Bool = true
 }
 
-public struct TStructTwo: Codable, AutoEquatable {
+public struct TStructTwo: AutoEquatable {
     var intValue: Int = 3
     var doubleValue: Double = 2.5
     var boolValue: Bool = true
@@ -26,7 +26,7 @@ public struct TStructTwo: Codable, AutoEquatable {
 
 }
 
-public class TClassBase: Codable, Equatable, CustomStringConvertible {
+public class TClassBase: Equatable, CustomStringConvertible {
     var intValue: Int = 3
     var doubleValue: Double = 2.5
     var boolValue: Bool = true

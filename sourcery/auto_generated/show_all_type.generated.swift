@@ -3,11 +3,9 @@
 
 // swiftlint:disable file_length
 
-/** Found 35 Types
+/** Found 33 Types
  * AppDelegate
  * CICOAutoCodableTests
- * ClassMemoryBytesWrapper
- * ClassMemoryBytesWrapper.CodingKeys
  * CodableError
  * Decodable
  * Encodable
