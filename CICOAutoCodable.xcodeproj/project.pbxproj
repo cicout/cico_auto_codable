@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		E41830872359B08100C17AC5 /* MemoryBytesWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41830862359B08100C17AC5 /* MemoryBytesWrapper.swift */; };
 		E41830892359C42900C17AC5 /* CodableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41830882359C42900C17AC5 /* CodableError.swift */; };
-		E418ABF921252D57002BD333 /* OCCodingObjectWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E418ABF721252D57002BD333 /* OCCodingObjectWrapper.swift */; };
 		E418ABFA21252D57002BD333 /* OCEnumWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E418ABF821252D57002BD333 /* OCEnumWrapper.swift */; };
 		E41947232125964000A43398 /* OCTestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E41947222125964000A43398 /* OCTestClass.m */; };
 		E41947252125990F00A43398 /* SwiftTestClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41947242125990F00A43398 /* SwiftTestClass.swift */; };
@@ -33,7 +32,8 @@
 		E41F762A20C7C37300399E42 /* default_array.json in Resources */ = {isa = PBXBuildFile; fileRef = E41F762920C7C35C00399E42 /* default_array.json */; };
 		E41F762C20C7C6ED00399E42 /* default_dictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = E41F762B20C7C6DB00399E42 /* default_dictionary.json */; };
 		E42EA2CE21F2CD6D00C61F52 /* TCStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42EA2CD21F2CD6D00C61F52 /* TCStruct.swift */; };
-		E47B3B4C2127BA210037626F /* OCCodingObjectArrayWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47B3B4B2127BA210037626F /* OCCodingObjectArrayWrapper.swift */; };
+		E43634E223644355000D37A1 /* SerializableWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43634E123644355000D37A1 /* SerializableWrapper.swift */; };
+		E43634E423644701000D37A1 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43634E323644701000D37A1 /* Serializable.swift */; };
 		E481123523161CEE001DA5B9 /* show_all_type.stencil in Resources */ = {isa = PBXBuildFile; fileRef = E481123423161CED001DA5B9 /* show_all_type.stencil */; };
 		E4FD6C48210FFD0000ECAF4E /* CICOAutoCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FD6C47210FFD0000ECAF4E /* CICOAutoCodableTests.swift */; };
 		E4FD6C4A210FFD0000ECAF4E /* CICOAutoCodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E41F758520C6772700399E42 /* CICOAutoCodable.framework */; };
@@ -90,7 +90,6 @@
 /* Begin PBXFileReference section */
 		E41830862359B08100C17AC5 /* MemoryBytesWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryBytesWrapper.swift; sourceTree = "<group>"; };
 		E41830882359C42900C17AC5 /* CodableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableError.swift; sourceTree = "<group>"; };
-		E418ABF721252D57002BD333 /* OCCodingObjectWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCCodingObjectWrapper.swift; sourceTree = "<group>"; };
 		E418ABF821252D57002BD333 /* OCEnumWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCEnumWrapper.swift; sourceTree = "<group>"; };
 		E41947202125964000A43398 /* CICOAutoCodableTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CICOAutoCodableTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		E41947212125964000A43398 /* OCTestClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCTestClass.h; sourceTree = "<group>"; };
@@ -118,7 +117,8 @@
 		E41F762920C7C35C00399E42 /* default_array.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = default_array.json; sourceTree = "<group>"; };
 		E41F762B20C7C6DB00399E42 /* default_dictionary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = default_dictionary.json; sourceTree = "<group>"; };
 		E42EA2CD21F2CD6D00C61F52 /* TCStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCStruct.swift; sourceTree = "<group>"; };
-		E47B3B4B2127BA210037626F /* OCCodingObjectArrayWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCCodingObjectArrayWrapper.swift; sourceTree = "<group>"; };
+		E43634E123644355000D37A1 /* SerializableWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerializableWrapper.swift; sourceTree = "<group>"; };
+		E43634E323644701000D37A1 /* Serializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
 		E481123423161CED001DA5B9 /* show_all_type.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = show_all_type.stencil; sourceTree = "<group>"; };
 		E4FD6C45210FFD0000ECAF4E /* CICOAutoCodableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CICOAutoCodableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4FD6C47210FFD0000ECAF4E /* CICOAutoCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CICOAutoCodableTests.swift; sourceTree = "<group>"; };
@@ -184,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				E434DE782273F9D600D5677B /* core */,
+				E43634F82367E0DB000D37A1 /* deprecapted */,
 				E434DE772273F9CE00D5677B /* main */,
 				E434DE792273F9DC00D5677B /* wrapper */,
 			);
@@ -255,11 +256,18 @@
 				E41830882359C42900C17AC5 /* CodableError.swift */,
 				E4FFB7382355AA970036844B /* MemoryBytesAide.swift */,
 				E41830862359B08100C17AC5 /* MemoryBytesWrapper.swift */,
-				E47B3B4B2127BA210037626F /* OCCodingObjectArrayWrapper.swift */,
-				E418ABF721252D57002BD333 /* OCCodingObjectWrapper.swift */,
-				E418ABF821252D57002BD333 /* OCEnumWrapper.swift */,
+				E43634E323644701000D37A1 /* Serializable.swift */,
+				E43634E123644355000D37A1 /* SerializableWrapper.swift */,
 			);
 			path = wrapper;
+			sourceTree = "<group>";
+		};
+		E43634F82367E0DB000D37A1 /* deprecapted */ = {
+			isa = PBXGroup;
+			children = (
+				E418ABF821252D57002BD333 /* OCEnumWrapper.swift */,
+			);
+			path = deprecapted;
 			sourceTree = "<group>";
 		};
 		E4FD6C46210FFD0000ECAF4E /* CICOAutoCodableTests */ = {
@@ -487,12 +495,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E47B3B4C2127BA210037626F /* OCCodingObjectArrayWrapper.swift in Sources */,
-				E418ABF921252D57002BD333 /* OCCodingObjectWrapper.swift in Sources */,
 				E41F759320C677A300399E42 /* JSONDecoder+String.swift in Sources */,
 				E41F759420C677A300399E42 /* CICOAutoCodable.swift in Sources */,
 				E4FFB7392355AA970036844B /* MemoryBytesAide.swift in Sources */,
 				E41830892359C42900C17AC5 /* CodableError.swift in Sources */,
+				E43634E423644701000D37A1 /* Serializable.swift in Sources */,
+				E43634E223644355000D37A1 /* SerializableWrapper.swift in Sources */,
 				E418ABFA21252D57002BD333 /* OCEnumWrapper.swift in Sources */,
 				E41F759520C677A300399E42 /* JSONEncoder+String.swift in Sources */,
 				E41830872359B08100C17AC5 /* MemoryBytesWrapper.swift in Sources */,
@@ -696,7 +704,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.22.26;
+				CURRENT_PROJECT_VERSION = 0.23.27;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -709,7 +717,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.22;
+				MARKETING_VERSION = 0.23;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cico.AutoCodable;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -725,7 +733,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.22.26;
+				CURRENT_PROJECT_VERSION = 0.23.27;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -738,7 +746,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.22;
+				MARKETING_VERSION = 0.23;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cico.AutoCodable;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

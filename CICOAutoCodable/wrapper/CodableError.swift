@@ -9,5 +9,6 @@
 import Foundation
 
 public enum CodableError: Int, Error {
-    case invalidData = -1000
+    case decodeFailed = -800
+    case encodeFailed = -801
 }

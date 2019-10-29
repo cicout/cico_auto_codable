@@ -8,7 +8,7 @@
 
 import Foundation
 
-/// Transfer OBJ-C enum object to SWIFT codable object;
+/// Deprecapted, use "extension EnumType: Codable {}" instead.
 public struct OCEnumWrapper<T: RawRepresentable>: Codable where T.RawValue: Codable {
     public var value: T {
         set {
@@ -41,7 +41,7 @@ public extension OCEnumWrapper {
         let rawValue = try container.decode(T.RawValue.self, forKey: .rawValue)
 
         guard T.init(rawValue: rawValue) != nil else {
-            throw CodableError.invalidData
+            throw CodableError.decodeFailed
         }
 
         self.rawValue = rawValue

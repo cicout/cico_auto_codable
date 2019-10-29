@@ -10,6 +10,9 @@ import XCTest
 import CICOAutoCodable
 import GLKit
 
+extension OCTestClass: NSCodingSerializable {}
+extension OCTestClassX: NSCodingSerializable {}
+
 class WrapperTests: XCTestCase {
 
     override func setUp() {
@@ -51,46 +54,47 @@ class WrapperTests: XCTestCase {
 //        XCTAssert(enumValueWrapperZXZ!.value == enumValueX, "invalid point")
     }
 
-    func test_Coding_Object_Wrapper() {
+    func test_Serializable_Wrapper() {
         let objectValue = OCTestClass.init()
         objectValue.text = "test_text"
-        let objectValueWrapper = OCCodingObjectWrapper<OCTestClass>.init(value: objectValue)
+        let objectValueWrapper = SerializableWrapper.init(value: objectValue)
 
         let objectValueJSONString = objectValueWrapper.toJSONString()
         XCTAssertNotNil(objectValueJSONString, "model to json failed")
 
-        let objectValueWrapperZ = OCCodingObjectWrapper<OCTestClass>.init(jsonString: objectValueJSONString!)
+        let objectValueWrapperZ = SerializableWrapper<OCTestClass>.init(jsonString: objectValueJSONString!)
         XCTAssertNotNil(objectValueWrapperZ, "json to model failed")
         XCTAssert(objectValueWrapperZ!.value.text == objectValue.text, "invalid point")
 
         // wrong data test
-        let wrongObjectValueWrapperZ = OCCodingObjectWrapper<OCTestClassX>.init(jsonString: objectValueJSONString!)
+        let wrongObjectValueWrapperZ = SerializableWrapper<OCTestClassX>.init(jsonString: objectValueJSONString!)
         XCTAssertNil(wrongObjectValueWrapperZ, "json to model should failed with wrong json")
     }
 
-    func test_Empty_Array_Wrapper() {
+    func test_Empty_Array_Serializable_Wrapper() {
         let emptyArray = [OCTestClass].init()
 
-        let wrapper = OCCodingObjectArrayWrapper<OCTestClass>.init(value: emptyArray)
+        let wrapper = SerializableWrapper.init(value: emptyArray)
         let jsonString = wrapper.toJSONString()
         XCTAssertNotNil(jsonString, "model to json failed")
 
-        let wrapperx = OCCodingObjectArrayWrapper<OCTestClass>.init(jsonString: jsonString!)
+        let wrapperx = SerializableWrapper<[OCTestClass]>.init(jsonString: jsonString!)
         XCTAssertNotNil(wrapperx, "json to model failed")
+        XCTAssert(wrapperx!.value.count == 0, "Invalid value.")
     }
 
-    func test_Array_Wrapper() {
+    func test_Array_Serializable_Wrapper() {
         var array = [OCTestClass].init()
 
         let objectValue = OCTestClass.init()
         objectValue.text = "test_text"
         array.append(objectValue)
 
-        let wrapper = OCCodingObjectArrayWrapper<OCTestClass>.init(value: array)
+        let wrapper = SerializableWrapper.init(value: array)
         let jsonString = wrapper.toJSONString()
         XCTAssertNotNil(jsonString, "model to json failed")
 
-        let wrapperx = OCCodingObjectArrayWrapper<OCTestClass>.init(jsonString: jsonString!)
+        let wrapperx = SerializableWrapper<[OCTestClass]>.init(jsonString: jsonString!)
         XCTAssertNotNil(wrapperx, "json to model failed")
 
         let objectValueX = wrapperx!.value.first
@@ -99,7 +103,7 @@ class WrapperTests: XCTestCase {
         XCTAssert(objectValueX!.text == objectValue.text, "invalid object value")
 
         // wrong data test
-        let wrongwrapperx = OCCodingObjectArrayWrapper<OCTestClassX>.init(jsonString: jsonString!)
+        let wrongwrapperx = SerializableWrapper<[OCTestClassX]>.init(jsonString: jsonString!)
         XCTAssertNil(wrongwrapperx, "json to model should failed with wrong json")
     }
 

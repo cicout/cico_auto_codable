@@ -3,7 +3,7 @@
 
 // swiftlint:disable file_length
 
-/** Found 33 Types
+/** Found 35 Types
  * AppDelegate
  * CICOAutoCodableTests
  * CodableError
@@ -23,6 +23,8 @@
  * OCCodingObjectWrapper.CodingKeys
  * OCEnumWrapper
  * OCEnumWrapper.CodingKeys
+ * SerializableWrapper
+ * SerializableWrapper.CodingKeys
  * StructMemoryBytesWrapper
  * StructMemoryBytesWrapper.CodingKeys
  * SwiftTestClass
