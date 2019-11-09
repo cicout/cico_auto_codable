@@ -10,7 +10,7 @@ import Foundation
 
 public protocol Serializable {
     static func createFromSerializedData(_ data: Data) -> Self?
-    func serializToData() -> Data?
+    func serializedData() -> Data?
 }
 
 public protocol NSCodingSerializable: Serializable {}
@@ -33,7 +33,7 @@ public extension NSCodingSerializable where Self: NSCoding, Self: NSObject {
         }
     }
 
-    func serializToData() -> Data? {
+    func serializedData() -> Data? {
         if #available(iOS 11.0, *) {
             do {
                 let data = try NSKeyedArchiver.archivedData(withRootObject: self, requiringSecureCoding: false)
@@ -66,7 +66,7 @@ extension Array: Serializable where Element: NSCoding, Element: NSObject {
         }
     }
 
-    public func serializToData() -> Data? {
+    public func serializedData() -> Data? {
         if #available(iOS 11.0, *) {
             do {
                 let data = try NSKeyedArchiver.archivedData(withRootObject: self, requiringSecureCoding: false)

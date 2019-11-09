@@ -10,8 +10,9 @@ import Foundation
 
 /// Transfer Serializable value to Codable.
 ///
-/// - Write "extension YourType: NSCodingSerializable {}" first, then you can use it for NSCoding value;
-/// - You can directly use it for NSArray<Element: NSCoding> value;
+/// - Write "extension YourType: NSCodingSerializable {}" first for "YourType: NSObject, NSCoding",
+/// then you can use it for NSCoding value;
+/// - You can directly use it for NSArray<Element: NSObject, NSCoding> value;
 ///
 public struct SerializableWrapper<T: Serializable>: Codable {
     public var value: T
@@ -40,7 +41,7 @@ public extension SerializableWrapper {
     }
 
     func encode(to encoder: Encoder) throws {
-        guard let data = self.value.serializToData() else {
+        guard let data = self.value.serializedData() else {
             throw CodableError.encodeFailed
         }
 

@@ -3,8 +3,9 @@
 
 // swiftlint:disable file_length
 
-/** Found 35 Types
+/** Found 36 Types
  * AppDelegate
+ * Array
  * CICOAutoCodableTests
  * CodableError
  * Decodable
@@ -17,12 +18,12 @@
  * MyClass.CICOIgnoredCodingKeys
  * MyClass.CodingKeys
  * MyEnum
- * OCCodingObjectArrayWrapper
- * OCCodingObjectArrayWrapper.CodingKeys
- * OCCodingObjectWrapper
- * OCCodingObjectWrapper.CodingKeys
  * OCEnumWrapper
  * OCEnumWrapper.CodingKeys
+ * OCTestClass
+ * OCTestClassX
+ * OCTestIntEnum
+ * OCTestIntEnumX
  * SerializableWrapper
  * SerializableWrapper.CodingKeys
  * StructMemoryBytesWrapper
