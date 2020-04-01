@@ -1,7 +1,17 @@
-// Generated using Sourcery 0.16.2 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.17.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 // swiftlint:disable file_length
+
+
+/** Found 5 CICOAutoCodable Types
+ * MyClass
+ * MyEnum
+ * SwiftTestClass
+ * TCodableClass
+ * TCodableStruct
+ */
+
 
 /** Found 36 Types
  * AppDelegate
@@ -40,12 +50,4 @@
  * TStructTwo
  * ViewController
  * WrapperTests
- */
-
-/** Found 5 CICOAutoCodable Types
- * MyClass
- * MyEnum
- * SwiftTestClass
- * TCodableClass
- * TCodableStruct
  */

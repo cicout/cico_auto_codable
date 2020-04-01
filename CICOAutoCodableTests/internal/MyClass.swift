@@ -26,24 +26,6 @@ class MyClass: CICOAutoCodable {
     private(set) var arrayValue: [String]?
     private(set) var dicValue: [String: String]?
     private(set) var ignoredValue: String?
-
-//// sourcery:inline:auto:MyClass.CICOAutoCodable_Auto_Generated_CodingKeys_Head
-//    enum CodingKeys: String, CodingKey {
-//// sourcery:inline:auto:MyClass.CodingKeys.CICOAutoCodable_Auto_Generated_Custom_CodingKeys
-//        case next = "nextValue"
-//// sourcery:inline:auto:MyClass.CodingKeys.CICOAutoCodable_Auto_Generated_CodingKeys
-//        case stringValue
-//        case dateValue
-//        case intValue
-//        case doubleValue
-//        case boolValue
-//        case enumValue
-//        case urlValue
-//        case arrayValue
-//        case dicValue
-//// sourcery:inline:auto:MyClass..CICOAutoCodable_Auto_Generated_CodingKeys_Tail
-//    }
-//// sourcery:end
 }
 
 //extension MyClass {
