@@ -27,11 +27,11 @@ public struct OCEnumWrapper<T: RawRepresentable>: Codable where T.RawValue: Coda
         self.rawValue = value.rawValue
         self.value = value
     }
-    
+
     enum CodingKeys: String, CodingKey {
         case rawValue
     }
-    
+
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let rawValue = try container.decode(T.RawValue.self, forKey: .rawValue)

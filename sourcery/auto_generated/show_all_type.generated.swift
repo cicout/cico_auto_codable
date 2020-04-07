@@ -13,10 +13,12 @@
  */
 
 
-/** Found 36 Types
+/** Found 42 Types
  * AppDelegate
  * Array
  * CICOAutoCodableTests
+ * CStructWrapper
+ * CStructWrapper.CodingKeys
  * CodableError
  * Decodable
  * Encodable
@@ -28,6 +30,10 @@
  * MyClass.CICOIgnoredCodingKeys
  * MyClass.CodingKeys
  * MyEnum
+ * OCCodingObjectArrayWrapper
+ * OCCodingObjectArrayWrapper.CodingKeys
+ * OCCodingObjectWrapper
+ * OCCodingObjectWrapper.CodingKeys
  * OCEnumWrapper
  * OCEnumWrapper.CodingKeys
  * OCTestClass

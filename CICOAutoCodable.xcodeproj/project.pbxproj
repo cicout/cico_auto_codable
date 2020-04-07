@@ -34,6 +34,9 @@
 		E42EA2CE21F2CD6D00C61F52 /* TCStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42EA2CD21F2CD6D00C61F52 /* TCStruct.swift */; };
 		E43634E223644355000D37A1 /* SerializableWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43634E123644355000D37A1 /* SerializableWrapper.swift */; };
 		E43634E423644701000D37A1 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43634E323644701000D37A1 /* Serializable.swift */; };
+		E438F2FA243C779D0085DC25 /* CStructWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E438F2F7243C779D0085DC25 /* CStructWrapper.swift */; };
+		E438F2FB243C779D0085DC25 /* OCCodingObjectWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E438F2F8243C779D0085DC25 /* OCCodingObjectWrapper.swift */; };
+		E438F2FC243C779D0085DC25 /* OCCodingObjectArrayWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E438F2F9243C779D0085DC25 /* OCCodingObjectArrayWrapper.swift */; };
 		E481123523161CEE001DA5B9 /* show_all_type.stencil in Resources */ = {isa = PBXBuildFile; fileRef = E481123423161CED001DA5B9 /* show_all_type.stencil */; };
 		E4FD6C48210FFD0000ECAF4E /* CICOAutoCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FD6C47210FFD0000ECAF4E /* CICOAutoCodableTests.swift */; };
 		E4FD6C4A210FFD0000ECAF4E /* CICOAutoCodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E41F758520C6772700399E42 /* CICOAutoCodable.framework */; };
@@ -119,6 +122,9 @@
 		E42EA2CD21F2CD6D00C61F52 /* TCStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCStruct.swift; sourceTree = "<group>"; };
 		E43634E123644355000D37A1 /* SerializableWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerializableWrapper.swift; sourceTree = "<group>"; };
 		E43634E323644701000D37A1 /* Serializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
+		E438F2F7243C779D0085DC25 /* CStructWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CStructWrapper.swift; sourceTree = "<group>"; };
+		E438F2F8243C779D0085DC25 /* OCCodingObjectWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCCodingObjectWrapper.swift; sourceTree = "<group>"; };
+		E438F2F9243C779D0085DC25 /* OCCodingObjectArrayWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCCodingObjectArrayWrapper.swift; sourceTree = "<group>"; };
 		E481123423161CED001DA5B9 /* show_all_type.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = show_all_type.stencil; sourceTree = "<group>"; };
 		E4FD6C45210FFD0000ECAF4E /* CICOAutoCodableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CICOAutoCodableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4FD6C47210FFD0000ECAF4E /* CICOAutoCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CICOAutoCodableTests.swift; sourceTree = "<group>"; };
@@ -265,6 +271,9 @@
 		E43634F82367E0DB000D37A1 /* deprecapted */ = {
 			isa = PBXGroup;
 			children = (
+				E438F2F7243C779D0085DC25 /* CStructWrapper.swift */,
+				E438F2F9243C779D0085DC25 /* OCCodingObjectArrayWrapper.swift */,
+				E438F2F8243C779D0085DC25 /* OCCodingObjectWrapper.swift */,
 				E418ABF821252D57002BD333 /* OCEnumWrapper.swift */,
 			);
 			path = deprecapted;
@@ -495,8 +504,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E438F2FC243C779D0085DC25 /* OCCodingObjectArrayWrapper.swift in Sources */,
+				E438F2FB243C779D0085DC25 /* OCCodingObjectWrapper.swift in Sources */,
 				E41F759320C677A300399E42 /* JSONDecoder+String.swift in Sources */,
 				E41F759420C677A300399E42 /* CICOAutoCodable.swift in Sources */,
+				E438F2FA243C779D0085DC25 /* CStructWrapper.swift in Sources */,
 				E4FFB7392355AA970036844B /* MemoryBytesAide.swift in Sources */,
 				E41830892359C42900C17AC5 /* CodableError.swift in Sources */,
 				E43634E423644701000D37A1 /* Serializable.swift in Sources */,
@@ -705,7 +717,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.27.31;
+				CURRENT_PROJECT_VERSION = 0.28.32;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -718,7 +730,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.27;
+				MARKETING_VERSION = 0.28;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cico.AutoCodable;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -735,7 +747,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.27.31;
+				CURRENT_PROJECT_VERSION = 0.28.32;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -748,7 +760,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.27;
+				MARKETING_VERSION = 0.28;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cico.AutoCodable;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
