@@ -8,7 +8,7 @@
 
 import Foundation
 
-/// Deprecapted, use "extension EnumType: Codable {}" instead.
+@available(*, deprecated, message: "Use \"extension EnumType: Codable {}\" instead.")
 public struct OCEnumWrapper<T: RawRepresentable>: Codable where T.RawValue: Codable {
     public var value: T {
         set {
@@ -27,16 +27,12 @@ public struct OCEnumWrapper<T: RawRepresentable>: Codable where T.RawValue: Coda
         self.rawValue = value.rawValue
         self.value = value
     }
-}
-
-public extension OCEnumWrapper {
+    
     enum CodingKeys: String, CodingKey {
         case rawValue
     }
-}
-
-public extension OCEnumWrapper {
-    init(from decoder: Decoder) throws {
+    
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let rawValue = try container.decode(T.RawValue.self, forKey: .rawValue)
 
