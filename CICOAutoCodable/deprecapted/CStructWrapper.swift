@@ -8,7 +8,7 @@
 
 import Foundation
 
-@available(*, deprecated, message: "Use \"StructMemoryBytesWrapper\" instead.")
+/// @available(*, deprecated, message: "Use \"StructMemoryBytesWrapper\" instead.")
 public struct CStructWrapper<T: Any>: Codable {
     public var value: T
 
@@ -26,16 +26,14 @@ public struct CStructWrapper<T: Any>: Codable {
 
         let size = MemoryLayout<T>.size
         guard data.count == size else {
-            let error = NSError.init(domain: "Invalid data size of \(T.self).", code: -999, userInfo: nil) as Error
-            throw error
+            throw CodableError.decodeFailed
         }
 
         self.value = try data.withUnsafeBytes({ (rawBufferPointer) -> T in
             let typeBufferPointer = rawBufferPointer.bindMemory(to: T.self)
 
             guard let typePointer = typeBufferPointer.baseAddress else {
-                let error = NSError.init(domain: "Invalid data of \(T.self).", code: -998, userInfo: nil) as Error
-                throw error
+                throw CodableError.decodeFailed
             }
 
             return typePointer.pointee

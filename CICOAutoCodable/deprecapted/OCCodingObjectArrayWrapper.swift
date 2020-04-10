@@ -8,7 +8,7 @@
 
 import Foundation
 
-@available(*, deprecated, message: "Use \"SerializableWrapper\" instead.")
+/// @available(*, deprecated, message: "Use \"SerializableWrapper\" instead.")
 public struct OCCodingObjectArrayWrapper<T: NSCoding>: Codable {
     public var value: [T]
 
@@ -25,8 +25,7 @@ public struct OCCodingObjectArrayWrapper<T: NSCoding>: Codable {
         let data = try container.decode(Data.self, forKey: .data)
 
         guard let value = NSKeyedUnarchiver.unarchiveObject(with: data) as? [T] else {
-            let error = NSError.init(domain: "Invalid data of \([T].self).", code: -999, userInfo: nil) as Error
-            throw error
+            throw CodableError.decodeFailed
         }
 
         self.value = value

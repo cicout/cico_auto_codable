@@ -8,7 +8,7 @@
 
 import Foundation
 
-@available(*, deprecated, message: "Use \"extension EnumType: Codable {}\" instead.")
+/// @available(*, deprecated, message: "Use \"extension EnumType: Codable {}\" instead.")
 public struct OCEnumWrapper<T: RawRepresentable>: Codable where T.RawValue: Codable {
     public var value: T {
         set {
