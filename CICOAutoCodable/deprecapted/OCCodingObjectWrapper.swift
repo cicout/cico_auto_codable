@@ -25,6 +25,7 @@ public struct OCCodingObjectWrapper<T: NSCoding>: Codable {
         let data = try container.decode(Data.self, forKey: .data)
 
         guard let value = NSKeyedUnarchiver.unarchiveObject(with: data) as? T else {
+            print("[ERROR]: Invalid data for OCCodingObjectWrapper.")
             throw CodableError.decodeFailed
         }
 

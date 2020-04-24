@@ -41,6 +41,7 @@ public extension StructMemoryBytesWrapper {
         let data = try container.decode(Data.self, forKey: .data)
 
         guard let instance = MemoryBytesAide.createInstanceFromMemoryBytes(data, type: T.self) else {
+            print("[ERROR]: Invalid data for StructMemoryBytesWrapper.")
             throw CodableError.decodeFailed
         }
 

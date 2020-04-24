@@ -26,6 +26,7 @@ public struct CStructWrapper<T: Any>: Codable {
 
         let size = MemoryLayout<T>.size
         guard data.count == size else {
+            print("[ERROR]: Invalid data size for CStructWrapper.")
             throw CodableError.decodeFailed
         }
 
@@ -33,6 +34,7 @@ public struct CStructWrapper<T: Any>: Codable {
             let typeBufferPointer = rawBufferPointer.bindMemory(to: T.self)
 
             guard let typePointer = typeBufferPointer.baseAddress else {
+                print("[ERROR]: Invalid data for CStructWrapper.")
                 throw CodableError.decodeFailed
             }
 

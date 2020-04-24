@@ -37,6 +37,7 @@ public struct OCEnumWrapper<T: RawRepresentable>: Codable where T.RawValue: Coda
         let rawValue = try container.decode(T.RawValue.self, forKey: .rawValue)
 
         guard T.init(rawValue: rawValue) != nil else {
+            print("[ERROR]: Invalid data for OCEnumWrapper.")
             throw CodableError.decodeFailed
         }
 

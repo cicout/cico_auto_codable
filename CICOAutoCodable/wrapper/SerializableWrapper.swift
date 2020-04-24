@@ -34,6 +34,7 @@ public extension SerializableWrapper {
         let data = try container.decode(Data.self, forKey: .data)
 
         guard let value = T.createFromSerializedData(data) else {
+            print("[ERROR]: Invalid data for SerializableWrapper.")
             throw CodableError.decodeFailed
         }
 
@@ -42,6 +43,7 @@ public extension SerializableWrapper {
 
     func encode(to encoder: Encoder) throws {
         guard let data = self.value.serializedData() else {
+            print("[ERROR]: Invalid data for SerializableWrapper.")
             throw CodableError.encodeFailed
         }
 
