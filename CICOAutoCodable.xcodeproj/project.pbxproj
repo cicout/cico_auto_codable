@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		E41830872359B08100C17AC5 /* MemoryBytesWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41830862359B08100C17AC5 /* MemoryBytesWrapper.swift */; };
 		E41830892359C42900C17AC5 /* CodableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41830882359C42900C17AC5 /* CodableError.swift */; };
-		E418ABFA21252D57002BD333 /* OCEnumWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E418ABF821252D57002BD333 /* OCEnumWrapper.swift */; };
 		E41947232125964000A43398 /* OCTestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E41947222125964000A43398 /* OCTestClass.m */; };
 		E41947252125990F00A43398 /* SwiftTestClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41947242125990F00A43398 /* SwiftTestClass.swift */; };
 		E4194727212599F100A43398 /* WrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4194726212599F100A43398 /* WrapperTests.swift */; };
@@ -34,9 +33,6 @@
 		E42EA2CE21F2CD6D00C61F52 /* TCStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42EA2CD21F2CD6D00C61F52 /* TCStruct.swift */; };
 		E43634E223644355000D37A1 /* SerializableWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43634E123644355000D37A1 /* SerializableWrapper.swift */; };
 		E43634E423644701000D37A1 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43634E323644701000D37A1 /* Serializable.swift */; };
-		E438F2FA243C779D0085DC25 /* CStructWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E438F2F7243C779D0085DC25 /* CStructWrapper.swift */; };
-		E438F2FB243C779D0085DC25 /* OCCodingObjectWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E438F2F8243C779D0085DC25 /* OCCodingObjectWrapper.swift */; };
-		E438F2FC243C779D0085DC25 /* OCCodingObjectArrayWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E438F2F9243C779D0085DC25 /* OCCodingObjectArrayWrapper.swift */; };
 		E481123523161CEE001DA5B9 /* show_all_type.stencil in Resources */ = {isa = PBXBuildFile; fileRef = E481123423161CED001DA5B9 /* show_all_type.stencil */; };
 		E4FD6C48210FFD0000ECAF4E /* CICOAutoCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FD6C47210FFD0000ECAF4E /* CICOAutoCodableTests.swift */; };
 		E4FD6C4A210FFD0000ECAF4E /* CICOAutoCodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E41F758520C6772700399E42 /* CICOAutoCodable.framework */; };
@@ -93,7 +89,6 @@
 /* Begin PBXFileReference section */
 		E41830862359B08100C17AC5 /* MemoryBytesWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryBytesWrapper.swift; sourceTree = "<group>"; };
 		E41830882359C42900C17AC5 /* CodableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableError.swift; sourceTree = "<group>"; };
-		E418ABF821252D57002BD333 /* OCEnumWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCEnumWrapper.swift; sourceTree = "<group>"; };
 		E41947202125964000A43398 /* CICOAutoCodableTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CICOAutoCodableTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		E41947212125964000A43398 /* OCTestClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCTestClass.h; sourceTree = "<group>"; };
 		E41947222125964000A43398 /* OCTestClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCTestClass.m; sourceTree = "<group>"; };
@@ -122,9 +117,6 @@
 		E42EA2CD21F2CD6D00C61F52 /* TCStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCStruct.swift; sourceTree = "<group>"; };
 		E43634E123644355000D37A1 /* SerializableWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerializableWrapper.swift; sourceTree = "<group>"; };
 		E43634E323644701000D37A1 /* Serializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
-		E438F2F7243C779D0085DC25 /* CStructWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CStructWrapper.swift; sourceTree = "<group>"; };
-		E438F2F8243C779D0085DC25 /* OCCodingObjectWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCCodingObjectWrapper.swift; sourceTree = "<group>"; };
-		E438F2F9243C779D0085DC25 /* OCCodingObjectArrayWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCCodingObjectArrayWrapper.swift; sourceTree = "<group>"; };
 		E481123423161CED001DA5B9 /* show_all_type.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = show_all_type.stencil; sourceTree = "<group>"; };
 		E4FD6C45210FFD0000ECAF4E /* CICOAutoCodableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CICOAutoCodableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4FD6C47210FFD0000ECAF4E /* CICOAutoCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CICOAutoCodableTests.swift; sourceTree = "<group>"; };
@@ -190,7 +182,6 @@
 			isa = PBXGroup;
 			children = (
 				E434DE782273F9D600D5677B /* core */,
-				E43634F82367E0DB000D37A1 /* deprecapted */,
 				E434DE772273F9CE00D5677B /* main */,
 				E434DE792273F9DC00D5677B /* wrapper */,
 			);
@@ -266,17 +257,6 @@
 				E43634E123644355000D37A1 /* SerializableWrapper.swift */,
 			);
 			path = wrapper;
-			sourceTree = "<group>";
-		};
-		E43634F82367E0DB000D37A1 /* deprecapted */ = {
-			isa = PBXGroup;
-			children = (
-				E438F2F7243C779D0085DC25 /* CStructWrapper.swift */,
-				E438F2F9243C779D0085DC25 /* OCCodingObjectArrayWrapper.swift */,
-				E438F2F8243C779D0085DC25 /* OCCodingObjectWrapper.swift */,
-				E418ABF821252D57002BD333 /* OCEnumWrapper.swift */,
-			);
-			path = deprecapted;
 			sourceTree = "<group>";
 		};
 		E4FD6C46210FFD0000ECAF4E /* CICOAutoCodableTests */ = {
@@ -504,16 +484,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E438F2FC243C779D0085DC25 /* OCCodingObjectArrayWrapper.swift in Sources */,
-				E438F2FB243C779D0085DC25 /* OCCodingObjectWrapper.swift in Sources */,
 				E41F759320C677A300399E42 /* JSONDecoder+String.swift in Sources */,
 				E41F759420C677A300399E42 /* CICOAutoCodable.swift in Sources */,
-				E438F2FA243C779D0085DC25 /* CStructWrapper.swift in Sources */,
 				E4FFB7392355AA970036844B /* MemoryBytesAide.swift in Sources */,
 				E41830892359C42900C17AC5 /* CodableError.swift in Sources */,
 				E43634E423644701000D37A1 /* Serializable.swift in Sources */,
 				E43634E223644355000D37A1 /* SerializableWrapper.swift in Sources */,
-				E418ABFA21252D57002BD333 /* OCEnumWrapper.swift in Sources */,
 				E41F759520C677A300399E42 /* JSONEncoder+String.swift in Sources */,
 				E41830872359B08100C17AC5 /* MemoryBytesWrapper.swift in Sources */,
 			);
