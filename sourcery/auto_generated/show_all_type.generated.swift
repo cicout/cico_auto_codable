@@ -1,4 +1,4 @@
-// Generated using Sourcery 0.17.0 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 1.0.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 // swiftlint:disable file_length
@@ -13,12 +13,10 @@
  */
 
 
-/** Found 42 Types
+/** Found 34 Types
  * AppDelegate
  * Array
  * CICOAutoCodableTests
- * CStructWrapper
- * CStructWrapper.CodingKeys
  * CodableError
  * Decodable
  * Encodable
@@ -30,12 +28,6 @@
  * MyClass.CICOIgnoredCodingKeys
  * MyClass.CodingKeys
  * MyEnum
- * OCCodingObjectArrayWrapper
- * OCCodingObjectArrayWrapper.CodingKeys
- * OCCodingObjectWrapper
- * OCCodingObjectWrapper.CodingKeys
- * OCEnumWrapper
- * OCEnumWrapper.CodingKeys
  * OCTestClass
  * OCTestClassX
  * OCTestIntEnum
