@@ -14,6 +14,6 @@ extension OCTestIntEnumX: Codable {}
 
 class SwiftTestClass: CICOAutoCodable {
     var objectValue: SerializableWrapper<OCTestClass>?
-    var enumValue: OCEnumWrapper<OCTestIntEnum>?
+//    var enumValue: OCEnumWrapper<OCTestIntEnum>?
     var enumValueX: OCTestIntEnum?
 }

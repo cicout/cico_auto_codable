@@ -25,34 +25,34 @@ class WrapperTests: XCTestCase {
         super.tearDown()
     }
 
-    func test_Enum_Wrapper() {
-        let enumValue = OCTestIntEnum.two
-        let enumValueWrapper = OCEnumWrapper<OCTestIntEnum>.init(value: enumValue)
-
-        let enumValueJSONString = enumValueWrapper.toJSONString()
-        XCTAssertNotNil(enumValueJSONString, "model to json failed")
-
-        let enumValueWrapperZ = OCEnumWrapper<OCTestIntEnum>.init(jsonString: enumValueJSONString!)
-        XCTAssertNotNil(enumValueWrapperZ, "json to model failed")
-        XCTAssert(enumValueWrapperZ!.value == enumValue, "invalid point")
-
-        let enumValueX = OCTestIntEnumX.onex
-        let enumValueWrapperX = OCEnumWrapper<OCTestIntEnumX>.init(value: enumValueX)
-
-        let enumValueJSONStringX = enumValueWrapperX.toJSONString()
-        XCTAssertNotNil(enumValueJSONStringX, "model to json failed")
-
-        let enumValueWrapperZX = OCEnumWrapper<OCTestIntEnumX>.init(jsonString: enumValueJSONStringX!)
-        XCTAssertNotNil(enumValueWrapperZX, "json to model failed")
-        XCTAssert(enumValueWrapperZX!.value == enumValueX, "invalid point")
-
-        // wrong data test (Enum should failed but it return one invalid enum!!!)
-        let wrongEnumValueWrapperZX = OCEnumWrapper<OCTestIntEnumX>.init(jsonString: enumValueJSONString!)
+//    func test_Enum_Wrapper() {
+//        let enumValue = OCTestIntEnum.two
+//        let enumValueWrapper = OCEnumWrapper<OCTestIntEnum>.init(value: enumValue)
+//
+//        let enumValueJSONString = enumValueWrapper.toJSONString()
+//        XCTAssertNotNil(enumValueJSONString, "model to json failed")
+//
+//        let enumValueWrapperZ = OCEnumWrapper<OCTestIntEnum>.init(jsonString: enumValueJSONString!)
+//        XCTAssertNotNil(enumValueWrapperZ, "json to model failed")
+//        XCTAssert(enumValueWrapperZ!.value == enumValue, "invalid point")
+//
+//        let enumValueX = OCTestIntEnumX.onex
+//        let enumValueWrapperX = OCEnumWrapper<OCTestIntEnumX>.init(value: enumValueX)
+//
+//        let enumValueJSONStringX = enumValueWrapperX.toJSONString()
+//        XCTAssertNotNil(enumValueJSONStringX, "model to json failed")
+//
+//        let enumValueWrapperZX = OCEnumWrapper<OCTestIntEnumX>.init(jsonString: enumValueJSONStringX!)
+//        XCTAssertNotNil(enumValueWrapperZX, "json to model failed")
+//        XCTAssert(enumValueWrapperZX!.value == enumValueX, "invalid point")
+//
+//        // wrong data test (Enum should failed but it return one invalid enum!!!)
+//        let wrongEnumValueWrapperZX = OCEnumWrapper<OCTestIntEnumX>.init(jsonString: enumValueJSONString!)
 //        XCTAssertNil(wrongEnumValueWrapperZX, "json to model should failed with wrong json")
-        let wrongEnumValue = wrongEnumValueWrapperZX!.value
-        print("[*]: \(wrongEnumValueWrapperZX!), \(wrongEnumValue), \(wrongEnumValue.rawValue)")
+//        let wrongEnumValue = wrongEnumValueWrapperZX!.value
+//        print("[*]: \(wrongEnumValueWrapperZX!), \(wrongEnumValue), \(wrongEnumValue.rawValue)")
 //        XCTAssert(enumValueWrapperZXZ!.value == enumValueX, "invalid point")
-    }
+//    }
 
     func test_Serializable_Wrapper() {
         let objectValue = OCTestClass.init()
