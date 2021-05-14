@@ -28,7 +28,7 @@ class MyClass: CICOAutoCodable {
     private(set) var ignoredValue: String?
 }
 
-//extension MyClass {
+// extension MyClass {
 //    enum CICOCustomCodingKeys: String {
 //        case next = "nextValue"
 //    }
@@ -36,7 +36,7 @@ class MyClass: CICOAutoCodable {
 //    enum CICOIgnoredCodingKeys: String {
 //        case ignoredValue
 //    }
-//}
+// }
 
 extension MyClass {
     enum CICOIgnoredCodingKeys: String {

@@ -64,21 +64,21 @@ public extension StructMemoryBytesWrapper {
 ///// - Don't use for String, it is an collection of char;
 ///// - Don't use for any type contains string such as URL;
 /////
-//public struct ClassMemoryBytesWrapper<T: AnyObject>: Codable {
+// public struct ClassMemoryBytesWrapper<T: AnyObject>: Codable {
 //    public var value: T
 //
 //    public init(value: T) {
 //        self.value = value
 //    }
-//}
+// }
 //
-//public extension ClassMemoryBytesWrapper {
+// public extension ClassMemoryBytesWrapper {
 //    enum CodingKeys: String, CodingKey {
 //        case data = "class_memory_bytes"
 //    }
-//}
+// }
 //
-//public extension ClassMemoryBytesWrapper {
+// public extension ClassMemoryBytesWrapper {
 //    init(from decoder: Decoder) throws {
 //        let container = try decoder.container(keyedBy: CodingKeys.self)
 //        let data = try container.decode(Data.self, forKey: .data)
@@ -96,4 +96,4 @@ public extension StructMemoryBytesWrapper {
 //        var container = encoder.container(keyedBy: CodingKeys.self)
 //        try container.encode(data, forKey: .data)
 //    }
-//}
+// }

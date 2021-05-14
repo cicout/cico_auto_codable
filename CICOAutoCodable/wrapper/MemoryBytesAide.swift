@@ -40,7 +40,7 @@ public class MemoryBytesAide {
 }
 
 // How to init class instance without init() protocol?
-//extension MemoryBytesAide {
+// extension MemoryBytesAide {
 //    public static func createInstanceFromMemoryBytes<T: AnyObject>(_ bytes: Data, type: T.Type) -> T? {
 //        let size: Int = class_getInstanceSize(type)
 //        guard bytes.count == size else {
@@ -80,4 +80,4 @@ public class MemoryBytesAide {
 //        let rawBufferPointer = UnsafeRawBufferPointer.init(start: rawPointer, count: instanceSize)
 //        return Data.init(rawBufferPointer)
 //    }
-//}
+// }
