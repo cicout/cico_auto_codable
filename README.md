@@ -1,6 +1,6 @@
 # CICOAutoCodable
 
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+![Swift5 compatible][Swift5Badge] [![Carthage compatible][CartagheBadge]][CarthageLink] [![CocoaPods][PodBadge]][PodLink] [![License MIT][MITBadge]][MITLink]
 
 CICOAutoCodable is an extension for codable, a new feature in Swift 4. It is very simple to achieve mutual conversion between model and JSON. And it provides automatic code completion using sourcery.
 
@@ -262,3 +262,15 @@ CICOAutoCodable is released under the MIT license. See [LICENSE](https://github.
 
 ## More
 Have a question? Please open an [issue](https://github.com/cicout/cico_auto_codable/issues/new)!
+
+[Swift5Badge]: https://img.shields.io/badge/swift-5-orange.svg?style=flat
+[Swift5Link]: https://developer.apple.com/swift/
+
+[CartagheBadge]: https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat
+[CarthageLink]: https://github.com/Carthage/Carthage
+
+[PodBadge]: https://img.shields.io/cocoapods/v/CICOAutoCodable.svg?style=flat
+[PodLink]: http://cocoapods.org/pods/CICOAutoCodable
+
+[MITBadge]: https://img.shields.io/badge/License-MIT-blue.svg?style=flat
+[MITLink]: https://github.com/cicout/cico_auto_codable/blob/develop/LICENSE
