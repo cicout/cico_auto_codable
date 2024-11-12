@@ -12,16 +12,6 @@ import CICOAutoCodable
 class ViewController: UIViewController {
     var count: Int = 0
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     @IBAction func testBtnAction(_ sender: UIButton) {
 //        self.testMyClass()
         self.testRetainCount()
