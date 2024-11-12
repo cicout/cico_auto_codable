@@ -1,17 +1,29 @@
 # CICOAutoCodable
 
-![Swift5 compatible][Swift5Badge] [![Carthage compatible][CartagheBadge]][CarthageLink] [![CocoaPods][PodBadge]][PodLink] [![License MIT][MITBadge]][MITLink]
+![Swift5 compatible][Swift5Badge] [![CocoaPods][PodBadge]][PodLink] [![Carthage compatible][CartagheBadge]][CarthageLink] [![License MIT][MITBadge]][MITLink]
 
 CICOAutoCodable is an extension for codable, a new feature in Swift 4. It is very simple to achieve mutual conversion between model and JSON. And it provides automatic code completion using sourcery.
 
 ## Installation
 
+### CocoaPod
+
+You can simply add CICOAutoCodable to your `Podfile`:  
+
+```
+pod "CICOAutoCodable"
+```
+
+### Carthage
+
 You can simply add CICOAutoCodable to your `Cartfile`:  
+
 ```
 github "cicout/cico_auto_codable"
 ```
 
 ## Sample Code
+
 ### Model And JSON Definition
 ```swift
 enum MyEnum: String, CICOAutoCodable {
@@ -60,6 +72,7 @@ class MyClass: CICOAutoCodable {
 ```
 
 ### JSON TO Model
+
 * Default JSONDecoder  
 ```swift
 let object = MyClass.init(jsonString: myJSONString)
@@ -73,6 +86,7 @@ let object = MyClass.init(jsonString: myJSONString, jsonDecoder: decoder)
 ```
 
 ### Model TO JSON
+
 * Default JSONEncoder  
 ```swift
 let jsonString = object?.toJSONString()
@@ -86,6 +100,7 @@ let jsonString = object?.toJSONString(jsonEncoder: encoder)
   
   
 ## OBJ-C Wrapper
+
 * **OCCodingObjectWrapper**  
 OCCodingObjectWrapper can make NSCoding Class in OBJ-C conform to Codable protocol in Swift.
 ```objc
@@ -254,13 +269,16 @@ extension MyClass {
 ```
 
 ## Requirements
-* iOS 8.0+
-* Swift 4.0+
+
+* iOS 12.0+
+* Swift 5.0+
 
 ## License
+
 CICOAutoCodable is released under the MIT license. See [LICENSE](https://github.com/cicout/cico_auto_codable/blob/master/LICENSE) for details.
 
 ## More
+
 Have a question? Please open an [issue](https://github.com/cicout/cico_auto_codable/issues/new)!
 
 [Swift5Badge]: https://img.shields.io/badge/swift-5-orange.svg?style=flat
