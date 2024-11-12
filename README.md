@@ -25,6 +25,7 @@ github "cicout/cico_auto_codable"
 ## Sample Code
 
 ### Model And JSON Definition
+
 ```swift
 enum MyEnum: String, CICOAutoCodable {
     case one
@@ -44,6 +45,7 @@ class MyClass: CICOAutoCodable {
     private(set) var dicValue: [String: String]?
 }
 ```
+
 ```json
 {
     "stringValue": "string",
@@ -88,10 +90,13 @@ let object = MyClass.init(jsonString: myJSONString, jsonDecoder: decoder)
 ### Model TO JSON
 
 * Default JSONEncoder  
+
 ```swift
 let jsonString = object?.toJSONString()
 ```
+
 * Custom JSONEncoder  
+
 ```swift
 let encoder = JSONEncoder()
 encoder.dateEncodingStrategy = .millisecondsSince1970
@@ -101,8 +106,10 @@ let jsonString = object?.toJSONString(jsonEncoder: encoder)
   
 ## OBJ-C Wrapper
 
-* **OCCodingObjectWrapper**  
-OCCodingObjectWrapper can make NSCoding Class in OBJ-C conform to Codable protocol in Swift.
+### NSCodingSerializable
+
+NSCodingSerializable can make NSCoding Class in OBJ-C conform to Codable protocol in Swift.
+
 ```objc
 @interface OCTestClass : NSObject <NSCoding>
 
@@ -128,35 +135,44 @@ OCCodingObjectWrapper can make NSCoding Class in OBJ-C conform to Codable protoc
 
 @end
 ``` 
+
 ```swift
-class SwiftTestClass: CICOAutoCodable {
-    var objectValue: OCCodingObjectWrapper<OCTestClass>?
-}
+extension OCTestClass: NSCodingSerializable {}
 ``` 
 
-* **OCEnumWrapper**  
-OCEnumWrapper can make integer enum in OBJ-C conform to Codable protocol in Swift.
+```
+let objectValue = OCTestClass()
+let objectValueWrapper = SerializableWrapper.init(value: objectValue)
+let objectValueJSONString = objectValueWrapper.toJSONString()
+```
+
+### OCEnum
+
+It can make integer enum in OBJ-C conform to Codable protocol in Swift.
+
 ```objc
 NS_ENUM(NSInteger, OCTestIntEnum) {
     one = 1,
     two
 };
 ``` 
+
 ```swift
-class SwiftTestClass: CICOAutoCodable {
-    var enumValue: OCEnumWrapper<OCTestIntEnum>?
-}
+extension OCTestIntEnum: Codable {}
 ```
   
   
 ## Auto Code Completion
+
 You don't need to write any mapping code when there is no custom mapping relationship using codable. However, you need to manually define the CodingKeys enumeration and list all the mappings, including the part that does not require a custom mapping, when there is any custom mapping relationship. CICOAutoCodable can complete the code for you automaticaly using sourcery.
 
 ### About Sourcery
+
 * [Sourcery](https://github.com/krzysztofzablocki/Sourcery)  
 * [Sourcery Reference](https://cdn.rawgit.com/krzysztofzablocki/Sourcery/master/docs/index.html)
 
 ### Install Sourcery
+
 1. Copy "sourcery" directory in this framework source into your project;
 2. Get the latest sourcery by CocoaPod; (replace `{YourProjectDir}` with your real project directory)  
 ```
@@ -174,7 +190,9 @@ fi
 4. Define your model and run;
 
 ### Sample Code
+
 #### Model Definition
+
 ```swift
 enum MyEnum: String, CICOAutoCodable {
     case one
@@ -197,7 +215,9 @@ class MyClass: CICOAutoCodable {
 ```
 
 #### Using Custom And Ignored CodingKeys  
+
 * CodingKeys Definition  
+
 ```swift
 extension MyClass {
     enum CICOCustomCodingKeys: String {
@@ -210,6 +230,7 @@ extension MyClass {
 }
 ```
 * Auto Generated Code  
+
 ```swift
 // sourcery:inline:auto:MyClass.CICOAutoCodable_Auto_Generated_CodingKeys_Head
     enum CodingKeys: String, CodingKey {
@@ -231,7 +252,9 @@ extension MyClass {
 ```
 
 #### Using CodingKeys Directly  
+
 * CodingKeys Definition  
+
 ```swift
 extension MyClass {
     enum CICOIgnoredCodingKeys: String {
@@ -244,6 +267,7 @@ extension MyClass {
 }
 ```
 * Auto Generated Code  
+
 ```swift
 extension MyClass {
     enum CICOIgnoredCodingKeys: String {
