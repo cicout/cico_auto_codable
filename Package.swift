@@ -3,7 +3,7 @@ import PackageDescription
 
 let package = Package(
     name: "CICOAutoCodable",
-    platforms: [.iOS(.v8)],
+    platforms: [.iOS(.v12)],
     products: [
         .library(name: "CICOAutoCodable", targets: ["CICOAutoCodable"])
     ],
