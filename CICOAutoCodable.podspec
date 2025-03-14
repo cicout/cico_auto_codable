@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "CICOAutoCodable"
-  spec.version      = "0.30.40"
+  spec.version      = "0.30.41"
   spec.summary      = "Auto codable using sourcery."
 
   # This description is used to generate tags and improve search results.
