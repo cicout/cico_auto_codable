@@ -38,6 +38,8 @@ playground.xcworkspace
 # Packages/
 # Package.pins
 # Package.resolved
+.swiftpm
+.Package.swift.swp
 .build/
 
 # CocoaPods
